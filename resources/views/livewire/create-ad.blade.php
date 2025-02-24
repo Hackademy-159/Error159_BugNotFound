@@ -2,7 +2,7 @@
 
     <div class="row">
         <div class="col-12 col-md-6">
-            <form wire:submit="create">
+            <form wire:submit="save">
                 
                 @csrf
                 
@@ -26,7 +26,12 @@
 
                 <div class="mb-3">
                     <label class="form-label">Condizione</label>
-                    <input type="text" class="form-control" wire:model="status">
+                    <select type="text" class="form-select" wire:model="status">
+                        <option value="nuovo">Nuovo</option>
+                        <option value="ottimo">Ottime</option>
+                        <option value="buono">Buone</option>
+                        <option value="discreto">Discrete</option>
+                        <select/>
                 </div>
 
 
@@ -36,7 +41,7 @@
                 </div>
 
 
-                <select class="form-select" wire:model="categories_id">
+                <select class="form-select" wire:model="category">
                     @foreach ($categories as $category)
                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                     @endforeach
