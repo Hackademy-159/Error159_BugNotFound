@@ -1,7 +1,7 @@
-<div class="container mx-auto">
+<div class="container">
     <div class="row justify-content-center">
         <div class="col-12 col-md-9">
-            <form wire:submit="save" class="cst-form p-5 mb-5 shadow">
+            <form wire:submit="save" class="cst-form p-5 my-5 shadow">
 
                 @csrf
 
@@ -67,8 +67,9 @@
                 </div>
 
 
-
-                <button type="submit" class="cst-button-card">Conferma inserimento</button>
+                <div class="d-flex justify-content-center pt-4">
+                    <button type="submit" class="cst-button-card">Conferma inserimento</button>
+                </div>
 
 
 

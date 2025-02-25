@@ -23,7 +23,7 @@
                         aria-expamded='false'>
                         Categorie
                     </a>
-                    <ul class="dropdown-menu col-bg">
+                    <ul class="dropdown-menu">
                         @foreach ($categories as $category)
                             <li>
                                 <a class="dropdown-item text-capitalize"
