@@ -36,7 +36,7 @@ class CreateAd extends Component
             'user_id' => Auth::id(),
         ]);
         $this->reset();
-        return redirect()->route('ad.create')->with('success', 'Annuncio crerato con successo');
+        return redirect()->route('create.ad')->with('success', 'Annuncio crerato con successo');
 
     }
     public function render()

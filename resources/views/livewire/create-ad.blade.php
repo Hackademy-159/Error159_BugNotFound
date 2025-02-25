@@ -3,54 +3,75 @@
     <div class="row">
         <div class="col-12 col-md-6">
             <form wire:submit="save">
-                
+
                 @csrf
-                
+
                 <div class="mb-3">
                     <label class="form-label">Titolo</label>
-                    <input type="text" class="form-control" wire:model="title">
+                    <input type="text" class="form-control" wire:model.blur="title">
+                    @error('title')
+                        <p class="text-danger">{{ $message }}</p>
+                    @enderror
                 </div>
 
 
                 <div class="mb-3">
                     <label class="form-label">Prezzo</label>
-                    <input type="text" class="form-control" wire:model="price">
+                    <input type="text" class="form-control" wire:model.blur="price">
+                    @error('price')
+                        <p class="text-danger">{{ $message }}</p>
+                    @enderror
                 </div>
 
 
                 <div class="mb-3">
                     <label class="form-label">Descrizione</label>
-                    <input type="text" class="form-control" wire:model="description">
+                    <input type="text" class="form-control" wire:model.blur="description">
+                    @error('description')
+                        <p class="text-danger">{{ $message }}</p>
+                    @enderror
                 </div>
 
 
                 <div class="mb-3">
                     <label class="form-label">Condizione</label>
-                    <select type="text" class="form-select" wire:model="status">
+                    <select type="text" class="form-select" wire:model.blur="status">
                         <option value="nuovo">Nuovo</option>
                         <option value="ottimo">Ottime</option>
                         <option value="buono">Buone</option>
                         <option value="discreto">Discrete</option>
-                        <select/>
+                        <select />
+                        @error('status')
+                            <p class="text-danger">{{ $message }}</p>
+                        @enderror
                 </div>
 
 
                 <div class="mb-3">
                     <label class="form-label">Colore</label>
-                    <input type="text" class="form-control" wire:model="color">
+                    <input type="text" class="form-control" wire:model.blur="color">
+                    @error('color')
+                        <p class="text-danger">{{ $message }}</p>
+                    @enderror
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Categoria</label>
+                    <select class="form-select" wire:model.blur="category">
+                        @foreach ($categories as $category)
+                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                        @endforeach
+                    </select>
+                    @error('category')
+                        <p class="text-danger">{{ $message }}</p>
+                    @enderror
                 </div>
 
 
-                <select class="form-select" wire:model="category">
-                    @foreach ($categories as $category)
-                        <option value="{{ $category->id }}">{{ $category->name }}</option>
-                    @endforeach
-                </select>
-
 
                 <button type="submit" class="btn btn-primary">Conferma inserimento</button>
-            
-                
+
+
 
             </form>
         </div>

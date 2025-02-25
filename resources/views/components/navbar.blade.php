@@ -8,11 +8,11 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
                 </li>
             </ul>
 
-            <ul class="navbar-nav  mb-2 mb-lg-0">
+            <ul class="navbar-nav mb-2 mb-lg-0">
               @guest
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('login') }}">Login</a>
@@ -22,13 +22,16 @@
                     <a class="nav-link" href="{{ route('register') }}">Registrati</a>
                 </li>
                 @endguest
+
                 @auth
-                    
-                
                 <li class="nav-item">
                     @if (Auth::user())
                         Benvenuto {{ Auth::user()->name }}
                     @endif
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('create.ad') }}">Crea un annuncio</a>
+
                 </li>
                 <li class="nav-item ms-auto">
                     <form action="{{ route('logout') }}" method="POST">

@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Ad;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controllers\HasMiddleware;
+use Illuminate\Routing\Controllers\Middleware;
 
-class AdController extends Controller
+class AdController extends Controller implements HasMiddleware
 {
     /**
      * Display a listing of the resource.
@@ -61,5 +63,11 @@ class AdController extends Controller
     public function destroy(Ad $ad)
     {
         //
+    }
+
+    public static function middleware(): array {
+        return[
+            new Middleware('auth', only:['create']),
+        ];
     }
 }
