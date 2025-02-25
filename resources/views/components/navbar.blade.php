@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-lg col-bg border-bottom shadow">
+    <div class="container-fluid  ">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
             aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,7 +23,7 @@
                         aria-expamded='false'>
                         Categorie
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu col-bg">
                         @foreach ($categories as $category)
                             <li>
                                 <a class="dropdown-item text-capitalize"
@@ -54,14 +54,15 @@
                 @auth
                     <li class="nav-item">
                         @if (Auth::user())
-                            Benvenuto {{ Auth::user()->name }}
+                            
+                            <a class="nav-link fs-5 active pe-3">Benvenuto {{ Auth::user()->name }}</a>
                         @endif
                     </li>
                   
-                    <li class="nav-item ms-auto">
+                    <li class="nav-item ms-auto py-1">
                         <form action="{{ route('logout') }}" method="POST">
                             @csrf
-                            <button class="btn btn-danger">Logout</button>
+                            <button class="btn btn-danger fw-semibold px-4">Logout</button>
                         </form>
                     </li>
                 @endauth

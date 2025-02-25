@@ -2,10 +2,10 @@
     <div class="container-fluid text-center">
         <div class="row wh-100 justify-content-center align-items-center">
             <div class="col-12">
-                <h1 class="display-1">PRESTO.IT</h1>
-                <div class="my-3">
+                <h1 class="display-1 ">PRESTO.IT</h1>
+                <div class="my-5 ">
                     @auth
-                        <a href="{{ route('create.ad') }}" class="btn btn-primary">Crea un annuncio</a>
+                        <a href="{{ route('create.ad') }}" class="cst-button px-5 py-3">Crea un annuncio</a>
                     @endauth
                 </div>
             </div>

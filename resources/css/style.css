@@ -1,3 +1,114 @@
-body{
-    min-height: 1500px;
+:root{
+    --background:rgb(253,251,239);
+    --primary:#2A5047;   
+    --secondary:#F8CDB4;
+    --button:#004766;
+    --accent:blue;
+}
+
+*{
+    color: var(--primary) ; 
+
+}
+
+
+
+
+.col-bg{
+    background-color: var(--background);
+}
+.col-bg-text{
+    color: var(--background);
+}
+
+.col-p{
+    background-color: var(--primary);
+}
+.col-p-text{
+    color: var(--primary);
+}
+
+.col-s{
+    background-color: var(--secondary);
+}
+.col-s-text{
+    color: var(--secondary);
+}
+
+.col-b{
+    background-color: var(--button);
+}
+.col-b-text{
+    color: var(--button);
+}
+
+.col-a{
+    background-color: var(--accent);
+}
+.col-a-text{
+    color: var(--accent);
+}
+
+.cst-button-card{
+    width: 40%;
+    height: auto;
+    background-color: var(--button);
+    color: var(--background);
+    padding: 7px;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.cst-button-card:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    /* border: 1px solid var(--button); */
+    transition: 0.2s;
+    color: var(--button);
+}
+
+.cst-button{
+    width: 40%;
+    height: auto;
+    background-color: var(--button);
+    color: var(--background);
+    padding: 7px;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+.cst-button:hover{
+    background-color: var(--background);
+    border: 1px solid var(--button);
+    transition: 0.2s;
+    color: var(--button);
+}
+
+.cst-button-card2{
+    width: 40%;
+    height: auto;
+    background-color: white;
+    color: var(--button);
+    padding: 7px;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid var(--button);
+}
+
+.cst-button-card2:hover{
+    background-color: var(--button);
+    transition: 0.2s;
+    color: white;
+}
+
+.cst-form{
+    
+    width: 100%;
+    background-color: var(--secondary);
 }
