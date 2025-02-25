@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Ad;
+use App\Models\Category;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
+use Illuminate\Routing\Controllers\HasMiddleware;
 
 class AdController extends Controller implements HasMiddleware
 {
@@ -39,7 +40,7 @@ class AdController extends Controller implements HasMiddleware
      */
     public function show(Ad $ad)
     {
-        //
+        return view('ad.show', compact('ad'));
     }
 
     /**
@@ -66,9 +67,14 @@ class AdController extends Controller implements HasMiddleware
         //
     }
 
-    public static function middleware(): array {
-        return[
-            new Middleware('auth', only:['create']),
+    public static function middleware(): array
+    {
+        return [
+            new Middleware('auth', only: ['create']),
         ];
+    }
+    public function byCategory(Category $category)
+    {
+        return view('ad.byCategory', ['ads' => $category->ads, 'category' => $category]);
     }
 }

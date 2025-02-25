@@ -10,3 +10,5 @@ Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 Route::get('/create/ad',[AdController::class,'create'] )->name('create.ad');
 //Rotta per l'indice degli articoli
 Route::get('/ad/index', [AdController::class, 'index'])->name('ad.index');
+Route::get("/show/ad/{ad}",[AdController::class,'show'])->name('ad.show');
+Route::get('/category/{category}',[AdController::class,'byCategory'])->name('byCategory');
