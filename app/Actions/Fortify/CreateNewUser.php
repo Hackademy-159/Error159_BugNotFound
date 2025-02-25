@@ -20,49 +20,55 @@ class CreateNewUser implements CreatesNewUsers
      */
     public function create(array $input): User
     {
-        Validator::make($input,
-         [
-            'name' => ['required', 'min:2', 'alpha'],
-            'surname'=> ['required', 'alpha'],
-            'email' => ['required','string','email','max:255',
-                Rule::unique(User::class),],
-            'password' => $this->passwordRules(),
-            'date'=> ['required', 'date', 'before:' . now()->subYears(18)->toDateString()],
-            'telephone_number'=> ['required', 'regex:/^+?[0-9]{10,15}$/'],
-         ],
-         [
-            'name.required' => 'Il nome è obbligatorio.',
-        'name.alpha' => 'Il nome può contenere solo lettere.',
-        'name.min' => 'Il nome deve contenere almeno 2 caratteri.',
-        
-        'surname.required' => 'Il cognome è obbligatorio.',
-        'surname.alpha' => 'Il cognome può contenere solo lettere.',
+        Validator::make(
+            $input,
+            [
+                'name' => ['required', 'min:2', 'alpha'],
+                'surname' => ['required', 'alpha'],
+                'email' => [
+                    'required',
+                    'string',
+                    'email',
+                    'max:255',
+                    Rule::unique(User::class),
+                ],
+                'password' => $this->passwordRules(),
+                'date' => ['required', 'date', 'before:' . now()->subYears(18)->toDateString()],
+                'telephone_number' => ['required', 'regex:/^+?[0-9]{10,15}$/'],
+            ],
+            [
+                'name.required' => 'Il nome è obbligatorio.',
+                'name.alpha' => 'Il nome può contenere solo lettere.',
+                'name.min' => 'Il nome deve contenere almeno 2 caratteri.',
 
-        'telephone_number.required' => 'Il numero di telefono è obbligatorio.',
-        'telephone_number.regex' => 'Il numero di telefono dev\'essere nel formato corretto e deve avere tra 8 e 15 cifre.',
+                'surname.required' => 'Il cognome è obbligatorio.',
+                'surname.alpha' => 'Il cognome può contenere solo lettere.',
 
-        'email.required' => "L'email è obbligatoria.",
-        'email.email' => "Inserisci un'email valida.",
-        'email.unique' => "L'email è già registrata.",
+                'telephone_number.required' => 'Il numero di telefono è obbligatorio.',
+                'telephone_number.regex' => 'Il numero di telefono dev\'essere nel formato corretto e deve avere tra 8 e 15 cifre.',
 
-        'password.required' => 'La password è obbligatoria.',
-        'password.min' => 'La password deve contenere almeno 8 caratteri.',
-        'password.confirmed' => 'Le password non coincidono.',
+                'email.required' => "L'email è obbligatoria.",
+                'email.email' => "Inserisci un'email valida.",
+                'email.unique' => "L'email è già registrata.",
 
-        'date.required' => 'La data di nascita è obbligatoria.',
-        'date.date' => 'Inserisci una data di nascita valida.',
-        'date.before' => 'Devi avere almeno 18 anni per registrarti.',
-         ]
-         )->validate();
-            
+                'password.required' => 'La password è obbligatoria.',
+                'password.min' => 'La password deve contenere almeno 8 caratteri.',
+                'password.confirmed' => 'Le password non coincidono.',
+
+                'date.required' => 'La data di nascita è obbligatoria.',
+                'date.date' => 'Inserisci una data di nascita valida.',
+                'date.before' => 'Devi avere almeno 18 anni per registrarti.',
+            ]
+        )->validate();
+
 
         return User::create([
             'name' => $input['name'],
             'email' => $input['email'],
             'password' => Hash::make($input['password']),
-            'surname'=>$input['surname'],
-            'telephone_number'=>$input['telephone_number'],
-            'date'=> Carbon::parse($input['date'])->format('d-m-Y'),
+            'surname' => $input['surname'],
+            'telephone_number' => $input['telephone_number'],
+            'date' => Carbon::parse($input['date'])->format('d-m-Y'),
         ]);
     }
 }
