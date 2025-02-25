@@ -7,4 +7,6 @@ use App\Http\Controllers\PublicController;
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 
 //Rotta get per la vista dell'annuncio
-    Route::get('/create/ad',[AdController::class,"create"] )->name("create.ad");
+Route::get('/create/ad',[AdController::class,'create'] )->name('create.ad');
+//Rotta per l'indice degli articoli
+Route::get('/ad/index', [AdController::class, 'index'])->name('ad.index');

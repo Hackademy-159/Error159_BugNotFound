@@ -14,7 +14,8 @@ class AdController extends Controller implements HasMiddleware
      */
     public function index()
     {
-        //
+        $ads = Ad::orderBy('created_at', 'desc')->paginate(6);
+        return view('ad.index', compact('ads'));
     }
 
     /**
@@ -22,7 +23,7 @@ class AdController extends Controller implements HasMiddleware
      */
     public function create()
     {
-        return view("ads.create");
+        return view("ad.create");
     }
 
     /**
