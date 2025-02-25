@@ -1,54 +1,60 @@
-:root{
-    --background:rgb(253,251,239);   
-    --secondary:#f7d5c2;
-    --button:#004766;
-    --opacity:rgba(255, 255, 255, 0.5);;
+:root {
+    --background: rgb(253, 251, 239);
+    --secondary: #f7d5c2;
+    --button: #004766;
+    --opacity: rgba(255, 255, 255, 0.5);
+    ;
 }
 
-*{
-    color: var(--button) ; 
+* {
+    color: var(--button);
 
 }
 
 
 
 
-.col-bg{
+.col-bg {
     background-color: var(--background);
 }
-.col-bg-text{
+
+.col-bg-text {
     color: var(--background);
 }
 
-.col-p{
+.col-p {
     background-color: var(--primary);
 }
-.col-p-text{
+
+.col-p-text {
     color: var(--primary);
 }
 
-.col-s{
+.col-s {
     background-color: var(--secondary);
 }
-.col-s-text{
+
+.col-s-text {
     color: var(--secondary);
 }
 
-.col-b{
+.col-b {
     background-color: var(--button);
 }
-.col-b-text{
+
+.col-b-text {
     color: var(--button);
 }
 
-.col-a{
+.col-a {
     background-color: var(--accent);
 }
-.col-a-text{
+
+.col-a-text {
     color: var(--accent);
 }
 
-.cst-button-card{
+.cst-button-card {
     width: 50%;
     height: auto;
     background-color: var(--button);
@@ -60,14 +66,14 @@
     font-weight: 600;
 }
 
-.cst-button-card:hover{
-    background-color:var(--opacity);
+.cst-button-card:hover {
+    background-color: var(--opacity);
     border: 1px solid var(--button);
     transition: 0.2s;
     color: var(--button);
 }
 
-.cst-button{
+.cst-button {
     width: 50%;
     height: auto;
     background-color: var(--button);
@@ -80,14 +86,14 @@
 }
 
 
-.cst-button:hover{
+.cst-button:hover {
     background-color: var(--background);
     border: 1px solid var(--button);
     transition: 0.2s;
     color: var(--button);
 }
 
-.cst-button-card2{
+.cst-button-card2 {
     width: 50%;
     height: auto;
     background-color: rgba(255, 255, 255, 0.5);
@@ -100,20 +106,40 @@
     border: 1px solid var(--button);
 }
 
-.cst-button-card2:hover{
+.cst-button-card2:hover {
     background-color: var(--button);
     transition: 0.2s;
     color: white;
 }
-.no-radius{
-    border-radius: 0px!important;
+
+.no-radius {
+    border-radius: 0px !important;
 }
-.cst-form{
-    
+
+.cst-form {
+
     width: 100%;
     background-color: var(--secondary);
 }
+
 .shadow-top {
     box-shadow: 0 -4px 8px -2px rgba(0, 0, 0, 0.2) !important;
     margin-top: 18vh;
 }
+
+.dropdown-menu {
+    background-color: var(--background) !important;
+}
+
+.dropdown-menu .dropdown-item {
+    color: var(--button) !important;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: var(--button)!important; 
+    color: var(--background) !important;
+}
+
+.navbar .nav-link {
+    color: var(--button) !important;
+}   

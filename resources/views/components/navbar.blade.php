@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg col-bg border-bottom shadow">
-    <div class="container-fluid  ">
+    <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
             aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
