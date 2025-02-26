@@ -13,7 +13,7 @@ class PublicController extends Controller
         return view('welcome', compact('ads'));
     }
 
-    public function searchArticles(Request $request)
+    public function searchAds(Request $request)
 {
     $query = $request->input('query');
     $ads = Ad::search($query)->where('is_accepted', true)->paginate(10);
