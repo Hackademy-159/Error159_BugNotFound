@@ -2,6 +2,7 @@
 
 return [
 
+
     /*
     |--------------------------------------------------------------------------
     | Default Search Engine
@@ -17,6 +18,8 @@ return [
     */
 
     'driver' => env('SCOUT_DRIVER', 'algolia'),
+    'driver' => env('SCOUT_DRIVER', 'tntsearch'),
+
 
     /*
     |--------------------------------------------------------------------------
@@ -206,4 +209,17 @@ return [
         ],
     ],
 
+    'tntsearch' => [
+        'storage' => storage_path(), // place where the index files will be stored
+        'fuzziness' => env('TNTSEARCH_FUZZINESS', true),
+        'fuzzy' => [
+            'prefix_length' => 2,
+            'max_expansions' => 50,
+            'distance' => 2,
+            'no_limit' => true
+        ],
+        'asYouType' => false,
+        'searchBoolean' => env('TNTSEARCH_BOOLEAN', false),
+        'maxDocs' => env('TNTSEARCH_MAX_DOCS', 500),
+    ],
 ];
