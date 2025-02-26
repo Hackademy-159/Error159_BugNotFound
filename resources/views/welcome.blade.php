@@ -1,4 +1,5 @@
 <x-layout>
+    <x-error />
     <div class="container-fluid text-center">
         <div class="row wh-100 justify-content-center align-items-center">
             <div class="col-12">

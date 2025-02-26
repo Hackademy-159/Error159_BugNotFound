@@ -14,9 +14,9 @@
                     <a class="nav-link active" aria-current="page" href="{{ route('ad.index') }}">Tutti gli articoli</a>
                 </li>
                 @auth
-                <li class="nav-item">
-                    <a class="nav-link active" href="{{ route('create.ad') }}">Crea un annuncio</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ route('create.ad') }}">Crea un annuncio</a>
+                    </li>
                 @endauth
                 <li class="nav-item dropdown">
                     <a class='nav-link dropdown-toggle active ' href=""role='buttom' data-bs-toggle='dropdown'
@@ -39,7 +39,7 @@
                     </ul>
                 </li>
             </ul>
-
+            {{-- ZONA NAVBAR DI DESTRA --}}
             <ul class="navbar-nav mb-2 mb-lg-0">
                 @guest
                     <li class="nav-item">
@@ -54,11 +54,21 @@
                 @auth
                     <li class="nav-item">
                         @if (Auth::user())
-                            
                             <a class="nav-link fs-5 active pe-3">Benvenuto {{ Auth::user()->name }}</a>
                         @endif
                     </li>
-                  
+
+                    @if (Auth::user()->is_revisor)
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-outline-success btn-sm position-relative w-sm-25"
+                                href="{{ route('revisor.index') }}">Zona revisore
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    {{\App\Models\Ad::toBeRevisedCount()}}
+                                </span>
+                            </a>
+                        </li>
+                    @endif
+
                     <li class="nav-item ms-auto py-1">
                         <form action="{{ route('logout') }}" method="POST">
                             @csrf
