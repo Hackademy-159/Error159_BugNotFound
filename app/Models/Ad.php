@@ -4,11 +4,24 @@ namespace App\Models;
 
 use App\Models\User;
 use App\Models\Category;
+use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Ad extends Model
 {
+    use Searchable;
+
+    public function toSearchableArray()
+    {
+        return [
+            'id'=>$this->id,
+            'title'=>$this->title,
+            'description'=>$this->description,
+            'category'=>$this->category,
+        ];
+    }
+
     protected $fillable = ['title','price','description','status','color','user_id', 'category_id'];
 
     public function user(): BelongsTo
