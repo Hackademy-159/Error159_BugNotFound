@@ -23,3 +23,7 @@ Route::patch('/accept/{ad}' , [RevisorController::class, 'accept'])->name('accep
 Route::patch('/reject/{ad}' , [RevisorController::class, 'reject'])->name('reject'); //1sor·Controller' , 1ccqit ì l(crpt \,
 //rotta per mostrare indice dei prodottti da revisionare
 Route::get('/revisor/index', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
+// rotta per invio email di richiesta revisor
+Route::get('/revisor/request', [RevisorController::class,"becomeRevisor"])->middleware('auth')->name('become.revisor');
+// Rotta per rendereun  utente  revisore
+Route::get('/make/revisor/{user}', [RevisorController::class,"makeRevisor"])->name('make.revisor');
