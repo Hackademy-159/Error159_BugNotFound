@@ -34,7 +34,9 @@ class CreateNewUser implements CreatesNewUsers
                 ],
                 'password' => $this->passwordRules(),
                 'date' => ['required', 'date', 'before:' . now()->subYears(18)->toDateString()],
-                'telephone_number' => ['required', 'regex:/^+?[0-9]{10,15}$/'],
+                'telephone_number' => ['required', 'regex:/^\+?[0-9]{10,15}$/'],
+
+
             ],
             [
                 'name.required' => 'Il nome è obbligatorio.',
