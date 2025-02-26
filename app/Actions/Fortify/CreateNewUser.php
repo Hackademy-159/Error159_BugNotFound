@@ -2,11 +2,12 @@
 
 namespace App\Actions\Fortify;
 
-use App\Models\User;
 use Carbon\Carbon;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
+use App\Models\User;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Validator;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
 
 class CreateNewUser implements CreatesNewUsers
@@ -62,6 +63,8 @@ class CreateNewUser implements CreatesNewUsers
                 'date.before' => 'Devi avere almeno 18 anni per registrarti.',
             ]
         )->validate();
+        Session::flash('success', 'Registrazione completata con successo! Ora puoi creare il tuo annuncio.');
+
 
 
         return User::create([
