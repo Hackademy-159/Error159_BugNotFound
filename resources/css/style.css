@@ -12,8 +12,6 @@
 }
 
 
-
-
 .col-bg {
     background-color: var(--background);
 }
@@ -43,16 +41,25 @@
 }
 
 .col-b-text {
-    color: var(--button)!important;
+    color: var(--button) !important;
 }
 
 .col-o {
-    background-color: var(--opacity)!important;
+    background-color: var(--opacity) !important;
+}
+
+.title-header{
+    font-size: 17vh;
+    font-weight: 200;
+}
+.sutitle-header{
+    font-size: 13vh;
+    font-weight: 200;
 }
 
 .btn-search {
-    background-color: var(--button)!important;
-    color: var(--background)!important;
+    background-color: var(--button) !important;
+    color: var(--background) !important;
     border: 1px solid var(--button);
     border-radius: 5px;
     font-weight: 600;
@@ -140,26 +147,35 @@
 }
 
 .dropdown-menu .dropdown-item:hover {
-    background-color: var(--button)!important; 
+    background-color: var(--button) !important;
     color: var(--background) !important;
 }
 
 .navbar .nav-link {
     color: var(--button) !important;
-}   
+}
 
-.cst-dim{
+.cst-dim {
     height: 55px;
     width: 55px;
 }
+
 /* classe per rimuovere il colore celeste quando si dgita nella barra di ricerca */
 input:focus {
-    border-color: initial !important; 
-    box-shadow: none !important;      
+    border-color: initial !important;
+    box-shadow: none !important;
 }
+
 .header-custom {
     background-image: url('../img/header_img.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    /* background-color: rgba(255, 255, 255, 0.6); 
+    background-blend-mode: lighten; */
+
+    background-color: rgba(0, 0, 0, 0.7); 
+    background-blend-mode: darken; 
+
+
 }

@@ -2,9 +2,10 @@
     <x-error />
     <x-success />
     <div class="container-fluid text-center">
-        <div class="row  vh-100">
-            <div class="header-custom">
-
+        <div class="row "> 
+            <div class="col-12 header-custom vh-100 d-flex flex-column justify-content-center">
+                <h1 class="title-header col-bg-text">RiArreda</h1>
+                <h2 class="subtitle-header col-bg-text">Occasioni uniche a prezzi imbattibili.</h2>
             </div>
         </div>
 
