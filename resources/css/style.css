@@ -48,14 +48,7 @@
     background-color: var(--opacity) !important;
 }
 
-.title-header{
-    font-size: 17vh;
-    font-weight: 200;
-}
-.sutitle-header{
-    font-size: 13vh;
-    font-weight: 200;
-}
+
 
 .btn-search {
     background-color: var(--button) !important;
@@ -166,16 +159,104 @@ input:focus {
     box-shadow: none !important;
 }
 
-.header-custom {
+/* .header-custom {
     background-image: url('../img/header_img.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* background-color: rgba(255, 255, 255, 0.6); 
-    background-blend-mode: lighten; */
-
     background-color: rgba(0, 0, 0, 0.7); 
     background-blend-mode: darken; 
 
+} */
 
+.nav-scrolled {
+    background-color: rgba(0, 0, 0, 0.8) !important; 
+    transition: background-color 1s ease-in-out;
 }
+
+
+.header-custom {
+    position: relative;
+    background-image: url('../img/header_img.png');
+    background-size: cover; 
+    background-position: center center; 
+    background-repeat: no-repeat;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5%;
+}
+
+/* / Overlay per migliorare la leggibilità del testo / */
+.header-custom::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+/* / Testo sopra l'overlay / */
+.title-header{
+    font-size: 10vh;
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.subtitle-header {
+    font-size: 6vh;
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* .title-header{
+    font-size: 17vh;
+    font-weight: 200;
+}
+.sutitle-header{
+    font-size: 13vh;
+    font-weight: 200;
+} */
+
+
+/* / Responsive per mobile / */
+@media (max-width: 768px) {
+    .header-custom {
+        height: auto; 
+        min-height: 100vh; 
+        padding: 20% 5%; 
+        background-position: center top;
+    }
+
+    .title-header {
+        font-size: 2rem;
+    }
+
+    .subtitle-header {
+        font-size: 1.2rem;
+    }
+}
+
+/* @media (max-width: 768px) { 
+    .header-custom {
+        background-size: contain; 
+        background-position: center top; 
+        background-repeat: no-repeat;
+    }
+    .title-header {
+        font-size: 2rem; 
+    }
+    .subtitle-header {
+        font-size: 1.2rem; 
+    }
+} */

@@ -16,7 +16,7 @@
           <p>
            Cliccando il bottone sottostante farai richiesta al nostro admin
           </p>
-          <a href="{{ route ('become.revisor')}}" class="btn btn-success">Diventa revisore</a>
+          <a href="{{ route ('become.revisor')}}" class="cst-button">Diventa revisore</a>
         </div>
         <!-- Grid column -->
 

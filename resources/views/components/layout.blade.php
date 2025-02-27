@@ -8,7 +8,14 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="col-bg">
-    <x-navbar></x-navbar>
+    @if (Route::currentRouteName()=='homepage')
+    <x-navbar-home />
+        @else
+    <x-navbar />     
+    @endif
+
+    
+    
     {{$slot}}
     <x-footer></x-footer>
 </body>

@@ -1,4 +1,4 @@
-<nav  class="navbar navbar-expand-lg col-bg border-bottom shadow fixed-top">
+<nav id="navbar" class="navbar navbar-expand-lg col-bg-text border-bottom shadow fixed-top">
     <div class="container-fluid">
         {{-- logo --}}
         <a href="{{ route('homepage') }}"><img class="cst-dim" src="{{ asset('img/Logo.png') }}" alt="Logo"></a>
