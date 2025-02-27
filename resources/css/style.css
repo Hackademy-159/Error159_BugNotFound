@@ -43,15 +43,19 @@
 }
 
 .col-b-text {
-    color: var(--button);
+    color: var(--button)!important;
 }
 
-.col-a {
-    background-color: var(--accent);
+.col-o {
+    background-color: var(--opacity)!important;
 }
 
-.col-a-text {
-    color: var(--accent);
+.btn-search {
+    background-color: var(--button)!important;
+    color: var(--background)!important;
+    border: 1px solid var(--button);
+    border-radius: 5px;
+    font-weight: 600;
 }
 
 .cst-button-card {

@@ -1,6 +1,20 @@
 <nav class="navbar navbar-expand-lg col-bg border-bottom shadow">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{ route('homepage') }}"><img class="cst-dim" src="{{ asset('img/Logo.png') }}" alt="Logo"></a>
+        {{-- logo --}}
+        <a href="{{ route('homepage') }}"><img class="cst-dim" src="{{ asset('img/Logo.png') }}" alt="Logo"></a>
+        <div class="d-md-none d-lg-none">
+            {{-- campo ricerca mobile --}}
+            <form class="d-flex ms-auto me-sm-auto" role="search" action="{{ route('ad.search') }}" method="GET">
+                <div class="input-group">
+                    <input type="search" name="query" class="form-control" placeholder="Cerca..."
+                        aria-label="Search">
+                    <button type="submit" class="btn-search input-group-text" id="basic-addon2">
+                        Cerca
+                    </button>
+                </div>
+            </form>
+        </div>
+        {{-- bottone apertura navbar mobile --}}
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
             aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -9,7 +23,8 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                 <li class="nav-item">
-                    <a class="nav-link active fs-5" aria-current="page" href="{{ route('ad.index') }}">Tutti gli articoli</a>
+                    <a class="nav-link active fs-5" aria-current="page" href="{{ route('ad.index') }}">Tutti gli
+                        articoli</a>
                 </li>
                 @auth
                     <li class="nav-item">
@@ -17,8 +32,8 @@
                     </li>
                 @endauth
                 <li class="nav-item dropdown">
-                    <a class='nav-link dropdown-toggle active fs-5 ' href=""role='buttom' data-bs-toggle='dropdown'
-                        aria-expamded='false'>
+                    <a class='nav-link dropdown-toggle active fs-5 ' href=""role='buttom'
+                        data-bs-toggle='dropdown' aria-expamded='false'>
                         Categorie
                     </a>
                     <ul class="dropdown-menu">
@@ -38,21 +53,22 @@
                 </li>
             </ul>
             {{-- ZONA NAVBAR DI DESTRA --}}
-            
+
 
 
             <ul class="navbar-nav mb-2 mb-lg-0">
-                
 
-                <form class="d-flex ms-auto" role="search" action="{{ route('ad.search') }}" method="GET">
+                <li class="nav-item pt-1">
+                <form class="d-flex ms-auto me-sm-auto" role="search" action="{{ route('ad.search') }}" method="GET">
                     <div class="input-group">
-                        <input type="search" name="query" class="form-control" placeholder="Cerca..."
+                        <input type="search" name="query" class="form-control col-o col-b-text" placeholder="Cerca..."
                             aria-label="Search">
-                        <button type="submit" class="btn btn-outline-success input-group-text" id="basic-addon2">
+                        <button type="submit" class="btn-search input-group-text" id="basic-addon2">
                             Cerca
                         </button>
                     </div>
                 </form>
+                </li>
 
                 @guest
                     <li class="nav-item">
@@ -67,20 +83,23 @@
                 @auth
 
                     <li class="nav-item dropdown-center ms-2">
-                        <a class='nav-link dropdown-toggle active fs-5' href=""role='buttom' data-bs-toggle='dropdown'
-                            aria-expamded='false'>Ciao {{ Auth::user()->name }}</a>
+                        <a class='nav-link dropdown-toggle active fs-5' href=""role='buttom'
+                            data-bs-toggle='dropdown' aria-expamded='false'>Ciao {{ Auth::user()->name }}</a>
                         <ul class="dropdown-menu dropdown-menu-end">
 
                             @if (Auth::user()->is_revisor)
-                                <li class="">
-                                    <a class="nav-item text-decoration-none  position-relative w-sm-25"
+                                <li class="ms-3">
+                                    <a class="nav-item text-decoration-none col-b-text fw-semibold"
                                         href="{{ route('revisor.index') }}">Zona revisore
-                                        <span class=" text-white rounded-pill bg-danger px-2">  {{ \App\Models\Ad::toBeRevisedCount() }}  </span>
+                                        <span class=" text-white rounded-pill bg-danger px-2 fw-bold">
+                                            {{ \App\Models\Ad::toBeRevisedCount() }} </span>
                                     </a>
                                 </li>
-                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
                             @endif
-                            
+
                             <li class="nav-item py-1">
                                 <form action="{{ route('logout') }}" method="POST" class="">
                                     @csrf
@@ -91,27 +110,9 @@
                         </ul>
                     </li>
 
-                    {{-- <div class="dropdown">
-                    <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                      Seleziona
-                    </button>
-                    class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger"
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <li><a class="dropdown-item" href="#">Opzione 1</a></li>
-                      <li><a class="dropdown-item" href="#">Opzione 2</a></li>
-                      <li><a class="dropdown-item" href="#">Opzione 3</a></li>
-                    </ul>
-                  </div> --}}
-
-
                 @endauth
-                
-            </ul>
 
-            {{-- <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form> --}}
+            </ul>
         </div>
     </div>
 </nav>

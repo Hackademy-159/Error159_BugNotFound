@@ -11,6 +11,7 @@
                     @endauth
                 </div>
             </div>
+            
         </div>
         <div class="row justify-content-center align-items-center py-5">
             @forelse ($ads as $ad)
