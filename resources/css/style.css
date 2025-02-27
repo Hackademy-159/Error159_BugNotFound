@@ -143,3 +143,8 @@
 .navbar .nav-link {
     color: var(--button) !important;
 }   
+
+.cst-dim{
+    height: 55px;
+    width: 55px;
+}

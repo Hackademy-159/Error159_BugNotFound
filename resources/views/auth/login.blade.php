@@ -32,7 +32,7 @@
 
                     <!-- Link alla Registrazione -->
                     <div class="text-center mt-3">
-                        <p>Ancora non hai un account? <a href="{{ route('register') }}">Iscriviti</a>.</p>
+                        <p>Ancora non hai un account? <a  class="fs-5  fw-bold col-b-text" href="{{ route('register') }}">Iscriviti</a>.</p>
                     </div>
                 </form>
             </div>
