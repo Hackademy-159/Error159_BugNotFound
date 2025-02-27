@@ -40,6 +40,14 @@
                 </li>
             </ul>
             {{-- ZONA NAVBAR DI DESTRA --}}
+            <form class="d-flex ms-auto" role="search" action="{{route('ad.search')}}" method="GET">
+                <div class="input-group">
+                    <input type="search" name="query" class="form-control" placeholder="Cerca..." aria-label="Search">
+                    <button type="submit" class="btn btn-outline-success input-group-text" id="basic-addon2"> 
+                        Cerca
+                    </button>
+                </div>
+            </form>
             <ul class="navbar-nav mb-2 mb-lg-0">
                 @guest
                     <li class="nav-item">
