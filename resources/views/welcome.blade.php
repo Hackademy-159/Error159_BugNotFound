@@ -3,7 +3,7 @@
     <x-success />
     <div class="container-fluid text-center">
         <div class="row "> 
-            <div class="col-12  vh-100 header-custom d-flex flex-column justify-content-center">
+            <div class="col-12 vh-100 header-custom d-flex flex-column justify-content-center">
                 <h1 class="title-header col-bg-text">RiArreda</h1>
                 <h2 class="subtitle-header col-bg-text">Occasioni uniche a prezzi imbattibili.</h2>
                 <div class="m-5 z-2">
