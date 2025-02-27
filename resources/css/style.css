@@ -152,3 +152,14 @@
     height: 55px;
     width: 55px;
 }
+/* classe per rimuovere il colore celeste quando si dgita nella barra di ricerca */
+input:focus {
+    border-color: initial !important; 
+    box-shadow: none !important;      
+}
+.header-custom {
+    background-image: url('../img/header_img.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

@@ -2,8 +2,8 @@
     <div class="container-fluid">
         {{-- logo --}}
         <a href="{{ route('homepage') }}"><img class="cst-dim" src="{{ asset('img/Logo.png') }}" alt="Logo"></a>
-        <div class="d-md-none d-lg-none">
-            {{-- campo ricerca mobile --}}
+        {{-- campo ricerca mobile --}}
+        <div class="d-md-none">
             <form class="d-flex ms-auto me-sm-auto" role="search" action="{{ route('ad.search') }}" method="GET">
                 <div class="input-group">
                     <input type="search" name="query" class="form-control" placeholder="Cerca..."
