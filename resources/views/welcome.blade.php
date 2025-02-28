@@ -50,32 +50,19 @@
                 </div>
 
                 {{-- modale --}}
-                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
-                            <div class="d-flex justify-content-between pt-2 col-bg">
-                                <h1 class="ps-3 modal-title-text" id="staticBackdropLabel">Conferma la tua scelta</h1>
-                                <div>
-                                    <button type="button" class="pe-3 btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
+                            <div class="modal-header col-bg">
+                                <h5 class="modal-title modal-title-text" id="staticBackdropLabel">Conferma la tua scelta</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <div class="col-bg">
-                                <hr>
-                            </div>
-                            <div class="modal-body col-bg">
+                            <div class="modal-body col-bg text-center">
                                 <p class="modal-text">Sei sicuro di voler diventare revisore?</p>
                             </div>
-                            <div class="col-bg">
-                                <hr>
-                            </div>
-                            <div class="col-bg pb-4 d-flex justify-content-center">
-                                <div class="w-75">
-                                    <button type="button" class="cst-button width-custom"
-                                        data-bs-dismiss="modal">Annulla</button>
-                                    </div>
-                                    <a href="{{ route('become.revisor') }}" class="cst-button width-custom">Conferma</a>
+                            <div class="modal-footer col-bg d-flex justify-content-center">
+                                <button type="button" class="cst-button width-custom me-2" data-bs-dismiss="modal">Annulla</button>
+                                <a href="{{ route('become.revisor') }}" class="cst-button width-custom">Conferma</a>
                             </div>
                         </div>
                     </div>
