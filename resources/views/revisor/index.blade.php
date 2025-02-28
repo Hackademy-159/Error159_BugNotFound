@@ -63,7 +63,8 @@
                 <div class="col-12">
                     <h1 class="fst-italic display-4 text-muted">Nessun articolo da revisionare
                     </h1>
-                    <a href="{{ route('homepage') }}" class="mt-4 btn btn-success px-4 py-2 shadow-sm">Torna
+                    <br>
+                    <a href="{{ route('homepage') }}" class="cst-button py-2 px-6 fs-6">Torna
                         all'homepage</a>
                 </div>
             </div>
