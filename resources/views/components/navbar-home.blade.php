@@ -1,4 +1,4 @@
-<nav id="navbar" class="navbar navbar-expand-lg col-bg border-bottom shadow fixed-top">
+<nav id="navbar" class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
         {{-- logo --}}
         <a href="{{ route('homepage') }}"><img class="cst-dim" src="{{ asset('img/Logo.png') }}" alt="Logo"></a>
@@ -23,16 +23,16 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                 <li class="nav-item">
-                    <a class="nav-link active fs-5" aria-current="page" href="{{ route('ad.index') }}">Tutti gli
+                    <a  class="navElement col-bg-text nav-link active fs-5" aria-current="page" href="{{ route('ad.index') }}">Tutti gli
                         articoli</a>
                 </li>
                 @auth
                     <li class="nav-item">
-                        <a class="nav-link active fs-5" href="{{ route('create.ad') }}">Crea un annuncio</a>
+                        <a  class="navElement col-bg-text nav-link active fs-5" href="{{ route('create.ad') }}">Crea un annuncio</a>
                     </li>
                 @endauth
                 <li class="nav-item dropdown">
-                    <a class='nav-link dropdown-toggle active fs-5 ' href=""role='buttom'
+                    <a  class='navElement col-bg-text nav-link dropdown-toggle active fs-5 ' href=""role='buttom'
                         data-bs-toggle='dropdown' aria-expamded='false'>
                         Categorie
                     </a>
@@ -72,18 +72,18 @@
 
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link fs-5" href="{{ route('login') }}">Login</a>
+                        <a  class="navElement col-bg-text nav-link fs-5" href="{{ route('login') }}">Login</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link fs-5 me-2" href="{{ route('register') }}">Registrati</a>
+                        <a  class="navElement col-bg-text nav-link fs-5 me-2" href="{{ route('register') }}">Registrati</a>
                     </li>
                 @endguest
 
                 @auth
 
                     <li class="nav-item dropdown-center ms-2">
-                        <a class='nav-link dropdown-toggle active fs-5' href=""role='buttom'
+                        <a  class='navElement col-bg-text nav-link dropdown-toggle active fs-5' href=""role='buttom'
                             data-bs-toggle='dropdown' aria-expamded='false'>Ciao {{ Auth::user()->name }}</a>
                         <ul class="dropdown-menu dropdown-menu-end">
 

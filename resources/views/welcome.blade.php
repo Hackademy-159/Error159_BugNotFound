@@ -43,25 +43,29 @@
                             Diventa revisore
                         </button>
                     @else
-                        <a href="{{ route('login') }}" class="cst-section-button">
-                            Diventa revisore
-                        </a>
+                        <button type="button" class="cst-section-button">
+                            <a href="{{ route('login') }}"></a>Diventa revisore
+                        </button>
                     @endif
                 </div>
 
                 {{-- modale --}}
-                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header col-bg">
-                                <h5 class="modal-title modal-title-text" id="staticBackdropLabel">Conferma la tua scelta</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <h5 class="modal-title modal-title-text" id="staticBackdropLabel">Conferma la tua scelta
+                                </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                             </div>
                             <div class="modal-body col-bg text-center">
                                 <p class="modal-text">Sei sicuro di voler diventare revisore?</p>
                             </div>
                             <div class="modal-footer col-bg d-flex justify-content-center">
-                                <button type="button" class="cst-button width-custom me-2" data-bs-dismiss="modal">Annulla</button>
+                                <button type="button" class="cst-button width-custom me-2"
+                                    data-bs-dismiss="modal">Annulla</button>
                                 <a href="{{ route('become.revisor') }}" class="cst-button width-custom">Conferma</a>
                             </div>
                         </div>

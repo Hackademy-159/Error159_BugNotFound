@@ -1,15 +1,20 @@
-let navbar = document.querySelector("#navbar")
+document.addEventListener("DOMContentLoaded", function () {
+    let navbar = document.querySelector("#navbar");
+    let navElements = document.querySelectorAll(".navElement");
 
-document.addEventListener("DOMContentLoaded", function() {
-    var navbar = document.getElementById("navbar");
-
-    window.addEventListener("scroll", function() {
-        if (window.scrollY > 847) { 
-            navbar.classList.add("col-bg","col-b-text");
-            navbar.classList.remove("col-bg-text");
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 847) {
+            navElements.forEach(navElements => {
+                navElements.classList.add("col-b-text");
+                navElements.classList.remove("col-bg-text");
+            });
+            navbar.classList.add("col-bg","shadow");
         } else {
-            navbar.classList.add("col-bg-text");
-            navbar.classList.remove("col-bg","col-b-text");
+            navElements.forEach(navElements => {
+                navElements.classList.add("col-bg-text");
+                navElements.classList.remove("col-b-text");
+            });
+            navbar.classList.remove("col-bg","shadow");
         }
     });
 });
