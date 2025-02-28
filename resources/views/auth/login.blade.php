@@ -1,5 +1,5 @@
 <x-layout>
-    <h1 class="text-center p-3 display-2 fw-normal col-b-text my-5">Accedi al tuo account:</h1>
+    <h1 class="text-center p-3 display-2 fw-normal col-b-text my-5 pt-5">Accedi al tuo account:</h1>
 
     <div class="container">
         <div class="row justify-content-center">

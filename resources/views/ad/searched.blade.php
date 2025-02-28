@@ -2,7 +2,7 @@
     <div class="container-fluid ">
         <div class="row py-5 justify-content-center align-items-center text-center">
             <div class="col-12">
-                <h1 class="display-1">Risultati per la ricerca "<span class="fst-italic">{{ $query }}</span>"</h1>
+                <h1 class="text-center display-2 fw-normal col-b-text mt-5">Risultati per la ricerca "<span class="fst-italic">{{ $query }}</span>"</h1>
             </div>
         </div>
         <div class="row height-custom justify-content-center align-items-center py-5">

@@ -2,8 +2,8 @@
     <div class="container">
         <div class="row py-5 justify-content-center align-items-center text-center">
             <div class="col-12 pt-5">
-                <h1 class="display-2">Articoli della categoria 
-                    <h2 class="fst-italic fw-bold display-3">{{ $category->name }}</h2>
+                <h1 class="text-center display-2 fw-normal col-b-text">Articoli della categoria 
+                    <h2 class="fst-italic fw-bold display-5">{{ $category->name }}</h2>
                 </h1>
             </div>
         </div>

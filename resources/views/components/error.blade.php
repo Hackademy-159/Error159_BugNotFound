@@ -1,5 +1,5 @@
 @if (session('error'))
-    <div class="container d-flex justify-content-center">
+    <div class="container d-flex justify-content-center z-3">
         <div class="alert alert-danger d-flex align-items-center justify-content-between shadow-sm p-3 rounded position-relative col-md-9">
             <i class="bi bi-x-circle-fill me-2 fs-5"></i> 
             <span class="flex-grow-1 text-danger fw-semibold">{{ session('error') }}</span>

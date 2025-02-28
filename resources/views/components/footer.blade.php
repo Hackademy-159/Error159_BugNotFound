@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="text-center text-lg-start col-bg text-muted mt-5">
+<footer class="text-center text-lg-start col-bg text-muted">
 
     <!-- Section: Links  -->
     <section class="shadow-top py-5">
