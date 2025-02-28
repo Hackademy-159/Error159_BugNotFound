@@ -1,91 +1,53 @@
 <!-- Footer -->
 <footer class="text-center text-lg-start col-bg text-muted mt-5">
-  
 
-  <!-- Section: Links  -->
-  <section class="shadow-top py-5">
-    <div class="container text-center text-md-start mt-5">
-      <!-- Grid row -->
-      <div class="row mt-3">
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-          <!-- Content -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i> Vuoi diventare revisore?
-          </h6>
-          <p>
-           Cliccando il bottone sottostante farai richiesta al nostro admin
-          </p>
-          <a href="{{ route ('become.revisor')}}" class="cst-button">Diventa revisore</a>
-        </div>
-        <!-- Grid column -->
+    <!-- Section: Links  -->
+    <section class="shadow-top py-5">
+        <div class="container text-center text-md-start">
+            <div class="row d-flex justify-content-between text-center text-md-start">
 
-        <!-- Grid column -->
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            Products
-          </h6>
-          <p>
-            <a href="#!" class="text-reset">Angular</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">React</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Vue</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Laravel</a>
-          </p>
-        </div>
-        <!-- Grid column -->
+                <!-- About RiArreda -->
+                <div class="col-md-3 col-lg-3 col-xl-3">
+                    <h6 class=" fw-bold mb-4">RiArreda</h6>
+                    <p>
+                        Diamo nuova vita ai mobili usati! Siamo un team di giovani web developer con l’obiettivo di
+                        creare un marketplace sicuro e intuitivo per comprare e vendere mobili di seconda mano,
+                        contribuendo a ridurre gli sprechi e promuovere la sostenibilità.
+                    </p>
+                </div>
 
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            Useful links
-          </h6>
-          <p>
-            <a href="#!" class="text-reset">Pricing</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Settings</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Orders</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Help</a>
-          </p>
-        </div>
-        <!-- Grid column -->
+                <!-- Team Members -->
+                <div class="col-md-2 col-lg-2 col-xl-2">
+                    <h6 class="text-uppercase fw-bold mb-4">Chi siamo</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#!" class="text-reset">Simone Arena</a></li>
+                        <li><a href="#!" class="text-reset">Gianvito Lovecchio</a></li>
+                        <li><a href="#!" class="text-reset">Alessandro Macrì</a></li>
+                        <li><a href="#!" class="text-reset">Luciana Tudela</a></li>
+                        <li><a href="#!" class="text-reset">Carmine Vicinanza</a></li>
+                    </ul>
+                </div>
 
-        <!-- Grid column -->
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-          <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
-          <p>
-            <i class="fas fa-envelope me-3"></i>
-            info@example.com
-          </p>
-          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                <!-- Contact Info -->
+                
+                <div class="col-md-3 col-lg-3 col-xl-3">
+                    <h6 class="text-uppercase fw-bold mb-4">Contatti </h6>
+                            <ul class="list-unstyled">
+                                <li><a href="#!" class="text-reset">Str. S. Giorgio Martire, 2D, 70124 Bari BA</a>
+                                </li>
+                                <li><a href="#!" class="text-reset">aulab@aulab.it</a></li>
+                                <li><a href="#!" class="text-reset">800 128 626</a></li>
+                                <li><a href="#!" class="text-reset">392 602 4621</a></li>
+                            </ul>
+                </div>
+
+            </div>
         </div>
-        <!-- Grid column -->
-      </div>
-      <!-- Grid row -->
+    </section>
+
+    <!-- Copyright -->
+    <div class="text-center p-4">
+        © 2025 Copyright:
+        <a class="text-reset fw-bold" href="#">RiArreda. Tutti i diritti riservati.</a>
     </div>
-  </section>
-  <!-- Section: Links  -->
-
-  <!-- Copyright -->
-  <div class="text-center p-4">
-    © 2021 Copyright:
-    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-  </div>
-  <!-- Copyright -->
 </footer>
-<!-- Footer -->
