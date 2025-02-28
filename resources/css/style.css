@@ -78,7 +78,6 @@
 }
 
 .cst-button {
-    width: 50%;
     height: auto;
     background-color: var(--button);
     color: var(--background);
@@ -96,6 +95,13 @@
     transition: 0.2s;
     color: var(--button);
 }
+
+
+.width-custom{
+    width: 25%;
+}
+
+
 
 .cst-button-card2 {
     width: 50%;
@@ -115,6 +121,25 @@
     transition: 0.2s;
     color: white;
 }
+
+
+.cst-section-button {
+    width: 20%;
+    height: 7vh;
+    background-color: var(--background);
+    color: var(--button);
+    padding: 1px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s linear;
+}
+
+.cst-section-button:hover {
+    transform: scale(1.1);
+}
+
 
 .no-radius {
     border-radius: 0px !important;
@@ -170,7 +195,7 @@ input:focus {
 } */
 
 .nav-scrolled {
-    background-color: rgba(0, 0, 0, 0.8) !important; 
+    background-color: rgba(0, 0, 0, 0.8) !important;
     transition: background-color 1s ease-in-out;
 }
 
@@ -178,10 +203,10 @@ input:focus {
 .header-custom {
     position: relative;
     background-image: url('../img/header_img.png');
-    background-size: cover; 
-    background-position: center center; 
+    background-size: cover;
+    background-position: center center;
     background-repeat: no-repeat;
-    height: 100vh; 
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -198,12 +223,12 @@ input:focus {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); 
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
 /* / Testo sopra l'overlay / */
-.title-header{
+.title-header {
     font-size: 10vh;
     position: relative;
     z-index: 2;
@@ -219,22 +244,39 @@ input:focus {
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 }
 
-/* .title-header{
-    font-size: 17vh;
-    font-weight: 200;
+.title-section {
+    font-size: 10vh;
+    font-weight: 400;
 }
-.sutitle-header{
-    font-size: 13vh;
-    font-weight: 200;
-} */
+
+.subtitle-section {
+    font-size: 4vh;
+    font-weight: 100;
+}
+
+.size-section {
+    height: 70vh;
+}
+
+
+.modal-title-text{
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.modal-text{
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
 
 
 /* / Responsive per mobile / */
 @media (max-width: 768px) {
     .header-custom {
-        height: auto; 
-        min-height: 100vh; 
-        padding: 20% 5%; 
+        height: auto;
+        min-height: 100vh;
+        padding: 20% 5%;
         background-position: center top;
     }
 
@@ -245,6 +287,30 @@ input:focus {
     .subtitle-header {
         font-size: 1.2rem;
     }
+
+
+
+    .title-section {
+        font-size: 6vh;
+    }
+
+    .subtitle-section {
+        font-size: calc(2vh + 2px);
+    }
+
+    .cst-section-button {
+        width: 70%;
+        height: 5vh;
+        background-color: var(--background);
+        color: var(--button);
+        padding: 1px;
+        font-size: 1.3rem;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 600;
+
+    }
+
 }
 
 /* @media (max-width: 768px) { 
