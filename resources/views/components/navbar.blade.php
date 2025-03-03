@@ -84,9 +84,12 @@
 
                     <li class="nav-item dropdown-center ms-2">
                         <a class='nav-link dropdown-toggle active fs-5' href=""role='buttom'
-                            data-bs-toggle='dropdown' aria-expamded='false'>Ciao {{ Auth::user()->name }}</a>
-                        <ul class="dropdown-menu dropdown-menu-end">
+                        data-bs-toggle='dropdown' aria-expamded='false'>Ciao {{ Auth::user()->name }} @if(\App\Models\Ad::toBeRevisedCount() > 0)
+                        <span class= "text-white rounded-pill bg-danger fw-bold px-1">!</span>
+                        @endif</a>
+                        
 
+                        <ul class="dropdown-menu dropdown-menu-end">
                             @if (Auth::user()->is_revisor)
                                 <li class="ms-3">
                                     <a class="nav-item text-decoration-none col-b-text fw-semibold"
