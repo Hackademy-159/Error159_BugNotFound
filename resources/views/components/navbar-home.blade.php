@@ -28,7 +28,7 @@
                 </li>
                 @auth
                     <li class="nav-item">
-                        <a  class="navElement col-bg-text nav-link active fs-5" href="{{ route('create.ad') }}">{{__('ui.Create an ad')}} </a>
+                        <a  class="navElement col-bg-text nav-link active fs-5" href="{{ route('create.ad') }}">{{__('ui.Crea un annuncio')}} </a>
                     </li>
                 @endauth
                 <li class="nav-item dropdown">
