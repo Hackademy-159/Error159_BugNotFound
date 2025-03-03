@@ -1,7 +1,7 @@
 <x-layout>
 
     <div class="container-fluid text-center">
-        <div class="row ">
+        <div id="header" class="row">
             <div class="col-12 vh-100 header-custom d-flex flex-column justify-content-center">
                 <x-error />
                 <x-success />
