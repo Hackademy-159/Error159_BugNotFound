@@ -9,6 +9,8 @@ use App\Http\Controllers\RevisorController;
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 //Rotta per la ricerca
 Route::get('/search/ad', [PublicController::class, 'searchAds'])->name('ad.search');
+//Rotta tipo Post per cambio lingua
+Route::post('/lingua/{lang}',[PublicController::class,'setLanguage'])->name("setLocale");
 
 //Rotta get per la vista dell'annuncio
 Route::get('/create/ad',[AdController::class,'create'] )->name('create.ad');
@@ -31,4 +33,5 @@ Route::get('/revisor/index', [RevisorController::class, 'index'])->middleware('i
 Route::get('/revisor/request', [RevisorController::class,"becomeRevisor"])->middleware('auth')->name('become.revisor');
 // Rotta per rendereun  utente  revisore
 Route::get('/make/revisor/{user}', [RevisorController::class,"makeRevisor"])->name('make.revisor');
+
 
