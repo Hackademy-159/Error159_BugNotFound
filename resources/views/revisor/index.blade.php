@@ -10,19 +10,31 @@
         <x-success />
 
         @if ($ad_to_check)
+
             <div class="row justify-content-center pt-5">
                 <!-- Sezione per le immagini -->
                 <div class="col-md-7">
                     <div class="row row-cols-1 row-cols-md-3 g-4">
-                        @for ($i = 0; $i < 6; $i++)
-                            <!-- Mostra 6 immagini, 3 per riga -->
-                            <div class="col">
-                                <div class="card shadow-sm">
-                                    <img src="https://picsum.photos/300/200" class="card-img-top"
-                                        alt="Immagine segnaposto">
+
+                        {{-- funzione immagini inserite dall'utente --}}
+                        @if ($ad_to_check->images->count())
+                            @foreach ($ad_to_check->images as $key => $image)
+                                <div class="col-4 col-md-4 mb-4">
+                                    <img src="{{ Storage::url($image->path) }}" class="img-fluid rounded shadow"
+                                        alt="Immagine {{ $key + 1 }} dell'articolo '{{ $ad_to_check->title }}'">
                                 </div>
-                            </div>
-                        @endfor
+                            @endforeach
+                        @else
+                            @for ($i = 0; $i < 6; $i++)
+                                <!-- Mostra 6 immagini, 3 per riga -->
+                                <div class="col-4">
+                                    <div class="card shadow-sm">
+                                        <img src="https://picsum.photos/300/200" class="card-img-top"
+                                            alt="Immagine segnaposto">
+                                    </div>
+                                </div>
+                            @endfor
+                        @endif
                     </div>
                 </div>
 

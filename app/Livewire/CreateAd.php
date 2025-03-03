@@ -5,11 +5,16 @@ namespace App\Livewire;
 use App\Models\Ad;
 use Livewire\Component;
 use App\Models\Category;
-use Illuminate\Support\Facades\Auth;
+use Livewire\WithFileUploads;
 use Livewire\Attributes\Validate;
+use Illuminate\Support\Facades\Auth;
 
 class CreateAd extends Component
 {
+    use WithFileUploads;
+    public $images = [];
+    public $temporary_images;
+
     #[Validate('required|min:5')]
     public $title;
     #[Validate('required|min:10')]
@@ -22,7 +27,7 @@ class CreateAd extends Component
     public $status;
     #[Validate('required')]
     public $color;
-    public $article;
+    public $ad;
 
     public function messages()
     {
@@ -40,7 +45,7 @@ class CreateAd extends Component
     }
     public function save(){
         $this->validate();
-        $this->article = Ad::create([
+        $this->ad = Ad::create([
             'title' => $this->title,
             'description' => $this->description,
             'category_id' => $this->category,
@@ -49,8 +54,16 @@ class CreateAd extends Component
             'color' => $this->color,
             'user_id' => Auth::id(),
         ]);
+
+        if (count($this->images) > 0) {
+            foreach ($this->images as $image) {
+                $this->ad->images()->create([
+                    'path' => $image->store('images', 'public')]);
+            }
+        }
+    
         $this->reset();
-        return redirect()->route('create.ad')->with('success', 'Annuncio crerato con successo');
+        return redirect()->route('create.ad')->with('success', 'Annuncio creato con successo');
 
     }
     public function render()
@@ -59,4 +72,30 @@ class CreateAd extends Component
         return view('livewire.create-ad');
         // ,compact('categories')
     }
+
+    public function updatedTemporaryImages()
+{
+    if ($this->validate([
+        'temporary_images.*' => 'image|max:1024',
+        'temporary_images' => 'max:6'
+    ])) {
+        foreach ($this->temporary_images as $image) {
+            $this->images[] = $image;
+        }
+    }
 }
+    public function removeImage($key)
+{
+    if (in_array($key, array_keys($this->images))) {
+        unset($this->images[$key]);
+    }
+}
+}
+
+
+
+
+
+
+
+

@@ -2,34 +2,40 @@
     <div class="container ">
         <div class="row height-custom justify-content-center align-items-center text-center">
             <div class="col-12">
-                <h1 class="text-center display-2 fw-normal col-b-text mt-5 pt-5">Dettaglio dell'articolo: {{ $ad->title }}</h1>
+                <h1 class="text-center display-2 fw-normal col-b-text mt-5 pt-5">Dettaglio dell'articolo:
+                    {{ $ad->title }}</h1>
             </div>
         </div>
         <div class="row height-custom justify-content-center py-5 cst-form p-5 mb-5 mt-2 shadow">
             <div class="col-12 col-md-6 mb-3">
-                <div id="carouselExample" class="carousel slide">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="https://picsum.photos/400" class="d-block w-100 shadow" alt="...">
+                @if ($ad->images->count() > 0)
+
+                    <div id="carouselExample" class="carousel slide">
+                        <div class="carousel-inner">
+                            @foreach ($ad->images as $key => $image)
+                                <div class="carousel-item @if ($loop->first) active @endif">
+                                    <img src="{{ Storage::url($image->path) }}" class="d-block w-100 rounded shadow"
+                                        alt="Immagine {{ $key + 1 }} dell'articolo {{ $ad->title }}">
+                                </div>
+                            @endforeach
                         </div>
-                        <div class="carousel-item">
-                            <img src="https://picsum.photos/400" class="d-block w-100 shadow" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://picsum.photos/400" class="d-block w-100 shadow" alt="...">
-                        </div>
+                        @if ($ad->images->count() > 1)
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        @endif
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
+                @else
+                    <img src="https://picsum.photos/200" alt="Foto non inserita dall'utente">
+                @endif
+
             </div>
             <div class="col-12 col-md-6 mb-3 height-custom d-flex flex-column justify-content-between">
                 <h2 class="display-5"> <span class="fw-bold">Titolo: </span> {{ $ad->title }}</h2>

@@ -1,6 +1,9 @@
 <div class="card mx-auto shadow text-center mb-3 no-radius border-0">
-    <img src="https://picsum.photos/200" class="col-s card-img-top p-4 no-radius" alt="immagine dell'articolo {{ $ad->title }}">
+
+    <img src="{{ $ad->images->isNotEmpty() ? Storage::url($ad->images->first()->path) : 'https://picsum.photos/200' }}"
+        class="col-s card-img-top p-4 no-radius" alt="Immagine dell'articolo {{ $ad->title }}">
     <div class="card-body col-s no-radius">
+
         <h5 class="card-title">{{ $ad->title }}</h5>
         <h6 class="card-subtle text-body-secondary p-3">Prezzo: {{ $ad->price }} €</h6>
 
