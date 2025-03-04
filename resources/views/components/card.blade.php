@@ -5,10 +5,10 @@
     <div class="card-body col-s no-radius">
 
         <h5 class="card-title">{{ $ad->title }}</h5>
-        <h6 class="card-subtle text-body-secondary p-3">Prezzo: {{ $ad->price }} €</h6>
+        <h6 class="card-subtle text-body-secondary p-3">{{__('ui.Prezzo')}}: {{ $ad->price }} €</h6>
 
         <div class="d-flex justify-content-evenly align-items-center my-2">
-            <a href="{{ route('ad.show', compact('ad')) }}" class="cst-button-card2 ">Dettaglio</a>
+            <a href="{{ route('ad.show', compact('ad')) }}" class="cst-button-card2 ">{{__('ui.Dettaglio')}}</a>
         </div>
         <div class="d-flex justify-content-evenly align-items-center my-2">
             <a href="{{ route('byCategory', ['category' => $ad->category]) }}" class="cst-button-card2">

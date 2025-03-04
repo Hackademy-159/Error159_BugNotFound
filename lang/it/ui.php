@@ -40,5 +40,29 @@ return [
     'Lampade e Illuminazione' => 'Lampade e Illuminazione',
     'Mobili da Esterno' => 'Mobili da Esterno',
     'Decorazioni e Accessori' => 'Decorazioni e Accessori',
-    'Elettrodomestici Usati' => 'Elettrodomestici Usati'
+    'Elettrodomestici Usati' => 'Elettrodomestici Usati',
+
+    //footer
+
+    'footer_message' => 'Diamo nuova vita ai mobili usati! Siamo un team di giovani web developer con l’obiettivo di creare un marketplace sicuro e intuitivo per comprare e vendere    mobili di seconda mano, contribuendo a ridurre gli sprechi e promuovere la sostenibilità.', 
+    'Chi siamo' => 'Chi siamo',
+    'Contatti' => 'Contatti',
+    'RiArreda. Tutti i diritti riservati.' => 'RiArreda. Tutti i diritti riservati.',
+
+    //card
+    'Prezzo' => 'Prezzo',
+    'Dettaglio' => 'Dettaglio',
+
+    //show
+    'Dettaglio articolo:' => 'Dettaglio articolo:',
+    'Immagine' => 'Immagine',
+    'Foto non inserita dall\'utente' => 'Foto non inserita dall\'utente',
+    'Titolo' => 'Titolo',
+    'Colore' => 'Colore',
+    'Condizione' => 'Condizione',
+    'Descrizione' => 'Descrizione',
+    
+
+
+
 ];
