@@ -40,18 +40,11 @@
             <div class="col-12 col-md-6 mb-3 height-custom d-flex flex-column justify-content-between">
                 <h2 class="display-5"> <span class="fw-bold">{{__('ui.Titolo')}}: </span> {{ $ad->title }}</h2>
                 <div class="text-left h-75">
-<<<<<<< HEAD
                     <h4 class="fw-bold p-2">Prezzo: <span class="fw-normal">{{ $ad->price }} €</span></h4>
                     <h4 class="fw-bold p-2">Colore: <span class="fw-normal">{{ $ad->color }}</span></h4>
                     <h4 class="fw-bold p-2">Condizione: <span class="fw-normal">{{ $ad->status }}</span></h4>
                     <h4 class="fw-bold p-2">Descrizione: <span class="fw-normal">{{ $ad->description }}</span></h5>
                         <a href="{{ route('ad.index') }}" class="cst-button-detail">Chiudi dettaglio</a>
-=======
-                    <h4 class="fw-bold p-2">{{__('ui.Prezzo')}}: <span class="fw-normal">{{ $ad->price }} €</span></h4>
-                    <h4 class="fw-bold p-2">{{__('ui.Colore')}}: <span class="fw-normal">{{ $ad->color }}</span></h4>
-                    <h4 class="fw-bold p-2">{{__('ui.Condizione')}}: <span class="fw-normal">{{ $ad->status }}</span></h4>
-                    <h4 class="fw-bold p-2">{{__('ui.Descrizione')}}: <span class="fw-normal">{{ $ad->description }}</span></h5>
->>>>>>> 0090f6ccad33d37e6fafdfc9f8225498566213d4
                 </div>
             </div>
         </div>
