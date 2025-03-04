@@ -40,5 +40,29 @@ return [
     'Lampade e Illuminazione' => 'Lamps and Lighting',
     'Mobili da Esterno' => 'Outdoor Furniture',
     'Decorazioni e Accessori' => 'Decorations and Accessories',
-    'Elettrodomestici Usati' => 'Used Appliances'
+    'Elettrodomestici Usati' => 'Used Appliances',
+
+    //footer
+    'footer_message' => 'We give new life to used furniture! We are a team of young web developers with the goal of creating a secure and intuitive marketplace to buy and sell second-hand furniture, helping reduce waste and promoting sustainability.',
+    'Chi siamo' => 'Who We Are',
+    'Contatti' => 'Contact',
+    'RiArreda. Tutti i diritti riservati.' => 'RiArreda. All rights reserved.',
+
+    //card
+    'Prezzo' => 'Price',
+    'Dettaglio' => 'Detail',
+
+    //show
+    'Dettaglio articolo:' => 'Item details:',
+    'Immagine' => 'Image',
+    'Foto non inserita dall\'utente' => 'Photo not uploaded by the user',
+    'Titolo' => 'Title',
+    'Colore' => 'Color',
+    'Condizione' => 'Condition',
+    'Descrizione' => 'Description',
+
 ];
+// {{__('ui.')}}
+
+
+    
