@@ -7,12 +7,12 @@
     <title>Document</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="col-bg">
-    @if (Route::currentRouteName()=='homepage')
+<body class="col-bg {{ Request::is('/') ? 'homepage' : 'internal-page' }}">
+    {{-- @if (Route::currentRouteName()=='homepage')
     <x-navbar-home />
-        @else
-    <x-navbar />     
-    @endif
+        @else --}}
+    <x-navbar/>     
+    {{-- @endif --}}
 
     
     {{$slot}}

@@ -3,6 +3,7 @@
     --secondary: #f7d5c2;
     --button: #004766;
     --opacity: rgba(255, 255, 255, 0.5);
+    --trasparent: rgba(255, 255, 255, 0);
     ;
 }
 
@@ -12,6 +13,9 @@
 }
 
 /* INIZIO COLORI */
+.col-t{
+    background-color: var(--trasparent);
+}
 .col-bg {
     background-color: var(--background);
 }
@@ -19,6 +23,12 @@
 .col-bg-text {
     color: var(--background)!important;
 }
+.homepage .col-bg-text svg {
+    fill: var(--background); /* Il tuo bianco personalizzato */
+}.internal-page .col-bg-text svg {
+    fill: var(--button); /* Il tuo bianco personalizzato */
+}
+
 
 .col-p {
     background-color: var(--primary);
@@ -164,6 +174,21 @@
 }
 /* FINE BOTTONI */
 
+.search-border-home::placeholder {
+    color: var(--background);
+}
+.search-border-all{
+    border-bottom: solid 2px var(--button);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.search-border-home{
+    border-bottom: solid 2px var(--background);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
 .no-radius {
     border-radius: 0px !important;
 }
