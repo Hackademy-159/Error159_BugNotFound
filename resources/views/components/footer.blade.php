@@ -9,16 +9,12 @@
                 <!-- About RiArreda -->
                 <div class="col-md-3 col-lg-3 col-xl-3">
                     <h6 class=" fw-bold mb-4">RiArreda</h6>
-                    <p>
-                        Diamo nuova vita ai mobili usati! Siamo un team di giovani web developer con l’obiettivo di
-                        creare un marketplace sicuro e intuitivo per comprare e vendere mobili di seconda mano,
-                        contribuendo a ridurre gli sprechi e promuovere la sostenibilità.
-                    </p>
+                    <p>{{__('ui.footer_message')}}  </p>
                 </div>
 
                 <!-- Team Members -->
                 <div class="col-md-2 col-lg-2 col-xl-2">
-                    <h6 class="text-uppercase fw-bold mb-4">Chi siamo</h6>
+                    <h6 class="text-uppercase fw-bold mb-4">{{__('ui.Chi siamo')}}</h6>
                     <ul class="list-unstyled">
                         <li><a href="#!" class="text-reset">Simone Arena</a></li>
                         <li><a href="#!" class="text-reset">Gianvito Lovecchio</a></li>
@@ -31,7 +27,7 @@
                 <!-- Contact Info -->
                 
                 <div class="col-md-3 col-lg-3 col-xl-3">
-                    <h6 class="text-uppercase fw-bold mb-4">Contatti </h6>
+                    <h6 class="text-uppercase fw-bold mb-4">{{__('ui.Contatti')}}</h6>
                             <ul class="list-unstyled">
                                 <li><a href="#!" class="text-reset">Str. S. Giorgio Martire, 2D, 70124 Bari BA</a>
                                 </li>
@@ -48,6 +44,6 @@
     <!-- Copyright -->
     <div class="text-center p-4">
         © 2025 Copyright:
-        <a class="text-reset fw-bold" href="#">RiArreda. Tutti i diritti riservati.</a>
+        <a class="text-reset fw-bold" href="#">{{__('ui.RiArreda. Tutti i diritti riservati.')}}</a>
     </div>
 </footer>

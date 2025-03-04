@@ -40,5 +40,27 @@ return [
     'Lampade e Illuminazione' => 'Lámparas e iluminación',
     'Mobili da Esterno' => 'Muebles de exterior',
     'Decorazioni e Accessori' => 'Decoraciones y accesorios',
-    'Elettrodomestici Usati' => 'Electrodomésticos usados'
+    'Elettrodomestici Usati' => 'Electrodomésticos usados',
+
+    //footer
+
+    'footer_message' => '¡Damos nueva vida a los muebles usados! Somos un equipo de jóvenes desarrolladores web con el objetivo de crear un mercado seguro e intuitivo para comprar y vender muebles de segunda mano, contribuyendo a reducir el desperdicio y promoviendo la sostenibilidad.',
+    'Chi siamo' => 'Quiénes somos',
+    'Contatti' => 'Contactos',
+    'RiArreda. Tutti i diritti riservati.' => 'RiArreda. Todos los derechos reservados.',
+
+    //card
+    'Prezzo' => 'Precio',
+    'Dettaglio' => 'Detalle',
+
+    //show
+    'Dettaglio articolo:' => 'Detalle del artículo:',
+    'Immagine' => 'Imagen',
+    'Foto non inserita dall\'utente' => 'Foto no subida por el usuario',
+    'Titolo' => 'Título',
+    'Colore' => 'Color',
+    'Condizione' => 'Condición',
+    'Descrizione' => 'Descripción',
+    
+
 ];

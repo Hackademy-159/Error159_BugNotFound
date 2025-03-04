@@ -2,7 +2,7 @@
     <div class="container ">
         <div class="row height-custom justify-content-center align-items-center text-center">
             <div class="col-12">
-                <h1 class="text-center display-2 fw-normal col-b-text mt-5 pt-5">Dettaglio dell'articolo:
+                <h1 class="text-center display-2 fw-normal col-b-text mt-5 pt-5">{{__('ui.Dettaglio articolo')}}:
                     {{ $ad->title }}</h1>
             </div>
         </div>
@@ -38,12 +38,12 @@
 
             </div>
             <div class="col-12 col-md-6 mb-3 height-custom d-flex flex-column justify-content-between">
-                <h2 class="display-5"> <span class="fw-bold">Titolo: </span> {{ $ad->title }}</h2>
+                <h2 class="display-5"> <span class="fw-bold">{{__('ui.Titolo')}}: </span> {{ $ad->title }}</h2>
                 <div class="text-left h-75">
-                    <h4 class="fw-bold p-2">Prezzo: <span class="fw-normal">{{ $ad->price }} €</span></h4>
-                    <h4 class="fw-bold p-2">Colore: <span class="fw-normal">{{ $ad->color }}</span></h4>
-                    <h4 class="fw-bold p-2">Condizione: <span class="fw-normal">{{ $ad->status }}</span></h4>
-                    <h4 class="fw-bold p-2">Descrizione: <span class="fw-normal">{{ $ad->description }}</span></h5>
+                    <h4 class="fw-bold p-2">{{__('ui.Prezzo')}}: <span class="fw-normal">{{ $ad->price }} €</span></h4>
+                    <h4 class="fw-bold p-2">{{__('ui.Colore')}}: <span class="fw-normal">{{ $ad->color }}</span></h4>
+                    <h4 class="fw-bold p-2">{{__('ui.Condizione')}}: <span class="fw-normal">{{ $ad->status }}</span></h4>
+                    <h4 class="fw-bold p-2">{{__('ui.Descrizione')}}: <span class="fw-normal">{{ $ad->description }}</span></h5>
                 </div>
             </div>
         </div>
