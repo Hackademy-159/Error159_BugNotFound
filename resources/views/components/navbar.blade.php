@@ -1,4 +1,4 @@
-<nav @if (Route::currentRouteName() == 'homepage') id="navbar" @endif class="navbar navbar-expand-lg @if (Route::currentRouteName() == 'homepage') nav-trans @else col-bg @endif fixed-top">
+<nav @if (Route::currentRouteName() == 'homepage') id="navbar" @endif class="navbar navbar-expand-lg @if (Route::currentRouteName() == 'homepage') nav-trans @else shadow col-bg @endif fixed-top">
     <div class="container-fluid">
         {{-- logo --}}
         <a href="{{ route('homepage') }}"><img class="cst-dim" src="{{ asset('img/Logo.png') }}" alt="Logo"></a>
@@ -31,16 +31,16 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                 <li class="nav-item">
-                    <a class="@if (Route::currentRouteName() == 'homepage') navElement col-bg-text @endif nav-link active fs-5" aria-current="page" href="{{ route('ad.index') }}">Tutti gli
+                    <a class="@if (Route::currentRouteName() == 'homepage') navElement col-bg-text @else col-b-text @endif nav-link active fs-5" aria-current="page" href="{{ route('ad.index') }}">Tutti gli
                         articoli</a>
                 </li>
                 @auth
                     <li class="nav-item">
-                        <a class="@if (Route::currentRouteName() == 'homepage') navElement col-bg-text @endif nav-link active fs-5" href="{{ route('create.ad') }}">Crea un annuncio</a>
+                        <a class="@if (Route::currentRouteName() == 'homepage') navElement col-bg-text @else col-b-text @endif nav-link active fs-5" href="{{ route('create.ad') }}">Crea un annuncio</a>
                     </li>
                 @endauth
                 <li class="nav-item dropdown">
-                    <a class=" @if (Route::currentRouteName() == 'homepage') navElement col-bg-text @endif nav-link dropdown-toggle active fs-5" href=""role='buttom'
+                    <a class=" @if (Route::currentRouteName() == 'homepage') navElement col-bg-text @else col-b-text @endif nav-link dropdown-toggle active fs-5" href=""role='buttom'
                         data-bs-toggle='dropdown' aria-expamded='false'>
                         Categorie
                     </a>
@@ -79,18 +79,18 @@
 
                 @guest
                     <li class="nav-item">
-                        <a class=" @if (Route::currentRouteName() == 'homepage') navElement col-bg-text @endif nav-link fs-5" href="{{ route('login') }}">Login</a>
+                        <a class=" @if (Route::currentRouteName() == 'homepage') navElement col-bg-text @else col-b-text @endif nav-link fs-5" href="{{ route('login') }}">Login</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class=" @if (Route::currentRouteName() == 'homepage') navElement col-bg-text @endif nav-link fs-5 me-2" href="{{ route('register') }}">Registrati</a>
+                        <a class=" @if (Route::currentRouteName() == 'homepage') navElement col-bg-text @else col-b-text @endif nav-link fs-5 me-2" href="{{ route('register') }}">Registrati</a>
                     </li>
                 @endguest
 
                 @auth
 
                     <li class="nav-item dropdown-center ms-2">
-                        <a class=' @if (Route::currentRouteName() == 'homepage') navElement col-bg-text @endif nav-link dropdown-toggle active fs-5' href=""role='buttom'
+                        <a class=' @if (Route::currentRouteName() == 'homepage') navElement col-bg-text @else col-b-text @endif nav-link dropdown-toggle active fs-5' href=""role='buttom'
                         data-bs-toggle='dropdown' aria-expamded='false'>Ciao {{ Auth::user()->name }} @if(\App\Models\Ad::toBeRevisedCount() > 0)
                         <span class= "text-white rounded-pill bg-danger fw-bold px-1">!</span>
                         @endif</a>
@@ -123,7 +123,7 @@
                 @endauth
 
                 <li class="nav-item dropdown ms-2">
-                    <a class="navElement col-bg-text nav-link dropdown-toggle active fs-5" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="navElement col-bg-text nav-link dropdown-toggle active fs-5 p-0" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <!-- Mostra direttamente la bandiera della lingua corrente tramite x-_locale -->
                         @if (app()->getLocale() == 'it')
                             <x-_locale lang="it" />

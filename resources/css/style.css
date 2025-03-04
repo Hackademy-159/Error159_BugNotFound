@@ -231,6 +231,12 @@
 /* .navbar .nav-link {
     color: var(--background) !important;
 } */
+.border-create-img{
+    border: 2px solid var(--button);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+}
+
 .position-custom{
     position: absolute; 
     top: 15%;
