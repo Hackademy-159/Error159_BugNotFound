@@ -14,7 +14,7 @@
                         <div class="carousel-inner">
                             @foreach ($ad->images as $key => $image)
                                 <div class="carousel-item @if ($loop->first) active @endif">
-                                    <img src="{{ $image->getUrl(300,300) }}" class="d-block w-100 rounded shadow"
+                                    <img src="{{ $image->getUrl(300, 300) }}" class="d-block w-100 rounded shadow"
                                         alt="Immagine {{ $key + 1 }} dell'articolo {{ $ad->title }}">
                                 </div>
                             @endforeach
@@ -44,6 +44,7 @@
                     <h4 class="fw-bold p-2">Colore: <span class="fw-normal">{{ $ad->color }}</span></h4>
                     <h4 class="fw-bold p-2">Condizione: <span class="fw-normal">{{ $ad->status }}</span></h4>
                     <h4 class="fw-bold p-2">Descrizione: <span class="fw-normal">{{ $ad->description }}</span></h5>
+                        <a href="{{ route('ad.index') }}" class="cst-button-detail">Chiudi dettaglio</a>
                 </div>
             </div>
         </div>

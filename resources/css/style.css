@@ -123,6 +123,29 @@
     color: white;
 }
 
+
+.cst-button-detail {
+    width: 80%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: var(--button);
+    padding: 9px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid var(--button);
+    margin-left: 33vh;
+}
+
+.cst-button-detail:hover {
+    background-color: var(--button);
+    transition: 0.2s;
+    color: white;
+}
+
     /* bottone sezione diventa revisore*/
 .cst-section-button {
     width: 20%;
