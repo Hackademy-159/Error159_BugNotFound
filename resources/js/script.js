@@ -31,3 +31,21 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+
+document.querySelectorAll('.carousel').forEach(carousel => {
+    carousel.addEventListener('mouseenter', () => {
+        var carouselInstance = new bootstrap.Carousel(carousel, {
+            interval: 2000, // Tempo di auto avanzamento (2000ms = 2 secondi)
+        });
+        carouselInstance.cycle(); // Avvia l'auto avanzamento
+    });
+
+    carousel.addEventListener('mouseleave', () => {
+        var carouselInstance = new bootstrap.Carousel(carousel, {
+            interval: false // Disabilita l'auto avanzamento
+        });
+        carouselInstance.pause(); // Ferma l'auto avanzamento
+    });
+});
+

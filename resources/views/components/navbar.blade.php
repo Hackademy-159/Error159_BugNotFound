@@ -122,9 +122,35 @@
 
                 @endauth
 
-                <x-_locale lang="it" />
-                <x-_locale lang="en" />
-                <x-_locale lang="es" />
+                <li class="nav-item dropdown ms-2">
+                    <a class="navElement col-bg-text nav-link dropdown-toggle active fs-5" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <!-- Mostra direttamente la bandiera della lingua corrente tramite x-_locale -->
+                        @if (app()->getLocale() == 'it')
+                            <x-_locale lang="it" />
+                        @elseif (app()->getLocale() == 'en')
+                            <x-_locale lang="en" />
+                        @elseif (app()->getLocale() == 'es')
+                            <x-_locale lang="es" />
+                        @endif
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown" style="max-width: 150px;">
+                        <li>
+                            <a class="dropdown-item" href="{{ route('setLocale', ['lang' => 'it']) }}">
+                                <x-_locale lang="it" />Italiano
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ route('setLocale', ['lang' => 'en']) }}">
+                                <x-_locale lang="en" />English
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ route('setLocale', ['lang' => 'es']) }}">
+                                <x-_locale lang="es" />Español
+                            </a>
+                        </li>
+                    </ul>
+                </li>
 
             </ul>
         </div>
