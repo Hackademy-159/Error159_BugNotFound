@@ -5,10 +5,10 @@ return [
     'Occasioni uniche a prezzi imbattibili.' => 'Unique opportunities at unbeatable prices.',
     'Pubblica un annuncio' => 'Post an ad',
     'Ultimi annunci inseriti' => 'Latest ads posted',
-    'Non sono ancora stati creati degli articoli' => 'No items have been created yet',
+    'Non sono ancora stati creati degli annunci' => 'No ads have been created yet',
     'Vuoi diventare revisore?' => 'Do you want to become a reviewer?',
     'Aiutaci a mantenere il nostro marketplace sicuro.' => 'Help us keep our marketplace safe.',
-    'Diventa un revisore e approva o rifiuta gli articoli messi in vendita dagli utenti.' => 'Become a reviewer and approve or reject items posted by users.',
+    'Diventa un revisore e approva o rifiuta gli annunci messi in vendita dagli utenti.' => 'Become a reviewer and approve or reject ads posted by users.',
     'Diventa revisore' => 'Become a reviewer',
     'Conferma la tua scelta' => 'Confirm your choice',
     'Sei sicuro di voler diventare revisore?' => 'Are you sure you want to become a reviewer?',
@@ -21,7 +21,7 @@ return [
     // navbar
     'Cerca...' => 'Search...',
     'Cerca' => 'Search',
-    'Tutti gli articoli' => 'All items',
+    'Tutti gli annunci' => 'All ads',
     'Crea un annuncio' => 'Create an ad',
     'Categorie' => 'Categories',
     'Accedi' => 'Login',
@@ -53,7 +53,7 @@ return [
     'Dettaglio' => 'Detail',
 
     //show
-    'Dettaglio articolo:' => 'Item details:',
+    'Dettaglio annuncio' => 'ad details',
     'Immagine' => 'Image',
     'Foto non inserita dall\'utente' => 'Photo not uploaded by the user',
     'Titolo' => 'Title',
@@ -61,8 +61,53 @@ return [
     'Condizione' => 'Condition',
     'Descrizione' => 'Description',
 
+    //searched
+    'Risultati per la ricerca' => 'Search results for',
+    'Nessun annuncio corrisponde alla tua ricerca' => 'No ads match your search',
+
+    //index
+    'Tutti gli annunci' => 'All ads',
+    'Non sono ancora stati creati annunci' => 'No ads have been created yet',
+
+    //byCategory
+    'Annunci della categoria' => 'Ads in the category',
+    'Non sono ancora stati creati annunci per questa categoria!' => 'No ads have been created for this category yet!',
+    'Pubblica annuncio' => 'Post an ad',
+
+    //create
+    'Aggiungi il tuo annuncio' => 'Add your ad',
+
+    //create-ad (form)
+    'Categoria' => 'Category',
+    'Seleziona una condizione' => 'Select a condition',
+    'Nuovo' => 'New',
+    'Ottime' => 'Excellent',
+    'Buone' => 'Good',
+    'Discrete' => 'Fair',
+    'Seleziona una categoria' => 'Select a category',
+    'Inserisci immagini' => 'Insert images',
+    'Conferma inserimento' => 'Confirm submission',
+    'Anteprima della foto' => 'Photo preview',
+
+    //revisor
+    'Revisore Dashboard' => 'Reviewer Dashboard',
+    'Autore' => 'Author: ',
+    'Rifiuta' => 'Reject',
+    'Accetta' => 'Accept',
+    'Nessun articolo da revisionare' => 'No items to review',
+    'Homepage' => 'Back to homepage',
 ];
 // {{__('ui.')}}
 
 
     
+
+   
+
+   
+  
+    
+
+
+    
+

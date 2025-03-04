@@ -7,7 +7,7 @@
 
                 <!-- Titolo -->
                 <div class="mb-3">
-                    <label class="form-label">Titolo</label>
+                    <label class="form-label">{{__('ui.Titolo')}}</label>
                     <input type="text" class="form-control @error('title') is-invalid @enderror"
                         wire:model.defer="title">
                     @error('title')
@@ -19,7 +19,7 @@
 
                 <!-- Prezzo -->
                 <div class="mb-3">
-                    <label class="form-label">Prezzo</label>
+                    <label class="form-label">{{__('ui.Prezzo')}}</label>
                     <input type="text" class="form-control @error('price') is-invalid @enderror"
                         wire:model.defer="price">
                     @error('price')
@@ -31,7 +31,7 @@
 
                 <!-- Descrizione -->
                 <div class="mb-3">
-                    <label class="form-label">Descrizione</label>
+                    <label class="form-label">{{__('ui.Descrizione')}}</label>
                     <input type="text" class="form-control @error('description') is-invalid @enderror"
                         wire:model.defer="description">
                     @error('description')
@@ -43,13 +43,13 @@
 
                 <!-- Condizione -->
                 <div class="mb-3">
-                    <label class="form-label">Condizione</label>
+                    <label class="form-label">{{__('ui.Condizione')}}</label>
                     <select class="form-select @error('status') is-invalid @enderror" wire:model.defer="status">
-                        <option value="">Seleziona una condizione</option>
-                        <option value="nuovo">Nuovo</option>
-                        <option value="ottimo">Ottime</option>
-                        <option value="buono">Buone</option>
-                        <option value="discreto">Discrete</option>
+                        <option value="">{{__('ui.Seleziona una condizione')}}</option>
+                        <option value="nuovo">{{__('ui.Nuovo')}}</option>
+                        <option value="ottimo">{{__('ui.Ottime')}}</option>
+                        <option value="buono">{{__('ui.Buone')}}</option>
+                        <option value="discreto">{{__('ui.Discrete')}}</option>
                     </select>
                     @error('status')
                         <div class="invalid-feedback d-flex align-items-center">
@@ -60,7 +60,7 @@
 
                 <!-- Colore -->
                 <div class="mb-3">
-                    <label class="form-label">Colore</label>
+                    <label class="form-label">{{__('ui.Colore')}}</label>
                     <input type="text" class="form-control @error('color') is-invalid @enderror"
                         wire:model.defer="color">
                     @error('color')
@@ -72,11 +72,11 @@
 
                 <!-- Categoria -->
                 <div class="mb-3">
-                    <label class="form-label">Categoria</label>
+                    <label class="form-label">{{__('ui.Categoria')}}</label>
                     <select class="form-select @error('category') is-invalid @enderror" wire:model.defer="category">
-                        <option value="">Seleziona una categoria</option>
+                        <option value="">{{__('ui.Seleziona una categoria')}}</option>
                         @foreach ($categories as $category)
-                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                            <option value="{{ $category->id }}">{{__("ui.$category->name")}}</option>
                         @endforeach
                     </select>
                     @error('category')
@@ -89,6 +89,7 @@
 
                 {{-- inserimento immagini --}}
                 <div class="mb-3">
+                    <label class="form-label">{{__('ui.Inserisci immagini')}}</label>
                     <input type="file" wire:model.live="temporary_images" multiple
                         class="form-control shadow @error('temporary_images.') is-invalid @enderror"
                         placeholder="Img" />
@@ -103,7 +104,7 @@
                 @if (!empty($images))
                     <div class="row">
                         <div class="col-12">
-                            <p>Photo preview:</p>
+                            <p>{{__('ui.Anteprima della foto')}}:</p>
                             <div class="row border border-4 border-success rounded shadow py-4">
                                 @foreach ($images as $key => $image)
                                     <div class="col d-flex flex-column align-items-center my-3">
@@ -122,7 +123,7 @@
 
                 <!-- Bottone di conferma -->
                 <div class="d-flex justify-content-center pt-4">
-                    <button type="submit" class="cst-button-card">Conferma inserimento</button>
+                    <button type="submit" class="cst-button-card">{{__('ui.Conferma inserimento')}}</button>
                 </div>
             </form>
         </div>

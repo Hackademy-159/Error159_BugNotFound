@@ -2,8 +2,7 @@
     <div class="container ">
         <div class="row height-custom justify-content-center align-items-center text-center">
             <div class="col-12">
-                <h1 class="text-center display-2 fw-normal col-b-text mt-5 pt-5">{{__('ui.Dettaglio articolo')}}:
-                    {{ $ad->title }}</h1>
+                <h1 class="text-center display-2 fw-normal col-b-text mt-5 pt-5">{{__('ui.Dettaglio annuncio')}}: {{ $ad->title }}</h1>
             </div>
         </div>
         <div class="row height-custom justify-content-center py-5 cst-form p-5 mb-5 mt-2 shadow">
@@ -15,7 +14,7 @@
                             @foreach ($ad->images as $key => $image)
                                 <div class="carousel-item @if ($loop->first) active @endif">
                                     <img src="{{ $image->getUrl(300,300) }}" class="d-block w-100 rounded shadow"
-                                        alt="Immagine {{ $key + 1 }} dell'articolo {{ $ad->title }}">
+                                        alt="Immagine {{ $key + 1 }} dell'annuncio {{ $ad->title }}">
                                 </div>
                             @endforeach
                         </div>

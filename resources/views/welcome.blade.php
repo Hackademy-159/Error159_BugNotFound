@@ -25,7 +25,7 @@
                 </div>
             @empty
                 <div class="col-12">
-                    <h3 class="text-center">{{__('ui.Non sono ancora stati creati degli articoli')}}</h3>
+                    <h3 class="text-center">{{__('ui.Non sono ancora stati creati degli annunci')}}</h3>
                 </div>
             @endforelse
         </div>
@@ -35,7 +35,7 @@
             <div class="col-12 d-flex flex-column justify-content-center col-bg-text size-section">
                 <h2 class="title-section p-2">{{__('ui.Vuoi diventare revisore?')}}</h2>
                 <h2 class="subtitle-section pt-2">{{__('ui.Aiutaci a mantenere il nostro marketplace sicuro.')}}</h2>
-                <h2 class="subtitle-section">{{__('ui.Diventa un revisore e approva o rifiuta gli articoli messi in vendita dagli utenti.')}}</h2>
+                <h2 class="subtitle-section">{{__('ui.Diventa un revisore e approva o rifiuta gli annunci messi in vendita dagli utenti.')}}</h2>
                 <div class="p-5">
                     @if (Auth::check())
                         <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" type="button"
