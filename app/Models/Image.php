@@ -16,6 +16,13 @@ class Image extends Model
         'path'
     ];
 
+    protected function casts(): array
+    {
+        return[
+            'labels' => 'array',
+        ];
+    }
+
     public function ad(): BelongsTo
     {
         return $this->belongsTo(Ad::class);
