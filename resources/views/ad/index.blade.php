@@ -12,7 +12,7 @@
                 </div>
             @empty
                 <div class="col-12">
-                    <h3 class="text-center">{{__('ui.Non sono ancora stati creati articoli')}}</h3>
+                    <h3 class="text-center">{{__('ui.Non sono ancora stati creati annunci')}}</h3>
                 </div>
             @endforelse
         </div>

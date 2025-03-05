@@ -76,7 +76,7 @@
                     <select class="form-select @error('category') is-invalid @enderror" wire:model.defer="category">
                         <option value="">{{__('ui.Seleziona una categoria')}}</option>
                         @foreach ($categories as $category)
-                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                            <option value="{{ $category->id }}">{{__("ui.$category->name")}}</option>
                         @endforeach
                     </select>
                     @error('category')
@@ -102,9 +102,10 @@
                 </div>
 
                 @if (!empty($images))
-                    <div class="mb-3 mx-3">
-                            <label for="" class="form-label">Anteprima immagini caricate</label>
-                            <div class="row border-create-img shadow py-4">
+                    <div class="row">
+                        <div class="col-12">
+                            <p>{{__('ui.Anteprima della foto')}}:</p>
+                            <div class="row border border-4 border-success rounded shadow py-4">
                                 @foreach ($images as $key => $image)
                                     <div class="col d-flex flex-column align-items-center my-3 p-0">
                                         <div class="img-preview mx-auto shadow rounded"
@@ -121,7 +122,7 @@
 
                 <!-- Bottone di conferma -->
                 <div class="d-flex justify-content-center pt-4">
-                    <button type="submit" class="cst-button-card">Conferma inserimento</button>
+                    <button type="submit" class="cst-button-card">{{__('ui.Conferma inserimento')}}</button>
                 </div>
             </form>
         </div>

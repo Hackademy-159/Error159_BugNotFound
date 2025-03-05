@@ -27,7 +27,7 @@
         </div>
         <div class="d-flex justify-content-evenly align-items-center my-2">
             <a href="{{ route('byCategory', ['category' => $ad->category]) }}" class="cst-button-card2">
-                {{ $ad->category->name }}
+                {{$ad->category->name }}
             </a>
         </div>
     </div>

@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row py-5 justify-content-center align-items-center text-center">
             <div class="col-12 pt-5">
-                <h1 class="text-center display-2 fw-normal col-b-text">Articoli della categoria 
+                <h1 class="text-center display-2 fw-normal col-b-text">{{__('ui.Annunci della categoria')}}
                     <h2 class="fst-italic fw-bold display-5">{{ $category->name }}</h2>
                 </h1>
             </div>
@@ -15,11 +15,11 @@
             @empty
                 <div class="col-12 text-center">
                     <h3>
-                        Non sono ancora stati creati articoli per questa categoria!
+                        {{__('ui.Non sono ancora stati creati annunci per questa categoria!')}}
                     </h3>
                     @auth
                     <div class="m-5">
-                        <a class="cst-button my-5 py-3 px-4" href="{{ route('create.ad') }}">Pubblica un articolo</a>
+                        <a class="cst-button my-5 py-3 px-4" href="{{ route('create.ad') }}">{{__('ui.Pubblica un annuncio')}}</a>
                     </div>
                     @endauth
                 </div>
