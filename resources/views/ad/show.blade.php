@@ -2,7 +2,7 @@
     <div class="container ">
         <div class="row height-custom justify-content-center align-items-center text-center">
             <div class="col-12">
-                <h1 class="text-center display-2 fw-normal col-b-text mt-5 pt-5">{{__('ui.Dettaglio articolo')}}:
+                <h1 class="text-center display-2 fw-normal col-b-text mt-5 pt-5">{{__('ui.Dettaglio annuncio')}}
                     {{ $ad->title }}</h1>
             </div>
         </div>

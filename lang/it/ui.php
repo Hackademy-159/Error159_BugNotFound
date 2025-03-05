@@ -5,10 +5,10 @@ return [
     'Occasioni uniche a prezzi imbattibili.' => 'Occasioni uniche a prezzi imbattibili.',
     'Pubblica un annuncio' => 'Pubblica un annuncio',
     'Ultimi annunci inseriti' => 'Ultimi annunci inseriti',
-    'Non sono ancora stati creati degli articoli' => 'Non sono ancora stati creati degli articoli',
+    'Non sono ancora stati creati degli annunci' => 'Non sono ancora stati creati degli annunci',
     'Vuoi diventare revisore?' => 'Vuoi diventare revisore?',
     'Aiutaci a mantenere il nostro marketplace sicuro.' => 'Aiutaci a mantenere il nostro marketplace sicuro.',
-    'Diventa un revisore e approva o rifiuta gli articoli messi in vendita dagli utenti.' => 'Diventa un revisore e approva o rifiuta gli articoli messi in vendita dagli utenti.',
+    'Diventa un revisore e approva o rifiuta gli annunci messi in vendita dagli utenti.' => 'Diventa un revisore e approva o rifiuta gli annunci messi in vendita dagli utenti.',
     'Diventa revisore' => 'Diventa revisore',
     'Conferma la tua scelta' => 'Conferma la tua scelta',
     'Sei sicuro di voler diventare revisore?' => 'Sei sicuro di voler diventare revisore?',
@@ -21,7 +21,7 @@ return [
     // navbar
     'Cerca...' => 'Cerca...',
     'Cerca' => 'Cerca',
-    'Tutti gli articoli' => 'Tutti gli articoli',
+    'Tutti gli annunci' => 'Tutti gli annunci',
     'Crea un annuncio' => 'Crea un annuncio',
     'Categorie' => 'Categorie',
     'Accedi' => 'Accedi',
@@ -54,13 +54,52 @@ return [
     'Dettaglio' => 'Dettaglio',
 
     //show
-    'Dettaglio articolo:' => 'Dettaglio articolo:',
+    'Dettaglio annuncio' => 'Dettaglio annuncio',
     'Immagine' => 'Immagine',
     'Foto non inserita dall\'utente' => 'Foto non inserita dall\'utente',
     'Titolo' => 'Titolo',
     'Colore' => 'Colore',
     'Condizione' => 'Condizione',
     'Descrizione' => 'Descrizione',
+
+    //searched
+    'Risultati per la ricerca' => 'Risultati per la ricerca',
+    'Nessun annuncio corrisponde alla tua ricerca' => 'Nessun annuncio corrisponde alla tua ricerca',
+
+    //index
+    'Tutti gli annunci' => 'Tutti gli annunci',
+    'Non sono ancora stati creati annunci' => 'Non sono ancora stati creati annunci',
+
+    //byCategory
+    'Articoli della categoria' => 'Articoli della categoria',
+    'Non sono ancora stati creati annunci per questa categoria!' => 'Non sono ancora stati creati annunci per questa categoria!',
+    'Pubblica annuncio' => 'Pubblica annuncio',
+
+    //create
+    'Aggiungi il tuo annuncio' => 'Aggiungi il tuo annuncio',
+
+    //create-ad(form)
+    'Categoria' => 'Categoria',
+    'Seleziona una condizione' => 'Seleziona una condizione',
+    'Nuovo' => 'Nuovo',
+    'Ottime' => 'Ottime',
+    'Buone' => 'Buone',
+    'Discrete' => 'Discrete',
+    'Seleziona una categoria' => 'Seleziona una categoria',
+    'Inserisci immagini' => 'Inserisci immagini',
+    'Conferma inserimento' => 'Conferma inserimento',
+    'Anteprima della foto' => 'Anteprima della foto',
+
+    //revisor
+    'Revisore Dashboard' => 'Revisore Dashboard',
+    'Autore' => 'Autore',
+    'Prezzo' => 'Prezzo',
+    'Categoria' => 'Categoria',
+    'Descrizione' => 'Descrizione',
+    'Rifiuta' => 'Rifiuta',
+    'Accetta' => 'Accetta',
+    'Nessun articolo da revisionare' => 'Nessun articolo da revisionare',
+    'Homepage' => 'Torna all\'homepage',
     
 
 

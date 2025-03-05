@@ -31,7 +31,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                 <li class="nav-item">
-                    <a class="@if (Route::currentRouteName() == 'homepage') navElement col-bg-text @else col-b-text @endif nav-link active fs-5" aria-current="page" href="{{ route('ad.index') }}">{{__('ui.Tutti gli articoli')}}</a>
+                    <a class="@if (Route::currentRouteName() == 'homepage') navElement col-bg-text @else col-b-text @endif nav-link active fs-5" aria-current="page" href="{{ route('ad.index') }}">{{__('ui.Tutti gli annunci')}}</a>
                 </li>
                 @auth
                     <li class="nav-item">

@@ -10,20 +10,20 @@
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carousel{{ $ad->id }}" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Precedente</span>
+            <span class="visually-hidden">{{__('ui.Precedente')}}</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carousel{{ $ad->id }}" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Successivo</span>
+            <span class="visually-hidden">{{__('ui.Successivo')}}</span>
         </button>
     </div>
 
     <div class="card-body col-s no-radius">
         <h5 class="card-title">{{ $ad->title }}</h5>
-        <h6 class="card-subtle text-body-secondary p-3">Prezzo: {{ $ad->price }} €</h6>
+        <h6 class="card-subtle text-body-secondary p-3">{{__('ui.Prezzo')}}: {{ $ad->price }} €</h6>
 
         <div class="d-flex justify-content-evenly align-items-center my-2">
-            <a href="{{ route('ad.show', compact('ad')) }}" class="cst-button-card2 ">Dettaglio</a>
+            <a href="{{ route('ad.show', compact('ad')) }}" class="cst-button-card2 ">{{__('ui.Dettaglio')}}</a>
         </div>
         <div class="d-flex justify-content-evenly align-items-center my-2">
             <a href="{{ route('byCategory', ['category' => $ad->category]) }}" class="cst-button-card2">

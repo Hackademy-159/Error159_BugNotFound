@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row justify-content-center align-items-center text-center">
             <div class="col-12">
-                <h1 class="text-center display-2 fw-normal col-b-text mt-5 pt-5">Tutti gli articoli</h1>
+                <h1 class="text-center display-2 fw-normal col-b-text mt-5 pt-5">{{__('ui.Tutti gli annunci')}}</h1>
             </div>
         </div>
         <div class="row justify-content-center align-items-center py-5">
@@ -12,7 +12,7 @@
                 </div>
             @empty
                 <div class="col-12">
-                    <h3 class="text-center">Non sono ancora stati creati articoli</h3>
+                    <h3 class="text-center">{{__('ui.Non sono ancora stati creati articoli')}}</h3>
                 </div>
             @endforelse
         </div>

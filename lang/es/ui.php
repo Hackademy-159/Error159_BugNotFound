@@ -5,10 +5,10 @@ return [
     'Occasioni uniche a prezzi imbattibili.' => 'Oportunidades únicas a precios inmejorables.',
     'Pubblica un annuncio' => 'Publicar un anuncio',
     'Ultimi annunci inseriti' => 'Últimos anuncios publicados',
-    'Non sono ancora stati creati degli articoli' => 'Aún no se han creado artículos',
+    'Non sono ancora stati creati degli annunci' => 'Aún no se han creado anuncios',
     'Vuoi diventare revisore?' => '¿Quieres convertirte en revisor?',
     'Aiutaci a mantenere il nostro marketplace sicuro.' => 'Ayúdanos a mantener seguro nuestro mercado.',
-    'Diventa un revisore e approva o rifiuta gli articoli messi in vendita dagli utenti.' => 'Conviértete en revisor y aprueba o rechaza los artículos publicados por los usuarios.',
+    'Diventa un revisore e approva o rifiuta gli annunci messi in vendita dagli utenti.' => 'Conviértete en revisor y aprueba o rechaza los anuncios publicados por los usuarios.',
     'Diventa revisore' => 'Conviértete en revisor',
     'Conferma la tua scelta' => 'Confirma tu elección',
     'Sei sicuro di voler diventare revisore?' => '¿Estás seguro de que quieres convertirte en revisor?',
@@ -21,7 +21,7 @@ return [
     // navbar
     'Cerca...' => 'Buscar...',
     'Cerca' => 'Buscar',
-    'Tutti gli articoli' => 'Todos los artículos',
+    'Tutti gli annunci' => 'Todos los anuncios',
     'Crea un annuncio' => 'Crear un anuncio',
     'Categorie' => 'Categorías',
     'Accedi' => 'Iniciar sesión',
@@ -54,13 +54,53 @@ return [
     'Dettaglio' => 'Detalle',
 
     //show
-    'Dettaglio articolo:' => 'Detalle del artículo:',
+    'Dettaglio annuncio' => 'Detalle del anuncio',
     'Immagine' => 'Imagen',
     'Foto non inserita dall\'utente' => 'Foto no subida por el usuario',
     'Titolo' => 'Título',
     'Colore' => 'Color',
     'Condizione' => 'Condición',
     'Descrizione' => 'Descripción',
+
+    //searched
+    'Risultati per la ricerca' => 'Resultados para la búsqueda',
+    'Nessun annuncio corrisponde alla tua ricerca' => 'No hay anuncios que coincidan con tu búsqueda',
+
+    //index
+    'Tutti gli annunci' => 'Todos los anuncios',
+    'Non sono ancora stati creati annunci' => 'Aún no se han creado anuncios',
+
+    //byCategory
+    'Articoli della categoria' => 'Artículos de la categoría',
+    'Non sono ancora stati creati annunci per questa categoria!' => '¡Aún no se han creado anuncios para esta categoría!',
+    'Pubblica annuncio' => 'Publicar anuncio',
+
+    //create
+    'Aggiungi il tuo annuncio' => 'Agrega tu anuncio',
+
+    //create-ad(form)
+    'Categoria' => 'Categoría',
+    'Seleziona una condizione' => 'Selecciona una condición',
+    'Nuovo' => 'Nuevo',
+    'Ottime' => 'Excelente',
+    'Buone' => 'Buena',
+    'Discrete' => 'Regular',
+    'Seleziona una categoria' => 'Selecciona una categoría',
+    'Inserisci immagini' => 'Insertar imágenes',
+    'Conferma inserimento' => 'Confirmar inserción',
+    'Anteprima della foto' => 'Vista previa de la foto',
+
+    //revisor
+    'Revisore Dashboard' => 'Panel de Revisor',
+    'Autore' => 'Autor',
+    'Prezzo' => 'Precio',
+    'Categoria' => 'Categoría',
+    'Descrizione' => 'Descripción',
+    'Rifiuta' => 'Rechazar',
+    'Accetta' => 'Aceptar',
+    'Nessun articolo da revisionare' => 'No hay artículos para revisar',
+    'Homepage' => 'Volver a la página de inicio',
+
     
 
 ];
