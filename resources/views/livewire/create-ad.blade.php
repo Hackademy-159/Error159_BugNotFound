@@ -89,6 +89,7 @@
 
                 {{-- inserimento immagini --}}
                 <div class="mb-3">
+                    <label class="form-label">Immagini</label>
                     <input type="file" wire:model.live="temporary_images" multiple
                         class="form-control shadow @error('temporary_images.') is-invalid @enderror"
                         placeholder="Img" />
@@ -101,12 +102,11 @@
                 </div>
 
                 @if (!empty($images))
-                    <div class="row">
-                        <div class="col-12">
-                            <p>Photo preview:</p>
-                            <div class="row border border-4 border-success rounded shadow py-4">
+                    <div class="mb-3 mx-3">
+                            <label for="" class="form-label">Anteprima immagini caricate</label>
+                            <div class="row border-create-img shadow py-4">
                                 @foreach ($images as $key => $image)
-                                    <div class="col d-flex flex-column align-items-center my-3">
+                                    <div class="col d-flex flex-column align-items-center my-3 p-0">
                                         <div class="img-preview mx-auto shadow rounded"
                                             style="background-image: url({{ $image->temporaryUrl() }});">
                                         </div>
@@ -117,7 +117,6 @@
                                 @endforeach
                             </div>
                         </div>
-                    </div>
                 @endif
 
                 <!-- Bottone di conferma -->
