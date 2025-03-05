@@ -19,7 +19,7 @@
 
                 <!-- Prezzo -->
                 <div class="mb-3">
-                    <label class="form-label">{{__('ui.Prezzo')}}</label>
+                    <label class="form-label">{{__('ui.Prezzo')}} €</label>
                     <input type="text" class="form-control @error('price') is-invalid @enderror"
                         wire:model.defer="price">
                     @error('price')

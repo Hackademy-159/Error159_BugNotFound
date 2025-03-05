@@ -96,6 +96,21 @@ return [
     'Accetta' => 'Accept',
     'Nessun articolo da revisionare' => 'No items to review',
     'Homepage' => 'Back to homepage',
+
+    //login
+    'Accedi al tuo account' => '',
+    'Indirizzo Email' => '',
+    'Iscriviti' => 'Sign up',
+    'Ancora non hai un account?' => 'Don\'t have an account yet?',
+
+    //register 
+    'Crea il tuo account' => 'Create your account',
+    'Nome' => 'Name',
+    'Cognome' => 'Surname',
+    'Data Nascita' => 'Date of Birth',
+    'Numero Telefono' => 'Phone Number',
+    'Conferma Password' => 'Confirm Password',
+   
 ];
 // {{__('ui.')}}
 

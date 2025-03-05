@@ -101,6 +101,19 @@ return [
     'Nessun articolo da revisionare' => 'No hay artículos para revisar',
     'Homepage' => 'Volver a la página de inicio',
 
+    //login
+    'Accedi al tuo account' => 'Inicia sesión en tu cuenta',
+    'Indirizzo Email' => 'Dirección de correo electrónico',
+    'Iscriviti' => 'Inscribirse',
+    'Ancora non hai un account?' => '¿Aún no tienes una cuenta?',
     
+    //register 
+    'Crea il tuo account' => 'Crea tu cuenta',
+    'Nome' => 'Nombre',
+    'Cognome' => 'Apellido',
+    'Data Nascita' => 'Fecha de Nacimiento',
+    'Numero Telefono' => 'Número Telefónico',
+    'Conferma Password' => 'Confirmar Password',
+   
 
 ];

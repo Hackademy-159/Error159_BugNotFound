@@ -78,7 +78,7 @@
 
                 @guest
                     <li class="nav-item">
-                        <a class=" @if (Route::currentRouteName() == 'homepage') navElement col-bg-text @else col-b-text @endif nav-link fs-5" href="{{ route('login') }}">Login</a>
+                        <a class=" @if (Route::currentRouteName() == 'homepage') navElement col-bg-text @else col-b-text @endif nav-link fs-5" href="{{ route('login') }}">{{__("ui.Accedi")}} </a>
                     </li>
 
                     <li class="nav-item">

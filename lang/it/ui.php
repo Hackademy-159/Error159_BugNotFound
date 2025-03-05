@@ -101,7 +101,20 @@ return [
     'Nessun articolo da revisionare' => 'Nessun articolo da revisionare',
     'Homepage' => 'Torna all\'homepage',
     
+    //login
+    'Accedi al tuo account' => 'Accedi al tuo account',
+    'Indirizzo Email' => 'Indirizzo Email',
+    'Iscriviti' => 'Iscriviti',
+    'Ancora non hai un account?' => 'Ancora non hai un account?',
 
+    //register 
+    'Crea il tuo account' => 'Crea il tuo account',
+    'Nome' => 'Nome',
+    'Cognome' => 'Cognome',
+    'Data Nascita' => 'Data Nascita',
+    'Numero Telefono' => 'Numero Telefono',
+    'Conferma Password' => 'Conferma Password',
+   
 
 
 ];
