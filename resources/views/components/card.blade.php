@@ -1,10 +1,10 @@
 
-<div class="card mx-auto shadow text-center mb-3 ">
+<div class="card mx-auto text-center ">
     <div id="carousel{{ $ad->id }}" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             @foreach ($ad->images as $index => $image)
                 <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
-                    <img src="{{ $image->getUrl(300,300) }}" class="col-s card-img-top p-4 no-radius" alt="Immagine dell'articolo {{ $ad->title }}">
+                    <img src="{{ $image->getUrl(300,300) }}" class="col-s img-fluid p-4 no-radius" alt="Immagine dell'articolo {{ $ad->title }}">
                 </div>
             @endforeach
         </div>

@@ -15,7 +15,7 @@
                 <!-- Sezione per le immagini -->
                 <!-- Card con dettagli e azioni -->
                 <div class="col-9 w-75 mx-auto p-4 shadow rounded col-s d-flex flex-column justify-content-between m-2">
-                    <div>
+                    <div class="text-center">
                         <h1 class="fw-bold">{{ $ad_to_check->title }}</h1>
                         <h4 class="mt-3 col-b-text">{{ __('ui.Autore') }}: <span
                                 class="fw-normal">{{ $ad_to_check->user->name }}
@@ -41,85 +41,81 @@
                     </div>
                 </div>
             </div>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col-md-12">
-                    {{-- funzione immagini inserite dall'utente --}}
-                    @if ($ad_to_check->images->count())
-                        @foreach ($ad_to_check->images as $key => $image)
-                            <div class="col-4 col-md-4 mb-4">
-                                <img src="{{ $image->getUrl(300, 300) }}" class="img-fluid rounded shadow"
-                                    alt="Immagine {{ $key + 1 }} dell'articolo '{{ $ad_to_check->title }}'">
+            <div class="row justify-content-evenly p-5 bg-white ">
+                {{-- funzione immagini inserite dall'utente --}}
+                @if ($ad_to_check->images->count())
+                    @foreach ($ad_to_check->images as $key => $image)
+                    
+                        <div class="col-md-3 col-12 d-flex justify-content-end mb-3">
+                            <img src="{{ $image->getUrl(300, 300) }}" class="img-fluid"
+                                alt="Immagine {{ $key + 1 }} dell'articolo '{{ $ad_to_check->title }}'">
+                        </div>
+                        <div class="col-md-2 col-12 p-3 mb-3 align-self-center">
+                            <div>
+                                <h5>Labels</h5>
+                                @if ($image->labels)
+                                    @foreach ($image->labels as $label)
+                                        <span class="label-font-cst">#{{ $label }}, </span>
+                                    @endforeach
+                                @else
+                                    <p class="fst-italic">No labels</p>
+                                @endif
                             </div>
-                            <div class="col-md-2 ps-3">
-                                <div class="card-body">
-                                    <h5>Labels</h5>
-                                    @if ($image->labels)
-                                        @foreach ($image->labels as $label)
-                                            #{{ $label }},
-                                        @endforeach
-                                    @else
-                                        <p class="fst-italic">No labels</p>
-                                    @endif
+                        
+                            <h5 class="">Ratings</h5>
+                            <div class="row justify-content-center">
+                                <div class="col-2">
+                                    <div class="text-center mx-auto {{ $image->adult }}"></div>
                                 </div>
+                                <div class="col-10">adult</div>
                             </div>
-                            <div class="col-md-2 ps-3">
-                                <div class="card-body">
-                                    <h5 class="">Ratings</h5>
-                                    <div class="row justify-content-center">
-                                        <div class="col-2">
-                                            <div class="text-center mx-auto {{ $image->adult }}"></div>
-                                        </div>
-                                        <div class="col-10">adult</div>
-                                    </div>
-                                    <div class="row justify-content-center">
-                                        <div class="col-2">
-                                            <div class="text-center mx-auto {{ $image->violence }}"></div>
-                                        </div>
-                                        <div class="col-10">violence</div>
-                                    </div>
-                                    <div class="row justify-content-center">
-                                        <div class="col-2">
-                                            <div class="text-center mx-auto {{ $image->spoof }}"></div>
-                                        </div>
-                                        <div class="col-10">spoof</div>
-                                    </div>
-                                    <div class="row justify-content-center">
-                                        <div class="col-2">
-                                            <div class="text-center mx-auto {{ $image->racy }}"></div>
-                                        </div>
-                                        <div class="col-10">racy</div>
-                                    </div>
-                                    <div class="row justify-content-center">
-                                        <div class="col-2">
-                                            <div class="text-center mx-auto {{ $image->medical }}"></div>
-                                        </div>
-                                        <div class="col-10">medical</div>
-                                    </div>
+                            <div class="row justify-content-center">
+                                <div class="col-2">
+                                    <div class="text-center mx-auto {{ $image->violence }}"></div>
                                 </div>
+                                <div class="col-10">violence</div>
                             </div>
-                </div>
-        @endforeach
-    @else
-        @for ($i = 0; $i < 6; $i++)
-            <!-- Mostra 6 immagini, 3 per riga -->
-            <div class="col-4">
-                <div class="card shadow-sm">
-                    <img src="https://picsum.photos/300/200" class="card-img-top" alt="Immagine segnaposto">
+                            <div class="row justify-content-center">
+                                <div class="col-2">
+                                    <div class="text-center mx-auto {{ $image->spoof }}"></div>
+                                </div>
+                                <div class="col-10">spoof</div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-2">
+                                    <div class="text-center mx-auto {{ $image->racy }}"></div>
+                                </div>
+                                <div class="col-10">racy</div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-2">
+                                    <div class="text-center mx-auto {{ $image->medical }}"></div>
+                                </div>
+                                <div class="col-10">medical</div>
+                            </div>
+                        </div>
+                    @endforeach
+                @else
+                    @for ($i = 0; $i < 6; $i++)
+                        <!-- Mostra 6 immagini, 3 per riga -->
+                        <div class="col-4">
+                            <div class="card shadow-sm">
+                                <img src="https://picsum.photos/300/200" class="card-img-top" alt="Immagine segnaposto">
+                            </div>
+                        </div>
+                    @endfor
+                @endif
+            </div>
+        @else
+            <!-- Nessun annuncio da revisionare -->
+            <div class="row justify-content-center align-items-center text-center" style="height: 60vh;">
+                <div class="col-12">
+                    <h1 class="fst-italic display-4 text-muted">{{ __('ui.Nessun articolo da revisionare') }}
+                    </h1>
+                    <br>
+                    <a href="{{ route('homepage') }}" class="cst-button py-2 px-6 fs-6">{{ __('ui.Homepage') }}</a>
                 </div>
             </div>
-        @endfor
         @endif
-    </div>
-@else
-    <!-- Nessun annuncio da revisionare -->
-    <div class="row justify-content-center align-items-center text-center" style="height: 60vh;">
-        <div class="col-12">
-            <h1 class="fst-italic display-4 text-muted">{{ __('ui.Nessun articolo da revisionare') }}
-            </h1>
-            <br>
-            <a href="{{ route('homepage') }}" class="cst-button py-2 px-6 fs-6">{{ __('ui.Homepage') }}</a>
-        </div>
-    </div>
-    @endif
     </div>
 </x-layout>
