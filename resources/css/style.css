@@ -1,10 +1,10 @@
 :root {
     --background: #ffffff;
-    --secondary: #ffffff;
+    --secondary: #efe9e6;
     --button: #004766;
     --opacity: rgba(255, 255, 255, 0.5);
     --trasparent: rgba(255, 255, 255, 0);
-    --prova: #efe9e6;
+    /* --prova: #efe9e6; */
     /* #F7F4F3;efe9e6 */
     ;
 }
@@ -178,6 +178,24 @@
 
 .cst-section-button:hover {
     transform: scale(1.1);
+}
+
+.cst-input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: var(--secondary);
+    border-bottom: solid 2px var(--button);
+    color: var(--button);
+    padding: 5px
+}
+
+.border-preview{
+    border: solid 2px var(--button);
+}
+
+.delete-button{
+    color: var(--button);
 }
 /* FINE BOTTONI */
 

@@ -22,7 +22,7 @@
                 <h2 class="text-start display-3 ps-3 py-4">{{ __('ui.Ultimi annunci inseriti') }}</h2>
             </div>
             @forelse ($ads as $ad)
-                <div class="col-12 col-md-3 p-3 col-prova">
+                <div class="col-12 col-md-3 p-3 col-s">
                     <x-card :ad="$ad" />
                 </div>
             @empty
