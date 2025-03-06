@@ -260,6 +260,9 @@ input:focus {
     background-color: rgba(0, 0, 0, 0.8) !important;
     transition: background-color 1s ease-in-out;
 }
+.label-font-cst{
+    font-size: 0.8rem;
+}
 
 /* INIZIO SEZIONE HEADER */
     /* classe per immagine header */
