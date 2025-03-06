@@ -8,7 +8,7 @@
 
                 <!-- About RiArreda -->
                 <div class="col-md-3 col-lg-3 col-xl-3">
-                    <h6 class=" fw-bold mb-4">RiArreda</h6>
+                    <h6 class=" fs-3 fw-bold mb-4">RiArreda</h6>
                     <p>{{__('ui.footer_message')}}  </p>
                 </div>
 

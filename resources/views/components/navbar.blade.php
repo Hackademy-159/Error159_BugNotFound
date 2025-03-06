@@ -1,7 +1,7 @@
 <nav @if (Route::currentRouteName() == 'homepage') id="navbar" @endif class="navbar navbar-expand-lg @if (Route::currentRouteName() == 'homepage') nav-trans @else shadow col-bg @endif fixed-top">
     <div class="container-fluid">
-        {{-- logo --}}
-        <a href="{{ route('homepage') }}"><img class="cst-dim" src="{{ asset('img/Logo.png') }}" alt="Logo"></a>
+        {{-- logo --}} 
+        <a class="pe-md-2" href="{{ route('homepage') }}"><img class="cst-dim" src="{{ asset('img/Logo.png') }}" alt="Logo"></a>
         {{-- campo ricerca mobile --}}
         <div class="d-md-none">
             <form class="pt-1 d-flex" role="search" action="{{ route('ad.search') }}" method="GET">
@@ -12,15 +12,7 @@
                     </svg>
                 </button>
         </form>
-            {{-- <form class="d-flex ms-auto me-sm-auto" role="search" action="{{ route('ad.search') }}" method="GET">
-                <div class="input-group">
-                    <input type="search" name="query" class="form-control" placeholder="Cerca..."
-                        aria-label="Search">
-                    <button type="submit" class="btn-search input-group-text" id="basic-addon2">
-                        Cerca
-                    </button>
-                </div>
-            </form> --}}
+            
         </div>
         {{-- bottone apertura navbar mobile --}}
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
@@ -31,15 +23,15 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                 <li class="nav-item">
-                    <a class="@if (Route::currentRouteName() == 'homepage') navElement col-bg-text @else col-b-text @endif nav-link active fs-5" aria-current="page" href="{{ route('ad.index') }}">{{__('ui.Tutti gli annunci')}}</a>
+                    <a class="@if (Route::currentRouteName() == 'homepage') navElement col-bg-text @else col-b-text @endif nav-link px-md-3 active fs-5" aria-current="page" href="{{ route('ad.index') }}">{{__('ui.Tutti gli annunci')}}</a>
                 </li>
                 @auth
                     <li class="nav-item">
-                        <a class="@if (Route::currentRouteName() == 'homepage') navElement col-bg-text @else col-b-text @endif nav-link active fs-5" href="{{ route('create.ad') }}">{{__('ui.Crea un annuncio')}}</a>
+                        <a class="@if (Route::currentRouteName() == 'homepage') navElement col-bg-text @else col-b-text @endif nav-link px-md-3 active fs-5" href="{{ route('create.ad') }}">{{__('ui.Crea un annuncio')}}</a>
                     </li>
                 @endauth
                 <li class="nav-item dropdown">
-                    <a class=" @if (Route::currentRouteName() == 'homepage') navElement col-bg-text @else col-b-text @endif nav-link dropdown-toggle active fs-5" href=""role='buttom'
+                    <a class=" @if (Route::currentRouteName() == 'homepage') navElement col-bg-text @else col-b-text @endif nav-link px-md-3 dropdown-toggle active fs-5" href=""role='buttom'
                         data-bs-toggle='dropdown' aria-expamded='false'>
                         {{__('ui.Categorie')}}
                     </a>
@@ -63,11 +55,11 @@
 
 
 
-            <ul class="navbar-nav mb-2 mb-lg-0">
+            <ul class="navbar-nav mb-2  mb-lg-0">
 
                 <li class="pt-1">
                 <form class="pt-1 d-flex" role="search" action="{{ route('ad.search') }}" method="GET">
-                        <input type="search" class="@if (Route::currentRouteName() == 'homepage') search-border-home @else search-border-all @endif col-t " name="query" placeholder="{{__('ui.Cerca...')}}"aria-label="Search">
+                        <input type="search" class="@if (Route::currentRouteName() == 'homepage') search-border-home @else search-border-all @endif col-t px-md-3" name="query" placeholder="{{__('ui.Cerca...')}}"aria-label="Search">
                         <button type="submit" id="basic-addon2" class="border-0 col-t col-bg-text">
                             <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="bi bi-search" viewBox="0 0 16 16">
                                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>

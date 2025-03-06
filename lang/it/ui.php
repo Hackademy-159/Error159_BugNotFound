@@ -51,7 +51,7 @@ return [
 
     //card
     'Prezzo' => 'Prezzo',
-    'Dettaglio' => 'Dettaglio',
+    'Dettaglio' => 'Più dettagli',
 
     //show
     'Dettaglio annuncio' => 'Dettaglio annuncio',

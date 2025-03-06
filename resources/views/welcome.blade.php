@@ -15,12 +15,10 @@
         </div>
     </div>
 
-
+    <h2 class="text-start display-4 col-b-text ps-3 py-4">{{ __('ui.Ultimi annunci inseriti') }}</h2>
     <div class="container text-center">
-        <div class="row justify-content-center align-items-center pt-5 pb-5 h-100 ">
-            <div class="col-12">
-                <h2 class="text-start display-3 ps-3 py-4">{{ __('ui.Ultimi annunci inseriti') }}</h2>
-            </div>
+        <div class="row justify-content-center align-items-center my-3 pt-3 pb-5 h-100 ">
+            
             @forelse ($ads as $ad)
                 <div class="col-12 col-md-3 p-3 col-s">
                     <x-card :ad="$ad" />
