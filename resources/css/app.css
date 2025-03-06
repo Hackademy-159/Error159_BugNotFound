@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities; */
 
-@import './style.css';
 @import 'bootstrap';
 @import 'bootstrap-icons';
+@import './style.css';

@@ -1,12 +1,19 @@
 :root {
-    --background: rgb(253, 251, 239);
-    --secondary: #f7d5c2;
+    --background: #ffffff;
+    --secondary: #ffffff;
     --button: #004766;
     --opacity: rgba(255, 255, 255, 0.5);
     --trasparent: rgba(255, 255, 255, 0);
+    --prova: #efe9e6;
+    /* #F7F4F3;efe9e6 */
     ;
 }
-
+.card{
+    border-radius: 0px;
+}
+.col-prova{
+    background-color: var(--prova);
+}
 * {
     color: var(--button);
 
