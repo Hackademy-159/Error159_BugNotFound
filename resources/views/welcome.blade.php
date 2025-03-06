@@ -17,19 +17,38 @@
 
         <div class="row justify-content-center align-items-center pt-5 pb-5 h-100">
             <div class="col-12">
-                <h2 class="text-start display-3 ps-3 py-4">{{__('ui.Ultimi annunci inseriti')}}</h2>
+                <h2 class="text-start display-3 ps-3 py-4">{{ __('ui.Ultimi annunci inseriti') }}</h2>
             </div>
-            @forelse ($ads as $ad)
-                <div class="col-12 col-md-3 p-4">
-                    <x-card :ad="$ad" />
+        
+            <div class="col-8">
+                <div id="adsCarousel" class="carousel slide col-s text-white py-5" data-bs-ride="carousel">
+                    <!-- Indicators -->
+                    <div class="carousel-indicators">
+                        @foreach ($ads->chunk(3) as $index => $chunk)
+                            <button type="button" data-bs-target="#adsCarousel" data-bs-slide-to="{{ $index }}" class="{{ $index == 0 ? 'active' : '' }}"></button>
+                        @endforeach
+                    </div>
+        
+                    <!-- Wrapper -->
+                    <div class="carousel-inner">
+                        @foreach ($ads->chunk(3) as $index => $chunk)
+                            <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
+                                <div class="row justify-content-center align-items-center">
+                                    @foreach ($chunk as $ad)
+                                        <div class="col-7 col-md-3 col-lg-3">
+                                            <x-card :ad="$ad" />
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
                 </div>
-            @empty
-                <div class="col-12">
-                    <h3 class="text-center">{{__('ui.Non sono ancora stati creati degli annunci')}}</h3>
-                </div>
-            @endforelse
+            </div>
         </div>
-
+        
+        
+        
         {{-- sezione revisore --}}
         <div class="row col-b">
             <div class="col-12 d-flex flex-column justify-content-center col-bg-text size-section">

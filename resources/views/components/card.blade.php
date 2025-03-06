@@ -4,7 +4,7 @@
         <div class="carousel-inner">
             @foreach ($ad->images as $index => $image)
                 <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
-                    <img src="{{ $image->getUrl(300,300) }}" class="col-s card-img-top p-4 no-radius" alt="Immagine dell'articolo {{ $ad->title }}">
+                    <img src="{{ $image->getUrl(300,300) }}" class="bg-white card-img-top p-4 no-radius" alt="Immagine dell'articolo {{ $ad->title }}">
                 </div>
             @endforeach
         </div>
@@ -18,7 +18,7 @@
         </button>
     </div>
 
-    <div class="card-body col-s no-radius">
+    <div class="card-body bg-white no-radius">
         <h5 class="card-title">{{ $ad->title }}</h5>
         <h6 class="card-subtle text-body-secondary p-3">{{__('ui.Prezzo')}}: {{ $ad->price }} €</h6>
 
