@@ -1,17 +1,16 @@
 <x-layout>
-    <h1 class="text-center p-3 display-2 fw-normal col-b-text my-5 pt-5
-    ">{{__("ui.Crea il tuo account")}}:</h1>
+    <h1 class="display-6 col-b-text ms-4 mt-5 pt-5">{{__("ui.Crea il tuo account")}}:</h1>
 
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-9">
-                <form method="POST" action="{{ route('register') }}" class="cst-form p-5 mb-5 mt-2 shadow">
+            <div class="col-11 col-md-7">
+                <form method="POST" action="{{ route('register') }}" class="cst-form p-md-5 p-3 my-5">
                     @csrf
 
                     <!-- Nome -->
                     <div class="mb-3">
                         <label class="form-label">{{__('ui.Nome')}}</label>
-                        <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}">
+                        <input placeholder="Inserisci il tuo nome" type="text" class="cst-input w-100 @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}">
                         @error('name')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
@@ -20,7 +19,7 @@
                     <!-- Cognome -->
                     <div class="mb-3">
                         <label class="form-label">{{__('ui.Cognome')}}</label>
-                        <input type="text" class="form-control @error('surname') is-invalid @enderror" name="surname" value="{{ old('surname') }}">
+                        <input placeholder="Inserisci il tuo cognome" type="text" class="cst-input w-100 @error('surname') is-invalid @enderror" name="surname" value="{{ old('surname') }}">
                         @error('surname')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
@@ -29,7 +28,7 @@
                     <!-- Data Nascita -->
                     <div class="mb-3">
                         <label class="form-label">{{__('ui.Data Nascita')}}</label>
-                        <input type="date" class="form-control @error('date') is-invalid @enderror" name="date" value="{{ old('date') }}">
+                        <input type="date" class="cst-input w-100 @error('date') is-invalid @enderror" name="date" value="{{ old('date') }}">
                         @error('date')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
@@ -38,7 +37,7 @@
                     <!-- Numero Telefono -->
                     <div class="mb-3">
                         <label class="form-label">{{__('ui.Numero Telefono')}}</label>
-                        <input type="text" class="form-control @error('telephone_number') is-invalid @enderror" name="telephone_number" value="{{ old('telephone_number') }}">
+                        <input placeholder="Inserisci il tuo numero di telefono" type="text" class="cst-input w-100 @error('telephone_number') is-invalid @enderror" name="telephone_number" value="{{ old('telephone_number') }}">
                         @error('telephone_number')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
@@ -47,7 +46,7 @@
                     <!-- Indirizzo Email -->
                     <div class="mb-3">
                         <label class="form-label">{{__('ui.Indirizzo Email')}}</label>
-                        <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}">
+                        <input placeholder="Inserisci il tuo indirizzo email" type="email" class="cst-input w-100 @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}">
                         @error('email')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
@@ -56,7 +55,7 @@
                     <!-- Password -->
                     <div class="mb-3">
                         <label class="form-label">Password</label>
-                        <input type="password" class="form-control @error('password') is-invalid @enderror" name="password">
+                        <input placeholder="Inserisci la tua password" type="password" class="cst-input w-100 @error('password') is-invalid @enderror" name="password">
                         @error('password')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
@@ -65,7 +64,7 @@
                     <!-- Conferma Password -->
                     <div class="mb-3">
                         <label class="form-label">{{__('ui.Conferma Password')}}</label>
-                        <input type="password" class="form-control @error('password_confirmation') is-invalid @enderror" name="password_confirmation">
+                        <input placeholder="Conferma la tua password" type="password" class="cst-input w-100 @error('password_confirmation') is-invalid @enderror" name="password_confirmation">
                         @error('password_confirmation')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
