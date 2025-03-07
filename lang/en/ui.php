@@ -50,7 +50,7 @@ return [
 
     //card
     'Prezzo' => 'Price',
-    'Dettaglio' => 'Detail',
+    'Dettaglio' => 'More Details',
 
     //show
     'Dettaglio annuncio' => 'ad details',

@@ -54,7 +54,7 @@ return [
     'Dettaglio' => 'Detalle',
 
     //show
-    'Dettaglio annuncio' => 'Detalle del anuncio',
+    'Dettaglio annuncio' => 'Mas Detalles',
     'Immagine' => 'Imagen',
     'Foto non inserita dall\'utente' => 'Foto no subida por el usuario',
     'Titolo' => 'Título',

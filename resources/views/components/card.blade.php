@@ -1,10 +1,10 @@
 
-<div class="card mx-auto text-center ">
+<div class="card mx-auto ">
     <div id="carousel{{ $ad->id }}" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             @foreach ($ad->images as $index => $image)
                 <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
-                    <img src="{{ $image->getUrl(300,300) }}" class="col-s img-fluid p-4 no-radius" alt="Immagine dell'articolo {{ $ad->title }}">
+                    <img src="{{ $image->getUrl(300,300) }}" class="col-bg img-fluid p-2 no-radius" alt="Immagine dell'articolo {{ $ad->title }}">
                 </div>
             @endforeach
         </div>
@@ -18,17 +18,16 @@
         </button>
     </div>
 
-    <div class="card-body col-s no-radius">
-        <h5 class="card-title">{{ $ad->title }}</h5>
-        <h6 class="card-subtle text-body-secondary p-3">{{__('ui.Prezzo')}}: {{ $ad->price }} €</h6>
+    <div class=" px-3 col-bg no-radius">
+        <h5 class=" text-start m-0 col-b-text">{{ $ad->title }}</h5>
+        <div class="text-start mb-3">
+            <a href="{{ route('byCategory', ['category' => $ad->category]) }}" class="text-none col-b-text">{{$ad->category->name }}</a>
+        </div>
+        <h6 class="col-b-text text-start">{{__('ui.Prezzo')}}: {{ $ad->price }} €</h6>
 
-        <div class="d-flex justify-content-evenly align-items-center my-2">
-            <a href="{{ route('ad.show', compact('ad')) }}" class="cst-button-card2 ">{{__('ui.Dettaglio')}}</a>
+        <div class="d-flex justify-content-evenly align-items-center my-1 mb-3">
+            <a href="{{ route('ad.show', compact('ad')) }}" class="cst-button-card2 mt-3">{{__('ui.Dettaglio')}}</a>
         </div>
-        <div class="d-flex justify-content-evenly align-items-center my-2">
-            <a href="{{ route('byCategory', ['category' => $ad->category]) }}" class="cst-button-card2">
-                {{$ad->category->name }}
-            </a>
-        </div>
+        
     </div>
 </div>
