@@ -1,12 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
     let navbar = document.querySelector("#navbar");
     let navElements = document.querySelectorAll(".navElement");
+    let inputSearch = document.querySelector("#inputSearch");
+    let inputSearch1 = document.querySelector("#inputSearch1");
     let header = document.querySelector("#header");
-    let cercaInput = document.querySelector("#cercaInput");
+    let search = document.querySelector("#search");
 
     window.addEventListener("scroll", function () {
         console.log(window.scrollY);
-        if (window.scrollY > (header.clientHeight -10)) {
+        if (window.scrollY > (header.clientHeight - 10)) {
             navElements.forEach(navElements => {
                 //aggiuinge alle scritte colore blu
                 navElements.classList.add("col-b-text");
@@ -15,8 +17,12 @@ document.addEventListener("DOMContentLoaded", function () {
             });
             //aggiunge alla navbar ombreggiatura e colore sfondo bianco
             navbar.classList.add("col-bg","shadow");
-            cercaInput.classList.add("search-border-all");
-            cercaInput.classList.remove("search-border-home");
+            inputSearch.classList.remove("search-border-home");
+            inputSearch.classList.add("search-border-all");
+            inputSearch1.classList.remove("search-border-home");
+            inputSearch1.classList.add("search-border-all");
+            // search.classList.add("col-b-text");
+            // search.classList.remove("col-bg-text");
         } else {
             navElements.forEach(navElements => {
                 //aggiunge colore bianco
@@ -26,8 +32,12 @@ document.addEventListener("DOMContentLoaded", function () {
             });
             //rimuove ombra e colore sfondo bianco
             navbar.classList.remove("col-bg","shadow");
-            cercaInput.classList.remove("search-border-all");
-            cercaInput.classList.add("search-border-home");
+            inputSearch.classList.remove("search-border-all");
+            inputSearch.classList.add("search-border-home");
+            inputSearch1.classList.remove("search-border-all");
+            inputSearch1.classList.add("search-border-home");
+            // search.classList.remove("col-b-text");
+            // search.classList.add("col-bg-text");
         }
     });
 });
@@ -51,10 +61,10 @@ document.querySelectorAll('.carousel').forEach(carousel => {
 
 //rotazione bottone navbar mobile
 let navButton = document.querySelector("#navButton"); 
-let rotatedIcon = document.querySelector(".bi-chevron-double-up");
+// let rotatedIcon = document.querySelector(".bi-chevron-double-up");
 
 navButton.addEventListener('click', function() {
-    rotatedIcon.classList.toggle('rotated');
-    console.log(rotatedIcon.classList);
+    navButton.classList.toggle('rotated1');
+    navButton.classList.toggle('rotated2');
 });
 
