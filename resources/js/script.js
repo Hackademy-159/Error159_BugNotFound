@@ -49,3 +49,12 @@ document.querySelectorAll('.carousel').forEach(carousel => {
     });
 });
 
+//rotazione bottone navbar mobile
+let navButton = document.querySelector("#navButton"); 
+let rotatedIcon = document.querySelector(".bi-chevron-double-up");
+
+navButton.addEventListener('click', function() {
+    rotatedIcon.classList.toggle('rotated');
+    console.log(rotatedIcon.classList);
+});
+

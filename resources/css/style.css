@@ -8,32 +8,41 @@
     /* #F7F4F3;efe9e6 */
     ;
 }
-.card{
+
+.card {
     border-radius: 0px;
 }
-.col-prova{
+
+.col-prova {
     background-color: var(--prova);
 }
+
 * {
     color: var(--button);
 
 }
 
 /* INIZIO COLORI */
-.col-t{
+.col-t {
     background-color: var(--trasparent);
 }
+
 .col-bg {
     background-color: var(--background);
 }
 
 .col-bg-text {
-    color: var(--background)!important;
+    color: var(--background) !important;
 }
+
 .homepage .col-bg-text svg {
-    fill: var(--background); /* Il tuo bianco personalizzato */
-}.internal-page .col-bg-text svg {
-    fill: var(--button); /* Il tuo bianco personalizzato */
+    fill: var(--background);
+    /* Il tuo bianco personalizzato */
+}
+
+.internal-page .col-bg-text svg {
+    fill: var(--button);
+    /* Il tuo bianco personalizzato */
 }
 
 
@@ -64,10 +73,24 @@
 .col-o {
     background-color: var(--opacity) !important;
 }
- /* FINE COLORI */
+
+/* FINE COLORI */
 
 /*INIZIO BOTTONI */
-    /* bottone ricerca */
+/* bottone ricerca */
+.ciao:hover {
+    transform: rotate(180deg)!important;
+    transition: transform 0.3s ease;
+}
+
+.buttonNavCustom {
+    padding: 10px;
+    font-size: 3vh;
+    border: 0;
+    color: var(--color-s);
+    background-color: transparent;
+}
+
 .btn-search {
     background-color: var(--button) !important;
     color: var(--background) !important;
@@ -76,7 +99,7 @@
     font-weight: 600;
 }
 
-    /* bottone card, blu - hover opaco */
+/* bottone card, blu - hover opaco */
 .cst-button-card {
     width: 50%;
     height: auto;
@@ -101,7 +124,7 @@
     background-color: var(--button);
     color: var(--background);
     padding: 7px;
-    font-size: 1rem;
+    font-size: 25px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: 600;
@@ -114,30 +137,34 @@
     transition: 0.2s;
     color: var(--button);
 }
-.delete-button{
+
+.delete-button {
     background-color: transparent;
     border: rgb(232, 40, 40) solid 1px;
     border-radius: 3px;
     padding: 0px;
     margin: 3px;
 }
-.delete-button:hover{
+
+.delete-button:hover {
     background-color: rgb(232, 40, 40);
     border: var(--background) solid 1px;
 }
-.color{
+
+.color {
     color: rgb(232, 40, 40);
     padding-left: 6px;
     padding-right: 6px;
     padding-top: 4px;
     padding-bottom: 4px;
 }
-.color:hover{
+
+.color:hover {
     color: var(--background);
 }
 
 
-.width-custom{
+.width-custom {
     width: 25%;
 }
 
@@ -185,7 +212,7 @@
     color: white;
 }
 
-    /* bottone sezione diventa revisore*/
+/* bottone sezione diventa revisore*/
 .cst-section-button {
     width: 270px;
     height: 80px;
@@ -201,12 +228,15 @@
 .cst-section-button:hover {
     transform: scale(1.1);
 }
-input:focus, textarea:focus, select:focus {
+
+input:focus,
+textarea:focus,
+select:focus {
     outline: none;
     box-shadow: none;
 }
 
-.cst-input{
+.cst-input {
     border-top: none;
     border-left: none;
     border-right: none;
@@ -215,7 +245,8 @@ input:focus, textarea:focus, select:focus {
     color: var(--button);
     padding: 5px
 }
-.cst-input-image{
+
+.cst-input-image {
     border-top: none;
     border-left: none;
     border-right: none;
@@ -225,31 +256,34 @@ input:focus, textarea:focus, select:focus {
     padding: 5px
 }
 
-.border-preview{
+.border-preview {
     border: solid 2px var(--button);
 }
 
-.delete-button{
+.delete-button {
     color: var(--button);
 }
+
 /* FINE BOTTONI */
 
 .search-border-home::placeholder {
     color: var(--background);
 }
 
-.search-border-all{
+.search-border-all {
     border-bottom: solid 2px var(--button);
     border-top: none;
     border-left: none;
     border-right: none;
 }
-.search-border-home{
+
+.search-border-home {
     border-bottom: solid 2px var(--background);
     border-top: none;
     border-left: none;
     border-right: none;
 }
+
 .no-radius {
     border-radius: 0px !important;
 }
@@ -276,6 +310,7 @@ input:focus, textarea:focus, select:focus {
     background-color: var(--button) !important;
     color: var(--background) !important;
 }
+
 .nav-link {
     display: block;
     padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
@@ -285,35 +320,41 @@ input:focus, textarea:focus, select:focus {
     background: none;
     border: 0;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-  }
-  .border-navbar{
+}
+
+.border-navbar {
     border-bottom: solid 2px var(--button);
-  }
-  .nav-trans{
+}
+
+.nav-trans {
     transition: 0.6s;
-  }
+}
+
 /* .navbar .nav-link {
     color: var(--background) !important;
 } */
-.border-create-img{
+.border-create-img {
     border: 2px solid var(--button);
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
     border-radius: 5px;
 }
 
-.position-custom{
-    position: absolute; 
+.position-custom {
+    position: absolute;
     top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 .cst-dim {
     height: 55px;
     width: 55px;
 }
- .margin-cst{
+
+.margin-cst {
     margin-bottom: 25vh;
- }
+}
+
 /* classe per rimuovere il colore celeste quando si dgita nella barra di ricerca */
 input:focus {
     border-color: initial !important;
@@ -324,12 +365,13 @@ input:focus {
     background-color: rgba(0, 0, 0, 0.8) !important;
     transition: background-color 1s ease-in-out;
 }
-.label-font-cst{
+
+.label-font-cst {
     font-size: 0.8rem;
 }
 
 /* INIZIO SEZIONE HEADER */
-    /* classe per immagine header */
+/* classe per immagine header */
 .header-custom {
     position: relative;
     background-image: url('../img/header_img.png');
@@ -389,21 +431,22 @@ input:focus {
     height: 700px;
 }
 
-    /*inizio modale di conferma revisore */
-.modal-title-text{
+/*inizio modale di conferma revisore */
+.modal-title-text {
     font-weight: 600;
     font-size: 2rem;
 }
 
-.modal-text{
+.modal-text {
     font-weight: 500;
     font-size: 1.5rem;
 }
 
-.modal-footer{
+.modal-footer {
     background-color: var(--background) !important;
 }
-    /* fine  modale di conferma revisore */
+
+/* fine  modale di conferma revisore */
 /* FINE SEZIONE HEADER */
 
 
@@ -416,20 +459,21 @@ input:focus {
     width: 120px;
 }
 
-.text-none{
+.text-none {
     text-decoration: none;
 }
-.text-none:hover{
+
+.text-none:hover {
     text-decoration: underline;
 }
 
-.margin-index{
+.margin-index {
     margin-top: 20vh;
 }
 
 .page-item.active .page-link {
-    background-color:var(--background) !important; 
-    color:var(--button)!important;
+    background-color: var(--background) !important;
+    color: var(--button) !important;
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
@@ -443,8 +487,8 @@ input:focus {
 }
 
 .page-link {
-    background-color:var(--background) !important; 
-    color:var(--button)!important;
+    background-color: var(--background) !important;
+    color: var(--button) !important;
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
@@ -453,7 +497,7 @@ input:focus {
     border-bottom: 0px;
     margin-left: 3px;
     margin-right: 3px;
-    font-weight: 400; 
+    font-weight: 400;
     font-size: 20px;
 }
 
@@ -497,6 +541,19 @@ input:focus {
         text-decoration: none;
         font-weight: 600;
 
+    }
+
+    .cst-button {
+        display: block;
+        height: auto;
+        background-color: var(--button);
+        color: var(--background);
+        padding: 10px;
+        font-size: 18px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid var(--button);
     }
 
 }

@@ -8,7 +8,7 @@
                 <h1 class="title-header col-bg-text mt-5">RiArreda</h1>
                 <h2 class="subtitle-header col-bg-text">{{ __('ui.Occasioni uniche a prezzi imbattibili.') }}</h2>
                 <div class="m-5 z-2">
-                    <a class="cst-button py-3 px-5 fs-5 "
+                    <a class="cst-button py-md-3 px-md-5 fs-5 "
                         href="{{ route('create.ad') }}">{{ __('ui.Pubblica un annuncio') }}</a>
                 </div>
             </div>
