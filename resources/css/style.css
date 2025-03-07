@@ -113,6 +113,27 @@
     transition: 0.2s;
     color: var(--button);
 }
+.delete-button{
+    background-color: transparent;
+    border: rgb(232, 40, 40) solid 1px;
+    border-radius: 3px;
+    padding: 0px;
+    margin: 3px;
+}
+.delete-button:hover{
+    background-color: rgb(232, 40, 40);
+    border: var(--background) solid 1px;
+}
+.color{
+    color: rgb(232, 40, 40);
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.color:hover{
+    color: var(--background);
+}
 
 
 .width-custom{
@@ -179,6 +200,10 @@
 .cst-section-button:hover {
     transform: scale(1.1);
 }
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    box-shadow: none;
+}
 
 .cst-input{
     border-top: none;
@@ -187,6 +212,15 @@
     background-color: var(--secondary);
     border-bottom: solid 2px var(--button);
     color: var(--button);
+    padding: 5px
+}
+.cst-input-image{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: var(--secondary);
+    border-bottom: solid 2px var(--button);
+    color: rgb(108, 117, 125);
     padding: 5px
 }
 
@@ -202,6 +236,7 @@
 .search-border-home::placeholder {
     color: var(--background);
 }
+
 .search-border-all{
     border-bottom: solid 2px var(--button);
     border-top: none;
@@ -249,6 +284,9 @@
     background: none;
     border: 0;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  }
+  .border-navbar{
+    border-bottom: solid 2px var(--button);
   }
   .nav-trans{
     transition: 0.6s;

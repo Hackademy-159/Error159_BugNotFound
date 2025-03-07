@@ -23,15 +23,15 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                 <li class="nav-item">
-                    <a class="@if (Route::currentRouteName() == 'homepage') navElement col-bg-text @else col-b-text @endif nav-link px-md-3 active fs-5" aria-current="page" href="{{ route('ad.index') }}">{{__('ui.Tutti gli annunci')}}</a>
+                    <a class="@if (Route::currentRouteName() == 'homepage') navElement col-bg-text @else col-b-text @endif nav-link mx-md-2 active fs-5 @if(Route::currentRouteName() == 'ad.index') border-navbar @endif" aria-current="page" href="{{ route('ad.index') }}">{{__('ui.Tutti gli annunci')}}</a>
                 </li>
                 @auth
                     <li class="nav-item">
-                        <a class="@if (Route::currentRouteName() == 'homepage') navElement col-bg-text @else col-b-text @endif nav-link px-md-3 active fs-5" href="{{ route('create.ad') }}">{{__('ui.Crea un annuncio')}}</a>
+                        <a class="@if (Route::currentRouteName() == 'homepage') navElement col-bg-text @else col-b-text @endif nav-link mx-md-2 active fs-5 @if(Route::currentRouteName() == 'create.ad') border-navbar @endif" href="{{ route('create.ad') }}">{{__('ui.Crea un annuncio')}}</a>
                     </li>
                 @endauth
                 <li class="nav-item dropdown">
-                    <a class=" @if (Route::currentRouteName() == 'homepage') navElement col-bg-text @else col-b-text @endif nav-link px-md-3 dropdown-toggle active fs-5" href=""role='buttom'
+                    <a class=" @if (Route::currentRouteName() == 'homepage') navElement col-bg-text @else col-b-text @endif nav-link mx-md-2 dropdown-toggle active fs-5 @if(Route::currentRouteName() == 'byCategory') border-navbar @endif" href=""role='buttom'
                         data-bs-toggle='dropdown' aria-expamded='false'>
                         {{__('ui.Categorie')}}
                     </a>
@@ -59,7 +59,7 @@
 
                 <li class="pt-1">
                 <form class="pt-1 d-flex" role="search" action="{{ route('ad.search') }}" method="GET">
-                        <input type="search" class="@if (Route::currentRouteName() == 'homepage') search-border-home @else search-border-all @endif col-t px-md-3" name="query" placeholder="{{__('ui.Cerca...')}}"aria-label="Search">
+                        <input type="search" class="@if (Route::currentRouteName() == 'homepage') search-border-home @else search-border-all @endif col-t mx-md-2" name="query" placeholder="{{__('ui.Cerca...')}}"aria-label="Search">
                         <button type="submit" id="basic-addon2" class="border-0 col-t col-bg-text">
                             <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="bi bi-search" viewBox="0 0 16 16">
                                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
