@@ -71,7 +71,7 @@ return [
     'Non sono ancora stati creati annunci' => 'Aún no se han creado anuncios',
 
     //byCategory
-    'Articoli della categoria' => 'Artículos de la categoría',
+    'Annunci della categoria' => 'Anuncios de la categoría',
     'Non sono ancora stati creati annunci per questa categoria!' => '¡Aún no se han creado anuncios para esta categoría!',
     'Pubblica annuncio' => 'Publicar anuncio',
 

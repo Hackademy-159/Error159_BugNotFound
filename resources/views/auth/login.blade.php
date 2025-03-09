@@ -1,16 +1,18 @@
 <x-layout>
-    <h1 class="text-center p-3 display-2 fw-normal col-b-text my-5 pt-5">{{__('ui.Accedi al tuo account')}}:</h1>
+    <h1 class="display-6 col-b-text ms-4 mt-5 pt-5">{{ __('ui.Accedi al tuo account') }}:</h1>
 
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-6">
-                <form method="POST" action="{{ route('login') }}" class="cst-form p-5 mb-5 mt-2 shadow">
+            <div class="col-10 col-md-6">
+                <form method="POST" action="{{ route('login') }}" class="cst-form p-md-5 p-3 my-5">
                     @csrf
 
                     <!-- Indirizzo Email -->
                     <div class="mb-3">
-                        <label class="form-label">{{__('ui.Indirizzo Email')}}</label>
-                        <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}">
+                        <label class="form-label">{{ __('ui.Indirizzo Email') }}</label>
+                        <input placeholder="Inserisci il tuo indirizzo email" type="email"
+                            class="cst-input w-100 @error('email') is-invalid @enderror" name="email"
+                            value="{{ old('email') }}">
                         @error('email')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
@@ -19,7 +21,8 @@
                     <!-- Password -->
                     <div class="mb-3">
                         <label class="form-label">Password</label>
-                        <input type="password" class="form-control @error('password') is-invalid @enderror" name="password">
+                        <input placeholder="Inserisci la tua password" type="password"
+                            class="cst-input w-100 @error('password') is-invalid @enderror" name="password">
                         @error('password')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
@@ -27,12 +30,17 @@
 
                     <!-- Pulsante Accedi -->
                     <div class="d-flex justify-content-center pt-4">
-                        <button type="submit" class="cst-button-card">{{__('ui.Accedi')}}</button>
+                        <button type="submit" class="cst-button px-4">{{ __('ui.Accedi') }}</button>
                     </div>
 
                     <!-- Link alla Registrazione -->
                     <div class="text-center mt-3">
-                        <p>{{__('ui.Ancora non hai un account?')}} <a  class="fs-5  fw-bold col-b-text" href="{{ route('register') }}">{{__('ui.Iscriviti')}}</a>.</p>
+                        <p class="mb-1">{{ __('ui.Ancora non hai un account?') }} </p>
+                        <div>
+                            <a class="fs-6 p-0 m-0 fw-bold col-b-text" href="{{ route('register') }}">
+                                {{ __('ui.Iscriviti') }}
+                            </a>
+                        </div>
                     </div>
                 </form>
             </div>

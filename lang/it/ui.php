@@ -71,7 +71,7 @@ return [
     'Non sono ancora stati creati annunci' => 'Non sono ancora stati creati annunci',
 
     //byCategory
-    'Articoli della categoria' => 'Articoli della categoria',
+    'Annunci della categoria' => 'Annunci della categoria',
     'Non sono ancora stati creati annunci per questa categoria!' => 'Non sono ancora stati creati annunci per questa categoria!',
     'Pubblica annuncio' => 'Pubblica annuncio',
 

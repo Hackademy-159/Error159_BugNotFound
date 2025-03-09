@@ -1,6 +1,6 @@
 <x-layout>
 
-<h1 class="text-center display-2 fw-normal col-b-text mt-5 pt-5">{{__('ui.Aggiungi il tuo annuncio')}}:</h1>
+<h1 class="display-6 col-b-text ms-4 mt-5 pt-5">{{__('ui.Aggiungi il tuo annuncio')}}:</h1>
 
     <x-success/>
 

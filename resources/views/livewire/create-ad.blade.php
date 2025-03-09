@@ -1,52 +1,52 @@
-<div class="container ">
+<div class="container mx-auto d-block">
     <div class="row justify-content-center">
-        <div class="col-12 col-md-9">
-            <form wire:submit.prevent="save" class="cst-form p-5 my-5">
+        <div class="col-12 col-md-7">
+            <form wire:submit.prevent="save" class="cst-form p-md-5 p-3 my-5">
 
                 @csrf
 
                 <!-- Titolo -->
                 <div class="mb-3">
-                    
+                    <label class="form-label fw-normal fs-5">{{__('ui.Titolo')}}</label>
                     <input type="text" class="cst-input w-100 @error('title') is-invalid @enderror"
-                        wire:model.defer="title">
+                        wire:model.defer="title" placeholder="Inserisci il titolo dell'annuncio">
                     @error('title')
                         <div class="invalid-feedback d-flex align-items-center">
                             <i class="bi bi-exclamation-circle-fill me-2"></i> {{ $message }}
                         </div>
                     @enderror
-                    <label class="form-label fw-bold fs-5">{{__('ui.Titolo')}}</label>
+                    
                 </div>
 
                 <!-- Prezzo -->
                 <div class="mb-3">
-                    
+                    <label class="form-label fw-normal fs-5">{{__('ui.Prezzo')}} €</label>
                     <input type="text" class="cst-input w-100 @error('price') is-invalid @enderror"
-                        wire:model.defer="price">
+                        wire:model.defer="price" placeholder="Inserisci il prezzo dell'annuncio">
                     @error('price')
                         <div class="invalid-feedback d-flex align-items-center">
                             <i class="bi bi-exclamation-circle-fill me-2"></i> {{ $message }}
                         </div>
                     @enderror
-                    <label class="form-label fw-bold fs-5">{{__('ui.Prezzo')}} €</label>
+                    
                 </div>
 
                 <!-- Descrizione -->
                 <div class="mb-3">
-                    
+                    <label class="form-label fw-normal fs-5">{{__('ui.Descrizione')}}</label>
                     <input type="text" class="cst-input w-100 @error('description') is-invalid @enderror"
-                        wire:model.defer="description">
+                        wire:model.defer="description" placeholder="Inserisci una descrizione per l'annuncio">
                     @error('description')
                         <div class="invalid-feedback d-flex align-items-center">
                             <i class="bi bi-exclamation-circle-fill me-2"></i> {{ $message }}
                         </div>
                     @enderror
-                    <label class="form-label fw-bold fs-5">{{__('ui.Descrizione')}}</label>
+                    
                 </div>
 
                 <!-- Condizione -->
                 <div class="mb-3">
-                
+                    <label class="form-label fw-normal fs-5">{{__('ui.Condizione')}}</label>
                     <select class="cst-input w-100 @error('status') is-invalid @enderror" wire:model.defer="status">
                         <option value=""></option>
                         <option value="nuovo">{{__('ui.Nuovo')}}</option>
@@ -59,25 +59,25 @@
                             <i class="bi bi-exclamation-circle-fill me-2"></i> {{ $message }}
                         </div>
                     @enderror
-                    <label class="form-label fw-bold fs-5">{{__('ui.Condizione')}}</label>
+                    
                 </div>
 
                 <!-- Colore -->
                 <div class="mb-3">
-                    
+                    <label class="form-label fw-normal fs-5">{{__('ui.Colore')}}</label>
                     <input type="text" class="cst-input w-100 @error('color') is-invalid @enderror"
-                        wire:model.defer="color">
+                        wire:model.defer="color" placeholder="Inserisci il colore dell'articolo">
                     @error('color')
                         <div class="invalid-feedback d-flex align-items-center">
                             <i class="bi bi-exclamation-circle-fill me-2"></i> {{ $message }}
                         </div>
                     @enderror
-                    <label class="form-label fw-bold fs-5">{{__('ui.Colore')}}</label>
+                    
                 </div>
 
                 <!-- Categoria -->
                 <div class="mb-3">
-                    
+                    <label class="form-label fw-normal fs-5">{{__('ui.Categoria')}}</label>
                     <select class="cst-input w-100 @error('category') is-invalid @enderror" wire:model.defer="category">
                         <option value=""></option>
                         @foreach ($categories as $category)
@@ -89,15 +89,15 @@
                             <i class="bi bi-exclamation-circle-fill me-2"></i> {{ $message }}
                         </div>
                     @enderror
-                    <label class="form-label fw-bold fs-5">{{__('ui.Categoria')}}</label>
+                    
                 </div>
 
 
                 {{-- inserimento immagini --}}
                 <div class="mb-3">
-                    
+                    <label class="form-label fw-normal fs-5">{{__('ui.Inserisci immagini')}}</label>
                     <input type="file" wire:model.live="temporary_images" multiple
-                        class="cst-input w-100 @error('temporary_images.') is-invalid @enderror"
+                        class="cst-input-image w-100 @error('temporary_images.') is-invalid @enderror"
                         placeholder="Img" />
                     @error('temporary_images.')
                         <p class="fst-italic text-danger">{{ $message }}</p>
@@ -105,7 +105,7 @@
                     @error('temporary_images')
                         <p class="fst-italic text-danger">{{ $message }}</p>
                     @enderror
-                    <label class="form-label fw-bold fs-5">{{__('ui.Inserisci immagini')}}</label>
+                    
                 </div>
 
                 @if (!empty($images))
@@ -118,8 +118,9 @@
                                         <div class="img-preview mx-auto shadow "
                                             style="background-image: url({{ $image->temporaryUrl() }});">
                                         </div>
-                                        <button type="button" class="cst-button"
-                                            wire:click="removeImage({{ $key }})"><i class="bi bi-trash3"></i>
+                                        <button type="button" class="delete-button"
+                                            wire:click="removeImage({{ $key }})">
+                                            <i class="color bi bi-trash3"></i>
                                         </button>
                                     </div>
                                 @endforeach
