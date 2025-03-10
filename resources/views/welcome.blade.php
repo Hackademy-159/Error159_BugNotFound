@@ -5,8 +5,28 @@
             <div class="col-12 vh-100 header-custom d-flex flex-column justify-content-center">
                 <x-error />
                 <x-success />
-                <h1 class="title-header col-bg-text mt-5">RiArreda</h1>
-                <h2 class="subtitle-header col-bg-text">{{ __('ui.Occasioni uniche a prezzi imbattibili.') }}</h2>
+                
+                {{-- <div class="container py-4 z-3">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="{{ asset('img/Logo.png') }}" alt="">
+                        </div>
+                        <div class="col-8">
+                            <h1 class="title-header2 text-start col-bg-text mt-5">
+                                <span class="text-ri ts">Ri</span><span class="text-arreda ts">Arreda</span>
+                            </h1>
+                            <h2 class="text-start fs-1 ts "><span>Dai una seconda vita ai tuoi mobili</span></h2>
+                        </div>
+                    </div>
+                </div> --}}
+                <div class="logo-container z-3 p-3 d-flex align-items-center">
+                    {{-- <img src="{{ asset('img/Logo.png') }}" alt="Logo RiArreda" class="z-3 logo-img"> --}}
+                    <h1 class="title-header1 z-3 col-bg-text">
+                        <span class="text-ri ts">Ri</span><span class="text-arreda ts2">Arreda</span> <br>
+                        <span class="sottotitolo">Dai una seconda vita ai tuoi mobili</span>
+                    </h1>
+                </div>
+                
                 <div class="m-5 z-2">
                     <a class="cst-button py-md-3 px-md-5 fs-5 "
                         href="{{ route('create.ad') }}">{{ __('ui.Pubblica un annuncio') }}</a>
