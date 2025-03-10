@@ -1,9 +1,11 @@
 <x-layout>
+    <div>
+        <h2 class="fst-italic display-5 col-b-text ms-4 mt-5 pt-5 ps-3">{{__('ui.Tutti gli annunci')}}</h2>
+</div>
     <div class="container mt-5">
-        
-        <div class="row justify-content-center align-items-center px-2 py-3 col-s mb-5 ps-3 margin-index">
+        <div class="row height-custom justify-content-center align-items-center">
             @forelse ($ads as $ad)
-                <div class="col-12 col-md-3 p-2">
+                <div class="col-12 col-md-3 px-2 py-3 col-s mb-5">
                     <x-card :ad="$ad" />
                 </div>
             @empty

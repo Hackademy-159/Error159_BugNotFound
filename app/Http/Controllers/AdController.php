@@ -75,7 +75,9 @@ class AdController extends Controller implements HasMiddleware
     }
     public function byCategory(Category $category)
     {
-        $ads=$category->ads->where('is_accepted',true);
+
+        $ads=$category->ads()->where('is_accepted',true)->paginate(8);
+        // $ads=$category->ads->where('is_accepted',true);
         return view('ad.byCategory', compact('ads','category'));
     }
 }
