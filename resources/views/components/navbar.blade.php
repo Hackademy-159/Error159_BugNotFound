@@ -84,7 +84,7 @@
 
                     <li class="nav-item ms-auto ms-md-0 dropdown-center ms-2">
                         <a class=' @if (Route::currentRouteName() == 'homepage') navElement col-bg-text @else col-b-text @endif nav-link dropdown-toggle active fs-5' href=""role='buttom'
-                        data-bs-toggle='dropdown' aria-expamded='false'>{{__('ui.Ciao')}} {{ Auth::user()->name }} @if(\App\Models\Ad::toBeRevisedCount() > 0)
+                        data-bs-toggle='dropdown' aria-expamded='false'>{{__('ui.Ciao')}} {{ Auth::user()->name }} @if(Auth::user()->is_revisor && \App\Models\Ad::toBeRevisedCount() > 0)
                         <span class= "text-white rounded-pill bg-danger fw-bold px-1">!</span>
                         @endif</a>
                         
@@ -116,7 +116,7 @@
                 @endauth
 
                 <li class="nav-item dropdown ms-2 text-end text-md-start">
-                    <a class="navElement col-bg-text nav-link dropdown-toggle active fs-5 p-0" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="@if (Route::currentRouteName() == 'homepage') navElement col-bg-text @else col-b-text @endif nav-link dropdown-toggle active fs-5 p-0" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <!-- Mostra direttamente la bandiera della lingua corrente tramite x-_locale -->
                         @if (app()->getLocale() == 'it')
                             <x-_locale lang="it" />

@@ -7,7 +7,7 @@
 
                 <!-- Titolo -->
                 <div class="mb-3">
-                    <label class="form-label fw-normal fs-5">{{__('ui.Titolo')}}</label>
+                    <label class="form-label fw-semibold fs-5">{{__('ui.Titolo')}}</label>
                     <input type="text" class="cst-input w-100 @error('title') is-invalid @enderror"
                         wire:model.defer="title" placeholder="Inserisci il titolo dell'annuncio">
                     @error('title')
@@ -20,7 +20,7 @@
 
                 <!-- Prezzo -->
                 <div class="mb-3">
-                    <label class="form-label fw-normal fs-5">{{__('ui.Prezzo')}} €</label>
+                    <label class="form-label fw-semibold fs-5">{{__('ui.Prezzo')}} €</label>
                     <input type="text" class="cst-input w-100 @error('price') is-invalid @enderror"
                         wire:model.defer="price" placeholder="Inserisci il prezzo dell'annuncio">
                     @error('price')
@@ -33,7 +33,7 @@
 
                 <!-- Descrizione -->
                 <div class="mb-3">
-                    <label class="form-label fw-normal fs-5">{{__('ui.Descrizione')}}</label>
+                    <label class="form-label fw-semibold fs-5">{{__('ui.Descrizione')}}</label>
                     <input type="text" class="cst-input w-100 @error('description') is-invalid @enderror"
                         wire:model.defer="description" placeholder="Inserisci una descrizione per l'annuncio">
                     @error('description')
@@ -46,7 +46,7 @@
 
                 <!-- Condizione -->
                 <div class="mb-3">
-                    <label class="form-label fw-normal fs-5">{{__('ui.Condizione')}}</label>
+                    <label class="form-label fw-semibold fs-5">{{__('ui.Condizione')}}</label>
                     <select class="cst-input w-100 @error('status') is-invalid @enderror" wire:model.defer="status">
                         <option value=""></option>
                         <option value="nuovo">{{__('ui.Nuovo')}}</option>
@@ -64,7 +64,7 @@
 
                 <!-- Colore -->
                 <div class="mb-3">
-                    <label class="form-label fw-normal fs-5">{{__('ui.Colore')}}</label>
+                    <label class="form-label fw-semibold fs-5">{{__('ui.Colore')}}</label>
                     <input type="text" class="cst-input w-100 @error('color') is-invalid @enderror"
                         wire:model.defer="color" placeholder="Inserisci il colore dell'articolo">
                     @error('color')
@@ -77,7 +77,7 @@
 
                 <!-- Categoria -->
                 <div class="mb-3">
-                    <label class="form-label fw-normal fs-5">{{__('ui.Categoria')}}</label>
+                    <label class="form-label fw-semibold fs-5">{{__('ui.Categoria')}}</label>
                     <select class="cst-input w-100 @error('category') is-invalid @enderror" wire:model.defer="category">
                         <option value=""></option>
                         @foreach ($categories as $category)
@@ -95,7 +95,7 @@
 
                 {{-- inserimento immagini --}}
                 <div class="mb-3">
-                    <label class="form-label fw-normal fs-5">{{__('ui.Inserisci immagini')}}</label>
+                    <label class="form-label fw-semibold fs-5">{{__('ui.Inserisci immagini')}}</label>
                     <input type="file" wire:model.live="temporary_images" multiple
                         class="cst-input-image w-100 @error('temporary_images.') is-invalid @enderror"
                         placeholder="Img" />
