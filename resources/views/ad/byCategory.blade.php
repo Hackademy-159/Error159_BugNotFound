@@ -1,15 +1,11 @@
 <x-layout>
+    <div>
+        <h2 class="fst-italic display-5 col-b-text ms-4 mt-5 pt-5 ps-3">{{ $category->name }}</h2>
+</div>
     <div class="container">
-        <div class="row py-5 justify-content-center align-items-center text-center">
-            <div class="col-12 pt-5">
-                <h1 class="text-center display-2 fw-normal col-b-text">{{__('ui.Annunci della categoria')}}
-                    <h2 class="fst-italic fw-bold display-5">{{ $category->name }}</h2>
-                </h1>
-            </div>
-        </div>
-        <div class="row height-custom justify-content-center align-items-center py-5">
+        <div class="row height-custom justify-content-center align-items-center ">
             @forelse ($ads as $ad)
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-md-3 px-2 py-3 col-s mb-5">
                     <x-card :ad="$ad" />
                 </div>
             @empty

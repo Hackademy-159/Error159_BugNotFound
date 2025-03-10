@@ -1,5 +1,5 @@
 <x-layout>
-    <h1 class="display-6 col-b-text ms-4 mt-5 pt-5">{{ __('ui.Accedi al tuo account') }}:</h1>
+    <h1 class="fst-italic display-5 col-b-text ms-4 mt-5 pt-5 ps-3">{{ __('ui.Accedi al tuo account') }}:</h1>
 
     <div class="container">
         <div class="row justify-content-center">
@@ -9,7 +9,7 @@
 
                     <!-- Indirizzo Email -->
                     <div class="mb-3">
-                        <label class="form-label">{{ __('ui.Indirizzo Email') }}</label>
+                        <label class="fw-semibold form-label">{{ __('ui.Indirizzo Email') }}</label>
                         <input placeholder="Inserisci il tuo indirizzo email" type="email"
                             class="cst-input w-100 @error('email') is-invalid @enderror" name="email"
                             value="{{ old('email') }}">
@@ -20,7 +20,7 @@
 
                     <!-- Password -->
                     <div class="mb-3">
-                        <label class="form-label">Password</label>
+                        <label class="fw-semibold form-label">Password</label>
                         <input placeholder="Inserisci la tua password" type="password"
                             class="cst-input w-100 @error('password') is-invalid @enderror" name="password">
                         @error('password')
