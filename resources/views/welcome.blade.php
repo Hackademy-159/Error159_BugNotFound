@@ -42,13 +42,13 @@
                 </h2>
                 <div class="p-5">
                     @if (Auth::check())
-                        <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" type="button"
-                            class="cst-section-button">
+                        <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" type="button" class="cst-section-button">
                             {{ __('ui.Diventa revisore') }}
                         </button>
                     @else
-                        <a class="cst-section-button py-3 px-4"
-                            href="{{ route('login') }}">{{ __('ui.Diventa revisore') }}</a>
+                    <button class="cst-section-button">
+                        <a class=" py-3 px-4 text-decoration-none col-b-text" href="{{ route('login') }}">{{ __('ui.Diventa revisore') }}</a>
+                    </button>
                     @endif
                 </div>
 
@@ -68,11 +68,11 @@
                                 <div class="modal-body col-bg text-center">
                                     <p class="modal-text">{{ __('ui.Sei sicuro di voler diventare revisore?') }}</p>
                                 </div>
-                                <div class="modal-footer col-bg d-flex justify-content-center">
-                                    <button type="button" class="cst-button width-custom me-2"
+                                <div class="modal-footer col-bg d-flex justify-content-evenly">
+                                    <button type="button" class="delete-text me-2 fs-5"
                                         data-bs-dismiss="modal">{{ __('ui.Annulla') }}</button>
                                     <a href="{{ route('become.revisor') }}"
-                                        class="cst-button width-custom">{{ __('ui.Conferma') }}</a>
+                                        class="cst-button width-custom fs-5">{{ __('ui.Conferma') }}</a>
                                 </div>
                             @else
                                 <div class="modal-header col-bg">
@@ -82,7 +82,7 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                                 </div>
-                                <div class="modal-body col-bg text-center">
+                                <div class="modal-body col-bg text-center fw-normal">
                                     <p class="modal-text">{{ __('ui.Sei già un revisore!') }}</p>
                                 </div>
                                 <div class="modal-footer col-bg d-flex justify-content-center">

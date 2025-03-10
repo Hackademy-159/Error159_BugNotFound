@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container mt-5">
         
-        <div class="row justify-content-center align-items-center px-2 py-3 col-s mb-5 margin-index">
+        <div class="row justify-content-center align-items-center px-2 py-3 col-s mb-5 ps-3 margin-index">
             @forelse ($ads as $ad)
                 <div class="col-12 col-md-3 p-2">
                     <x-card :ad="$ad" />

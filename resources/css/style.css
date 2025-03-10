@@ -77,19 +77,7 @@
 /* FINE COLORI */
 
 /*INIZIO BOTTONI */
-/* bottone ricerca */
-/* @keyframes rotation {
-    from {
-        transform: rotateX(0deg);
-    }
 
-    to {
-        transform: rotateX(180deg);
-    }
-}
-.rotated{
-    animation: rotation 0.3s ease;
-} */
 .rotated1 {
     transform: rotateZ(0deg);
     transition: transform 0.6s ease;
@@ -168,10 +156,25 @@
     padding: 0px;
     margin: 3px;
 }
+.delete-text{
+    background-color: rgb(232, 40, 40);
+    border: rgb(232, 40, 40) solid 1px;
+    border-radius: 3px;
+    color: var(--background)!important;
+    padding: 7px;
+    font-size: 25px;
+    border-radius: 5px;
+    font-weight: 600;
+}
 
 .delete-button:hover {
     background-color: rgb(232, 40, 40);
     border: var(--background) solid 1px;
+}
+
+.delete-text:hover{
+    color: rgb(232, 40, 40)!important;
+    background-color: transparent !important;
 }
 
 .color {
@@ -190,7 +193,6 @@
 .width-custom {
     width: 25%;
 }
-
 
 
 .cst-button-card2 {
@@ -240,6 +242,7 @@
     width: 270px;
     height: 80px;
     background-color: var(--background);
+    border: var(--button) solid 2px;
     color: var(--button);
     font-size: 1.5rem;
     border-radius: 5px;
@@ -249,7 +252,8 @@
 }
 
 .cst-section-button:hover {
-    transform: scale(1.1);
+    transform:scale(1.1);
+    transition: 0.5;
 }
 
 input:focus,
@@ -496,6 +500,10 @@ input:focus {
 
 .margin-index {
     margin-top: 20vh;
+}
+
+.carousel-item{
+    margin-right: 0 !important;
 }
 
 .page-item.active .page-link {
