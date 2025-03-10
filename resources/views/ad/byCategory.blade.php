@@ -21,5 +21,10 @@
                 </div>
             @endforelse
         </div>
+        <div class="d-flex justify-content-center">
+            <div>
+                {{ $ads->links() }}
+            </div>
+        </div>
     </div>
 </x-layout>

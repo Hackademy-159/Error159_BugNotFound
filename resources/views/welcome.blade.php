@@ -23,7 +23,7 @@
                     {{-- <img src="{{ asset('img/Logo.png') }}" alt="Logo RiArreda" class="z-3 logo-img"> --}}
                     <h1 class="title-header1 z-3 col-bg-text">
                         <span class="text-ri ts">Ri</span><span class="text-arreda ts2">Arreda</span> <br>
-                        <span class="sottotitolo">Dai una seconda vita ai tuoi mobili</span>
+                        <span class="sottotitolo">{{__('ui.Occasioni uniche a prezzi imbattibili.')}}</span>
                     </h1>
                 </div>
                 
