@@ -29,20 +29,21 @@ class RevisorController extends Controller
         $ad->setAccepted(false);
         return redirect()->back()->with('error', "Hai rifiutato l'articolo $ad->title");
     }
- /*    public function backup()
-{
-    $ad_to_check=Ad::orderBy('updated_at','desc')->first();
-    return view('revisor.index', compact('ad_to_check')); 
-} */
+    public function backup()
+    {
+        $ad = Ad::whereNotNull('is_accepted')->orderBy('updated_at', 'desc')->first();
+        $ad->setAccepted(null);
+        return redirect()->back()->with('success', "Hai annullato l'ultimo articolo revisionato.");
+    }
 
     public function becomeRevisor()
     {
         Mail::to('admin@riarreda.it')->send(new BecomeRevisor(Auth::user()));
         return redirect()->route('homepage')->with('success', 'La tua richiesta per diventare revisor è stata inviata con successo');
     }
-    public function makeRevisor (User $user)
+    public function makeRevisor(User $user)
     {
-        Artisan::call('app:make-user-revisor', ['email'=>$user->email]);
+        Artisan::call('app:make-user-revisor', ['email' => $user->email]);
         return redirect()->back();
     }
 }

@@ -31,6 +31,14 @@
 .col-bg {
     background-color: var(--background);
 }
+.cancel-action{
+    text-decoration: none;
+    color: var(--background);
+    padding: 7px;
+}
+.cancel-action:hover{
+    color: var(--button);
+}
 
 .col-bg-text {
     color: var(--background) !important;
@@ -284,8 +292,8 @@
 
 /* bottone sezione diventa revisore*/
 .cst-section-button {
-    width: 270px;
-    height: 80px;
+    width: 250px;
+    height: 50px;
     background-color: var(--background);
     border: var(--button) solid 2px;
     color: var(--button);

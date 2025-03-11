@@ -28,7 +28,7 @@ Route::patch('/accept/{ad}' , [RevisorController::class, 'accept'])->name('accep
 //rotta per rifiutare l'annuncio
 Route::patch('/reject/{ad}' , [RevisorController::class, 'reject'])->name('reject'); 
 //rotta per visualizzare l'articolo precedentemente revisionato
-/* Route::get('/revisor/index/previous', [RevisorController::class,'backup'])->name('revisor.backup'); */
+Route::get('/revisor/cancel', [RevisorController::class,'backup'])->name('backup'); 
 //rotta per mostrare indice dei prodottti da revisionare
 Route::get('/revisor/index', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
 // rotta per invio email di richiesta revisor

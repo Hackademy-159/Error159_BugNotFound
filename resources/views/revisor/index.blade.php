@@ -95,20 +95,27 @@
                     @endfor
                 @endif
             </div>
-            <div class="d-flex justify-content-around pt-3">
-                <form action="{{ route('reject', ['ad' => $ad_to_check]) }}" method="POST">
-                    @csrf
-                    @method('PATCH')
-                    <button class="px-4 delete-text">{{ __('ui.Rifiuta') }}</button>
-                </form>
-              {{--   <button class="cst-button px-4"> 
-                    <a href="{{ route ('revisor.backup')}}"> Annulla scelta</a>
-                </button> --}}
-                <form action="{{ route('accept', ['ad' => $ad_to_check]) }}" method="POST">
-                    @csrf
-                    @method('PATCH')
-                    <button class="cst-button px-4">{{ __('ui.Accetta') }}</button>
-                </form>
+            <div class="row justify-content-around pt-3">
+                <div class="col-12 col-md-4 justify-content-center d-flex">
+                    <form action="{{ route('reject', ['ad' => $ad_to_check]) }}" method="POST">
+                        @csrf
+                        @method('PATCH')
+                        <button class="px-4 delete-text">{{__('ui.Rifiuta')}}</button>
+                    </form>
+                </div>
+                <div class="col-12 col-md-4 justify-content-center d-flex">
+                    <button class="cst-button">
+                        <a class="cancel-action" href="{{ route ('backup')}}"> Annulla ultima scelta</a>
+                    </button>
+                    {{-- <a class="cst-button text-decoration-none px-4" href="{{ route ('backup')}}"> Annulla ultima scelta</a> --}}
+                </div>
+                <div class="col-12 col-md-4 justify-content-center d-flex">
+                    <form action="{{ route('accept', ['ad' => $ad_to_check]) }}" method="POST">
+                        @csrf
+                        @method('PATCH')
+                        <button class="cst-button px-4">{{ __('ui.Accetta') }}</button>
+                    </form>
+                </div>
             </div>
         @else
             <!-- Nessun annuncio da revisionare -->
@@ -116,12 +123,14 @@
                 <div class="col-12">
                     <h1 class="fst-italic display-5 text-muted m-5">{{ __('ui.Nessun articolo da revisionare') }}
                     </h1>
-                   {{--  <br>
-                    <button class="cst-button px-4"> 
-                        <a href="{{ route ('revisor.backup')}}"> Annulla scelta</a>
-                    </button> --}}
-                    <br>
-                    <a href="{{ route('homepage') }}" class="cst-button py-3 px-6 fs-5">{{ __('ui.Homepage') }}</a>
+                </div>
+            </div>
+            <div class="row justify-content-center align-items-center text-center my-5">
+                <div class="col-4">
+                        <a class="cst-button text-decoration-none py-3 px-4 fs-5" href="{{ route ('backup')}}"> Annulla ultima scelta</a>
+                </div>
+                <div class="col-4">
+                    <a href="{{ route('homepage') }}" class="cst-button py-3 px-4 fs-5">{{ __('ui.Homepage') }}</a>
                 </div>
             </div>
         @endif

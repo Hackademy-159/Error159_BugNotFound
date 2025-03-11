@@ -65,11 +65,11 @@
                 <div class="p-4">
                     @if (Auth::check())
                         <button data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-                            class="cst-section-button px-4 py-2 px-md-5 py-md-3 fs-6 fs-md-5">
+                            class="cst-section-button fs-5">
                             {{ __('ui.Diventa revisore') }}
                         </button>
                     @else
-                        <a class="cst-section-button py-2 px-4 py-md-3 px-md-5 text-decoration-none col-b-text"
+                        <a class="cst-section-button px-md-4 fs-5 py-md-2 text-decoration-none col-b-text"
                             href="{{ route('login') }}">
                             {{ __('ui.Diventa revisore') }}
                         </a>
