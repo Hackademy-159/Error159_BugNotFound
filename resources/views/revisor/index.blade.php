@@ -101,6 +101,9 @@
                     @method('PATCH')
                     <button class="px-4 delete-text">{{ __('ui.Rifiuta') }}</button>
                 </form>
+              {{--   <button class="cst-button px-4"> 
+                    <a href="{{ route ('revisor.backup')}}"> Annulla scelta</a>
+                </button> --}}
                 <form action="{{ route('accept', ['ad' => $ad_to_check]) }}" method="POST">
                     @csrf
                     @method('PATCH')
@@ -113,6 +116,10 @@
                 <div class="col-12">
                     <h1 class="fst-italic display-5 text-muted m-5">{{ __('ui.Nessun articolo da revisionare') }}
                     </h1>
+                   {{--  <br>
+                    <button class="cst-button px-4"> 
+                        <a href="{{ route ('revisor.backup')}}"> Annulla scelta</a>
+                    </button> --}}
                     <br>
                     <a href="{{ route('homepage') }}" class="cst-button py-3 px-6 fs-5">{{ __('ui.Homepage') }}</a>
                 </div>

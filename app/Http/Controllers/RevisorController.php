@@ -29,6 +29,12 @@ class RevisorController extends Controller
         $ad->setAccepted(false);
         return redirect()->back()->with('error', "Hai rifiutato l'articolo $ad->title");
     }
+ /*    public function backup()
+{
+    $ad_to_check=Ad::orderBy('updated_at','desc')->first();
+    return view('revisor.index', compact('ad_to_check')); 
+} */
+
     public function becomeRevisor()
     {
         Mail::to('admin@riarreda.it')->send(new BecomeRevisor(Auth::user()));
