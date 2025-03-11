@@ -51,4 +51,8 @@ class Ad extends Model
         return $this->hasMany(Image::class);
     }
 
+    public function wishlistedByUsers()
+    {
+        return $this->belongsToMany(User::class, 'wishlist')->withTimestamps();
+    }
 }

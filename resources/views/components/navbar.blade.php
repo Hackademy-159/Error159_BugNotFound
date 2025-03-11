@@ -118,13 +118,21 @@
                                     <hr class="dropdown-divider">
                                 </li>
                             @endif
-
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('wishlist.index') }}">
+                                    <i class="bi bi-heart"></i> Wishlist
+                                </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
                             <li class="nav-item ms-auto ms-md-0 py-1">
                                 <form action="{{ route('logout') }}" method="POST" class="">
                                     @csrf
                                     <button class="btn btn-danger mx-auto d-block fw-semibold px-4">Logout</button>
                                 </form>
                             </li>
+                            
 
                         </ul>
                     </li>

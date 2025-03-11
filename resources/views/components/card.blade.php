@@ -23,6 +23,12 @@
                 class="text-center cst-button-card2 mt-3">{{ __('ui.Dettaglio') }}</a>
                 <i class="fs-3 mt-3 bi bi-heart col-b-text"></i>
         </div>
+        <div>
+            @auth
+    <livewire:wishlist-button :ad="$ad" />
+@endauth
 
+        </div>
+        
     </div>
 </div>

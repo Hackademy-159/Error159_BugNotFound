@@ -55,4 +55,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Ad::class);
     }
+
+    public function wishlist()
+{
+    return $this->belongsToMany(Ad::class, 'wishlist')->withTimestamps();
+}
 }
