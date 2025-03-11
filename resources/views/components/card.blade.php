@@ -10,25 +10,26 @@
         <h6 class="col-b-text text-start">{{ __('ui.Prezzo') }}: {{ $ad->price }} €</h6>
 
         <div class="d-flex justify-content-between align-items-center my-1 mb-3">
-            @if(Auth::user()->is_revisor)
-            <form action="{{route('backup', ['ad' => $ad])}}" method="POST" class="mt-3">
-                @csrf
-                @method('PATCH')
-                <button class="border-0 col-bg">
-                    <i class="fs-3 mt-4 bi bi-reply"></i>
-                </button>
-            </form>
+            @if (Auth::check() && Auth::user()->is_revisor)
+                <form action="{{ route('backup', ['ad' => $ad]) }}" method="POST" class="mt-3">
+                    @csrf
+                    @method('PATCH')
+                    <button class="border-0 col-bg">
+                        <i class="fs-3 mt-4 bi bi-reply"></i>
+                    </button>
+                </form>
             @endif
             <a href="{{ route('ad.show', compact('ad')) }}"
                 class="text-center cst-button-card2 mt-3">{{ __('ui.Dettaglio') }}</a>
-                <i class="fs-3 mt-3 bi bi-heart col-b-text"></i>
+            @auth
+                <livewire:wishlist-button :ad="$ad" />
+            @endauth
+            {{-- <i class="fs-3 mt-3 bi bi-heart col-b-text"></i> --}}
         </div>
         <div>
-            @auth
-    <livewire:wishlist-button :ad="$ad" />
-@endauth
+
 
         </div>
-        
+
     </div>
 </div>

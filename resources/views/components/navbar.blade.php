@@ -63,7 +63,7 @@
 
                 <li class="pt-1 d-none d-md-block">
                 <form class="pt-1 d-flex" role="search" action="{{ route('ad.search') }}" method="GET">
-                        <input id="inputSearch" type="search" class="@if (Route::currentRouteName() == 'homepage') search-border-home @else search-border-all @endif col-t mx-md-2" name="query" placeholder="{{__('ui.Cerca...')}}"aria-label="Search">
+                        <input id="inputSearch" type="search" class="@if (Route::currentRouteName() == 'homepage') navElement col-bg-text search-border-home @else search-border-all @endif col-t mx-md-2" name="query" placeholder="{{__('ui.Cerca...')}}"aria-label="Search">
                         <button type="submit" id="basic-addon2" class="border-0 col-t col-bg-text">
                             <i id="search" class="fs-5 bi bi-search @if (Route::currentRouteName() == 'homepage') navElement col-bg-text @else col-b-text @endif"></i>
                         </button>
