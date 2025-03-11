@@ -28,11 +28,13 @@ Route::patch('/accept/{ad}' , [RevisorController::class, 'accept'])->name('accep
 //rotta per rifiutare l'annuncio
 Route::patch('/reject/{ad}' , [RevisorController::class, 'reject'])->name('reject'); 
 //rotta per visualizzare l'articolo precedentemente revisionato
-Route::get('/revisor/cancel', [RevisorController::class,'backup'])->name('backup'); 
+Route::patch('/cancel/{ad}', [RevisorController::class, 'backup'])->name('backup'); 
 //rotta per mostrare indice dei prodottti da revisionare
 Route::get('/revisor/index', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
 // rotta per invio email di richiesta revisor
 Route::get('/revisor/request', [RevisorController::class,"becomeRevisor"])->middleware('auth')->name('become.revisor');
+//rotta per il revisore per la pagina degli articoli rifiutati
+Route::get('/revisor/index/rejected',[RevisorController::class, 'adRejected'])->middleware('isRevisor')->name('revisor.adRejected'); 
 // Rotta per rendereun  utente  revisore
 Route::get('/make/revisor/{user}', [RevisorController::class,"makeRevisor"])->name('make.revisor');
 

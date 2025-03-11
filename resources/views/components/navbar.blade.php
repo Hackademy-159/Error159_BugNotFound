@@ -101,6 +101,22 @@
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
+                                <li class="ms-3">
+                                    <a class="nav-item ms-auto ms-md-0 text-decoration-none col-b-text fw-semibold"
+                                        href="{{ route('revisor.adRejected') }}">Annunci rifiutati
+                                    </a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li class="ms-3">
+                                    <a class="nav-item ms-auto ms-md-0 text-decoration-none col-b-text fw-semibold"
+                                        href="{{ route('ad.index') }}">Annunci accettati
+                                    </a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
                             @endif
 
                             <li class="nav-item ms-auto ms-md-0 py-1">

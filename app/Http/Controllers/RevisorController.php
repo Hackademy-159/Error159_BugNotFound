@@ -18,7 +18,6 @@ class RevisorController extends Controller
         return view('revisor.index', compact('ad_to_check'));
     }
 
-
     public function accept(Ad $ad)
     {
         $ad->setAccepted(true);
@@ -29,11 +28,11 @@ class RevisorController extends Controller
         $ad->setAccepted(false);
         return redirect()->back()->with('error', "Hai rifiutato l'articolo $ad->title");
     }
-    public function backup()
+    public function backup(Ad $ad)
     {
-        $ad = Ad::whereNotNull('is_accepted')->orderBy('updated_at', 'desc')->first();
-        $ad->setAccepted(null);
-        return redirect()->back()->with('success', "Hai annullato l'ultimo articolo revisionato.");
+        $ad->is_accepted = null;
+        $ad->save();
+        return redirect()->back()->with('success', "L'annuncio è dinuovo disponibile nella zona revisore.");
     }
 
     public function becomeRevisor()
@@ -45,5 +44,10 @@ class RevisorController extends Controller
     {
         Artisan::call('app:make-user-revisor', ['email' => $user->email]);
         return redirect()->back();
+    }
+
+    public function adRejected(){
+        $ads_rejected = Ad::where('is_accepted', false)->paginate(8);
+        return view('revisor.rejected', compact('ads_rejected'));
     }
 }
