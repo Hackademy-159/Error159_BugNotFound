@@ -42,7 +42,7 @@
     <div class="container text-center">
         <div class="row justify-content-center align-items-center my-3 pt-3 pb-5 h-100">
             @forelse ($ads as $ad)
-                <div class="col-12 col-md-6 col-lg-4 p-3 col-s">
+                <div class="col-12 col-md-6 col-lg-3 p-3 col-s">
                     <x-card :ad="$ad" />
                 </div>
             @empty
