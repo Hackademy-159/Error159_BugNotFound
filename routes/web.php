@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\RevisorController;
+use App\Http\Controllers\WishlistController;
 
 //rotta per la homepage
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
@@ -36,4 +37,4 @@ Route::get('/revisor/request', [RevisorController::class,"becomeRevisor"])->midd
 // Rotta per rendereun  utente  revisore
 Route::get('/make/revisor/{user}', [RevisorController::class,"makeRevisor"])->name('make.revisor');
 
-
+Route::get('/wishlist', [WishlistController::class, 'index'])->middleware('auth')->name('wishlist.index');

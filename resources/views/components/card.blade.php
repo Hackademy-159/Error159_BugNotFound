@@ -30,6 +30,12 @@
         <div class="d-flex justify-content-evenly align-items-center my-1 mb-3">
             <a href="{{ route('ad.show', compact('ad')) }}" class="text-center cst-button-card2 mt-3">{{__('ui.Dettaglio')}}</a>
         </div>
+        <div>
+            @auth
+    <livewire:wishlist-button :ad="$ad" />
+@endauth
+
+        </div>
         
     </div>
 </div>
