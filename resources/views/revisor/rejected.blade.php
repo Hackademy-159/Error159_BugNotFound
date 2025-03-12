@@ -1,7 +1,7 @@
 <x-layout>
     <x-success/>
     <div>
-        <h2 class="fst-italic display-5 col-b-text ms-4 mt-5 pt-5 ps-3">Annunci rifiutati</h2>
+        <h2 class="fst-italic display-5 col-b-text ms-4 mt-5 pt-5 ps-3">{{__('ui.Annunci rifiutati')}}</h2>
 </div>
     <div class="container mt-5">
         <div class="row height-custom justify-content-center align-items-center">

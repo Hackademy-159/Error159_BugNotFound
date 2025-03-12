@@ -74,7 +74,7 @@
         document.addEventListener("DOMContentLoaded", function() {
             console.log("caricato")
             new Swiper(".mySwiper", {
-                loop: true,
+                loop: false,
                 pagination: {
                     el: ".swiper-pagination",
                     clickable: true,
