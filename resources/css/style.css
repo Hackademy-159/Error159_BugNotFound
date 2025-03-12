@@ -4,7 +4,6 @@
     --button: #004766;
     --opacity: rgba(255, 255, 255, 0.5);
     --trasparent: rgba(255, 255, 255, 0);
-    --header: rgba
     ;
 }
 
@@ -106,7 +105,6 @@
 
 .title-header1 {
     font-size: 150px; 
-
 }
 
 .logo-container {
@@ -648,6 +646,17 @@ input:focus {
         position: absolute !important;
         right: 0 !important;
         left: 60% !important;
+    }
+    .title-header1 {
+        font-size: 80px;
+    }
+
+    .sottotitolo{
+        font-size: 20px;
+    }
+    /* sfocatura sfondo dropdown da mobile */
+    .bg-filter{
+        backdrop-filter: blur(10px)
     }
 }
 

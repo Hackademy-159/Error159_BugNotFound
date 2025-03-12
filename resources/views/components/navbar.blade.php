@@ -1,6 +1,6 @@
 <nav @if (Route::currentRouteName() == 'homepage') id="navbar" @endif
     class="navbar navbar-expand-lg @if (Route::currentRouteName() == 'homepage') nav-trans @else shadow col-bg @endif fixed-top">
-    <div class="container-fluid">
+    <div class="container-fluid bg-filter">
         {{-- logo --}}
         <a class="pe-md-2" href="{{ route('homepage') }}"><img class="cst-dim" src="{{ asset('img/Logo.png') }}"
                 alt="Logo"></a>
@@ -9,7 +9,7 @@
             <form class="pt-1 d-flex" role="search" action="{{ route('ad.search') }}" method="GET">
 
                 <input id="inputSearch1" type="search"
-                    class="@if (Route::currentRouteName() == 'homepage') search-border-home @else search-border-all @endif col-t mx-md-2"
+                    class="@if (Route::currentRouteName() == 'homepage') navElement col-bg-text search-border-home @else search-border-all @endif col-t mx-md-2"
                     name="query" placeholder="{{ __('ui.Cerca...') }}"aria-label="Search">
                 <button type="submit" id="basic-addon2" class="border-0 col-t col-bg-text">
                     <i id="search"
@@ -85,12 +85,16 @@
 
                     </ul>
                 </li>
+
+                {{-- SOLO DA MOBILE --}}
+
+                
             </ul>
             {{-- ZONA NAVBAR DI DESTRA --}}
 
 
 
-            <ul class="navbar-nav mb-2  mb-lg-0">
+            <ul class="navbar-nav mb-2 mb-lg-0">
 
                 <li class="pt-1 d-none d-md-block">
                     <form class="pt-1 d-flex" role="search" action="{{ route('ad.search') }}" method="GET">
