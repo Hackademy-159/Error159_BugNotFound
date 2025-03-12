@@ -116,11 +116,16 @@
             <!-- Nessun annuncio da revisionare -->
             <div class="row justify-content-center align-items-center text-center">
                 <div class="col-12">
-                    <h1 class="fst-italic display-5 text-muted m-5">{{ __('ui.Nessun articolo da revisionare') }}
+                    <h1 class="fst-italic display-5 text-muted m-5">{{ __('ui.Nessun annuncio da revisionare') }}
                     </h1>
                 </div>
             </div>
-            
+            <div class="row justify-content-center align-items-center text-center my-5">
+               
+                <div class="col-4">
+                    <a href="{{ route('homepage') }}" class="cst-button py-3 px-4 fs-5">{{ __('ui.Homepage') }}</a>
+                </div>
+            </div>
         @endif
     </div>
 </x-layout>

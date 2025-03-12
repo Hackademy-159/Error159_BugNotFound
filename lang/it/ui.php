@@ -29,6 +29,9 @@ return [
     'Ciao' => 'Ciao',
     'Zona revisore' => 'Zona revisore',
     'Esci' => 'Esci',
+    'Annunci' => 'Annunci',
+    'Annunci rifiutati' => 'Annunci rifiutati',
+    'Annunci accettati' => 'Annunci accettati',
 
     // categorie
     'Divani e Poltrone' => 'Divani e Poltrone',
@@ -98,7 +101,7 @@ return [
     'Descrizione' => 'Descrizione',
     'Rifiuta' => 'Rifiuta',
     'Accetta' => 'Accetta',
-    'Nessun articolo da revisionare' => 'Nessun articolo da revisionare',
+    'Nessun annuncio da revisionare' => 'Nessun annuncio da revisionare',
     'Homepage' => 'Torna all\'homepage',
     
     //login
@@ -114,6 +117,16 @@ return [
     'Data Nascita' => 'Data Nascita',
     'Numero Telefono' => 'Numero Telefono',
     'Conferma Password' => 'Conferma Password',
+
+    //profile/index
+
+    'Il mio profilo' => 'Il mio profilo',
+    'Sei un revisore' => 'Sei un revisore',
+    'Non sei un revisore' => 'Non sei un revisore',
+    'Profilo creato il' => 'Profilo creato il',
+    'La mia wishlist' => 'La mia wishlist',
+    'I miei annunci' => 'I miei annunci',
+    'Nessun annuncio presente nella tua wishlist' => 'Nessun annuncio presente nella tua wishlist',
    
 
 

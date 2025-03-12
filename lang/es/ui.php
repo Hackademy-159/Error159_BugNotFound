@@ -29,6 +29,9 @@ return [
     'Ciao' => 'Hola',
     'Zona revisore' => 'Zona de revisor',
     'Esci' => 'Salir',
+    'Annunci' => 'Anuncios',
+    'Annunci rifiutati' => 'Anuncios rechazados',
+    'Annunci accettati' => 'Anuncios aceptados',
 
     // categorie
     'Divani e Poltrone' => 'Sofás y sillones',
@@ -98,7 +101,7 @@ return [
     'Descrizione' => 'Descripción',
     'Rifiuta' => 'Rechazar',
     'Accetta' => 'Aceptar',
-    'Nessun articolo da revisionare' => 'No hay artículos para revisar',
+    'Nessun annuncio da revisionare' => 'No hay anuncios para revisar',
     'Homepage' => 'Volver a la página de inicio',
 
     //login
@@ -114,6 +117,16 @@ return [
     'Data Nascita' => 'Fecha de Nacimiento',
     'Numero Telefono' => 'Número Telefónico',
     'Conferma Password' => 'Confirmar Password',
+
+    //profile/index
+    'Il mio profilo' => 'Mi perfil',
+    'Sei un revisore' => 'Eres un revisor',
+    'Non sei un revisore' => 'No eres un revisor',
+    'Profilo creato il' => 'Perfil creado el',
+    'La mia wishlist' => 'Mi lista de deseos',
+    'Nessun annuncio presente nella tua wishlist' => 'No hay anuncios en tu lista de deseos',
+    'I miei annunci' => 'Mis anuncios',
+    'Nessun annuncio presente nella tua wishlist' => 'No hay anuncios presentes en tu lista',
    
 
 ];

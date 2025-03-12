@@ -29,6 +29,9 @@ return [
     'Ciao' => 'Hello',
     'Zona revisore' => 'Reviewer Area',
     'Esci' => 'Logout',
+    'Annunci' => 'Ads',
+    'Annunci rifiutati' => 'Rejected ads',
+    'Annunci accettati' => 'Accepted ads',
 
     // categorie
     'Divani e Poltrone' => 'Sofas and Armchairs',
@@ -94,7 +97,7 @@ return [
     'Autore' => 'Author: ',
     'Rifiuta' => 'Reject',
     'Accetta' => 'Accept',
-    'Nessun articolo da revisionare' => 'No items to review',
+    'Nessun annuncio da revisionare' => 'No ads to review',
     'Homepage' => 'Back to homepage',
 
     //login
@@ -110,6 +113,16 @@ return [
     'Data Nascita' => 'Date of Birth',
     'Numero Telefono' => 'Phone Number',
     'Conferma Password' => 'Confirm Password',
+
+    //profile/index
+
+    'Il mio profilo' => 'My profile',
+    'Sei un revisore' => 'You are a reviewer',
+    'Non sei un revisore' => 'You are not a reviewer',
+    'Profilo creato il' => 'Profile created on',
+    'La mia wishlist' => 'My wishlist',
+    'I miei annunci' => 'My ads',
+    'Nessun annuncio presente nella tua wishlist' => 'No ads present in your list',
    
 ];
 // {{__('ui.')}}
