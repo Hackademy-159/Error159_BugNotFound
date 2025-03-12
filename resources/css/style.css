@@ -587,6 +587,32 @@ input:focus {
     font-size: 20px;
 }
 
+.sti-position{
+    position: sticky;
+    top: 100px;
+}
+
+/* CLASSI SWIPER */
+.swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
 
 /* MEDIA QUERIES */
@@ -642,11 +668,7 @@ input:focus {
         border: 1px solid var(--button);
     }
 
-    .pos-drop{
-        position: absolute !important;
-        right: 0 !important;
-        left: 60% !important;
-    }
+    
     .title-header1 {
         font-size: 80px;
     }
@@ -659,12 +681,17 @@ input:focus {
         backdrop-filter: blur(10px)
     }
 }
+@media(max-width: 991px){
+    .pos-drop{
+        position: absolute !important;
+        left: calc(100% - 150px) !important;
+    }
+}
 
 /* mediaqueries da schermo grande */
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
         .pos-drop{
             position: absolute !important;
-            right: 0 !important;
             left: -100% !important;
         }
     }

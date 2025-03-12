@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\RevisorController;
 use App\Http\Controllers\WishlistController;
@@ -22,10 +23,8 @@ Route::get("/show/ad/{ad}",[AdController::class,'show'])->name('ad.show');
 //rotta vista per categoria specifica
 Route::get('/category/{category}',[AdController::class,'byCategory'])->name('byCategory');
 
-//rotta per l'indice annunci da revisionare
-Route::get('/revisor/index',[RevisorController::class,'index'])->name('revisor.index');
 //rotta per accettare l'annuncio
-Route::patch('/accept/{ad}' , [RevisorController::class, 'accept'])->name('accept'); //1sor·Controller' , 1ccqit ì l(crpt \,
+Route::patch('/accept/{ad}' , [RevisorController::class, 'accept'])->name('accept'); 
 //rotta per rifiutare l'annuncio
 Route::patch('/reject/{ad}' , [RevisorController::class, 'reject'])->name('reject'); 
 //rotta per visualizzare l'articolo precedentemente revisionato
@@ -40,3 +39,6 @@ Route::get('/revisor/index/rejected',[RevisorController::class, 'adRejected'])->
 Route::get('/make/revisor/{user}', [RevisorController::class,"makeRevisor"])->name('make.revisor');
 
 Route::get('/wishlist', [WishlistController::class, 'index'])->middleware('auth')->name('wishlist.index');
+
+//rotta visualizzazione profilo utente
+Route::get('/profile',[UserController::class,'index'])->middleware('auth')->name('profile.index');

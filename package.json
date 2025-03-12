@@ -17,6 +17,7 @@
     "dependencies": {
         "bootstrap": "^5.3.3",
         "bootstrap-icons": "^1.11.3",
-        "fortify": "^0.0.0"
+        "fortify": "^0.0.0",
+        "swiper": "^11.2.5"
     }
 }

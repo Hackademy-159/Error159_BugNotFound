@@ -5,9 +5,9 @@
             @foreach ($wishlistAds as $ad)
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="{{ $ad->images->first()->getUrl(300, 300) ?? 'https://picsum.photos/300' }}" 
+                        {{-- <img src="{{ $ad->images->first()->getUrl(300, 300) ?? 'https://picsum.photos/300' }}" 
                              class="card-img-top" 
-                             alt="{{ $ad->title }}">
+                             alt="{{ $ad->title }}"> --}}
                         <div class="card-body">
                             <h5 class="card-title">{{ $ad->title }}</h5>
                             <p class="card-text">{{ $ad->price }} €</p>

@@ -1,4 +1,4 @@
-<div class="card mx-auto ">
+<div class="card mx-auto border-0 ">
     <img src="{{ $ad->images->isNotEmpty() ? $ad->images->first()->getUrl(300, 300) : 'https://picsum.photos/200' }}"
         class="col-bg img-fluid p-2 no-radius" alt="Immagine dell'articolo {{ $ad->title }}">
     <div class=" px-3 col-bg no-radius">
@@ -20,10 +20,13 @@
                 </form>
             @endif
             <a href="{{ route('ad.show', compact('ad')) }}"
-                class="text-center cst-button-card2 mt-3">{{ __('ui.Dettaglio') }}</a>
+                class="text-center cst-button-card2 mt-3">{{ __('ui.Dettaglio') }}
+            </a>
+                @if(Route::currentRouteName() != 'revisor.adRejected')
             @auth
                 <livewire:wishlist-button :ad="$ad" />
             @endauth
+            @endif
             {{-- <i class="fs-3 mt-3 bi bi-heart col-b-text"></i> --}}
         </div>
         <div>
