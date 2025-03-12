@@ -85,18 +85,15 @@
                         </div>
                     @endforeach
                 @else
-                    @for ($i = 0; $i < 6; $i++)
-                        <!-- Mostra 6 immagini, 3 per riga -->
-                        <div class="col-4">
-                            <div class="card shadow-sm">
-                                <img src="https://picsum.photos/300/200" class="card-img-top" alt="Immagine segnaposto">
-                            </div>
-                        </div>
-                    @endfor
+                <div class="col-lg-2 col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="{{ asset('img/noimage.png') }}" class="card-img-top" alt="Immagine segnaposto">
+                    </div>
+                </div>
                 @endif
             </div>
             <div class="row justify-content-around pt-3">
-                <div class="col-12 col-md-4 justify-content-center d-flex">
+                <div class="col-12 pb-3 col-md-4 justify-content-center d-flex">
                     <form action="{{ route('reject', ['ad' => $ad_to_check]) }}" method="POST">
                         @csrf
                         @method('PATCH')

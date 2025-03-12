@@ -1,5 +1,5 @@
 <div class="card mx-auto border-0 ">
-    <img src="{{ $ad->images->isNotEmpty() ? $ad->images->first()->getUrl(300, 300) : 'https://picsum.photos/200' }}"
+    <img src="{{ $ad->images->isNotEmpty() ? $ad->images->first()->getUrl(300, 300) : asset('img/noimage.png') }}"
         class="col-bg img-fluid p-2 no-radius" alt="Immagine dell'articolo {{ $ad->title }}">
     <div class=" px-3 col-bg no-radius">
         <h5 class=" text-start m-0 col-b-text">{{ $ad->title }}</h5>

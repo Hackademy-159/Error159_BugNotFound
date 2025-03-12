@@ -51,7 +51,7 @@
                             <div class="swiper-pagination"></div>
                         </div> --}}
                 @else
-                    <img src="https://picsum.photos/300" alt="Foto non inserita dall'utente">
+                    <img src={{asset('img/noimage.png')}} alt="Foto non inserita dall'utente">
                 @endif
 
             </div>
