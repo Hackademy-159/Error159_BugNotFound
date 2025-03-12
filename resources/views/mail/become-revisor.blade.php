@@ -8,15 +8,19 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
+            background-color: #efe9e6;
             margin: 0;
             padding: 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
         }
         .container {
             max-width: 600px;
             margin: 50px auto;
             padding: 20px;
-            background-color: rgb(253, 251, 239);
+            background-color: rgb(255, 255, 255);
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
@@ -32,14 +36,14 @@
         }
         p {
             font-size: 1.1em;
-            color: #333;
+            color: #000000;
             margin: 10px 0;
         }
         a {
             display: inline-block;
             padding: 12px 20px;
             background-color: #004766;
-            color: #f7d5c2;
+            color: #ffffff;
             text-decoration: none;
             font-size: 1.1em;
             border-radius: 5px;
@@ -54,7 +58,7 @@
 </head>
 <body>
     <div class="container">
-        <img src="{{ asset('img/RiArreda-removebg-preview.png') }}" alt="">
+        <img src="{{ asset('img/watermark2.png') }}" alt="">
         <h1>Un utente ha chiesto di lavorare con noi!</h1>
         <h2>Ecco i suoi dati:</h2>
         <p>Nome: <span class="highlight">{{$user->name}}</span></p>
