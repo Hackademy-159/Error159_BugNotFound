@@ -22,10 +22,9 @@ Route::get("/show/ad/{ad}",[AdController::class,'show'])->name('ad.show');
 //rotta vista per categoria specifica
 Route::get('/category/{category}',[AdController::class,'byCategory'])->name('byCategory');
 
-//rotta per l'indice annunci da revisionare
-Route::get('/revisor/index',[RevisorController::class,'index'])->name('revisor.index');
+
 //rotta per accettare l'annuncio
-Route::patch('/accept/{ad}' , [RevisorController::class, 'accept'])->name('accept'); //1sor·Controller' , 1ccqit ì l(crpt \,
+Route::patch('/accept/{ad}' , [RevisorController::class, 'accept'])->name('accept'); 
 //rotta per rifiutare l'annuncio
 Route::patch('/reject/{ad}' , [RevisorController::class, 'reject'])->name('reject'); 
 //rotta per visualizzare l'articolo precedentemente revisionato

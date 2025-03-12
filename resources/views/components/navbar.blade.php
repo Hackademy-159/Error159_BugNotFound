@@ -5,12 +5,7 @@
         {{-- campo ricerca mobile --}}
         <div class="d-md-none">
             <form class="pt-1 d-flex" role="search" action="{{ route('ad.search') }}" method="GET">
-                {{-- <input id="cercaInput" type="search" class="@if (Route::currentRouteName() == 'homepage') search-border-home @else search-border-all @endif col-t" name="query" placeholder="Cerca..."  aria-label="Search">
-                <button type="submit" id="basic-addon2" class="border-0 col-t">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search col-b-text" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                    </svg>
-                </button> --}}
+               
                 <input id="inputSearch1" type="search" class="@if (Route::currentRouteName() == 'homepage') search-border-home @else search-border-all @endif col-t mx-md-2" name="query" placeholder="{{__('ui.Cerca...')}}"aria-label="Search">
                         <button type="submit" id="basic-addon2" class="border-0 col-t col-bg-text">
                             <i id="search" class="fs-5 bi bi-search @if (Route::currentRouteName() == 'homepage') navElement col-bg-text @else col-b-text @endif"></i>
