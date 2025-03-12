@@ -553,9 +553,9 @@ input:focus {
     margin-top: 20vh;
 }
 
-.carousel-item{
+/* .carousel-item{
     margin-right: 0 !important;
-}
+} */
 
 .page-item.active .page-link {
     background-color: var(--background) !important;
@@ -613,6 +613,18 @@ input:focus {
     height: 100%;
     object-fit: cover;
   }
+
+  .swiper {
+    width: 65%;
+    height: 100%;
+  }
+  .cst-pagination{
+    top: 90% !important;
+  }
+  .next-cst{
+    left: 95%;
+  }
+
 
 
 /* MEDIA QUERIES */
