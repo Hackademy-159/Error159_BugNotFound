@@ -1,6 +1,6 @@
 <x-layout>
     <div>
-        @if(Auth::user()->is_revisor)
+        @if(Auth::check() && Auth::user()->is_revisor)
         <h2 class="fst-italic display-5 col-b-text ms-4 mt-5 pt-5 ps-3">Annunci accettati</h2>
         @else
         <h2 class="fst-italic display-5 col-b-text ms-4 mt-5 pt-5 ps-3">{{__('ui.Tutti gli annunci')}}</h2>
