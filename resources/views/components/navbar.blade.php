@@ -144,7 +144,7 @@
                             @endif
                             <li class="nav-item text-center">
                                 <a class="nav-item text-decoration-none col-b-text fw-semibold" href="{{ route('profile.index') }}">
-                                    Il mio profilo
+                                {{__('ui.Il mio profilo')}}
                                 </a>
                             </li>
                             <li>
